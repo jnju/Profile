@@ -1,0 +1,66 @@
+@import './style.scss';
+@import './common.scss';
+@import './mixin.scss';
+
+h2 {
+    font-size: 0;
+}
+html { font-size: 16px; }
+
+header {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 400px auto; 
+        @include responsive(pc-screens) {
+        font-size: 3.813rem;
+        }        
+    }
+
+
+    nav {
+        ul {
+            text-align: center;
+            background-color: aqua;
+            @include responsive(pc-screens) {
+                text-align: left;
+            }
+        }
+        li {
+            display: inline-block;
+            font-size: 1.45rem;
+
+            @include responsive(pc-screens) {
+                line-height: 1.4em;
+            }
+        }
+
+        img {
+            display: none;
+        }
+        @include responsive(pc-screens) {
+            background-color: aqua;
+            position: fixed;
+            margin-left: 3%;
+            font-size: 2.313em;
+    
+            img {
+                display: block;
+                width: 119px;
+                margin-bottom: 40px;
+            }
+        }
+        
+    }
+}
+
+main {
+    @include responsive(pc-screens) {
+        .container {
+            margin-left: 25%;
+            margin-right: 15%;
+            width: 65%;
+            // background-color: aqua;
+        }
+    }
+}
