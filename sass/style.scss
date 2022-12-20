@@ -1,11 +1,13 @@
 @font-face {
-    font-family: 'KOFIHDrLEEJWTTF-B';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/KOFIHDrLEEJWTTF-B.woff2') format('woff2');
-    font-weight: 700;
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    }
+}
 
-$font-main: 'KOFIHDrLEEJWTTF-B';
+
+
+$font-main: 'GmarketSansMedium';
 $color-main: #142850;
 $color-sub: #f1f6f5;
 

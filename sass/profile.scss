@@ -6,10 +6,22 @@ h2 {
     font-size: 0;
 }
 html { font-size: 16px; }
+.container {
+    margin: auto 6%;
+    // background-color: aqua;
+    @include responsive(pc-screens){
+            margin-left: 25%;
+            margin-right: 15%;
+            width: 65%;
+            // background-color: aqua;
+        
+    }
+}
 
 header {
     h1 {
         font-size: 2rem;
+        font-weight: bold;
         text-align: center;
         margin: 400px auto; 
         @include responsive(pc-screens) {
@@ -19,17 +31,23 @@ header {
 
 
     nav {
+        position: fixed;
+        z-index: 3;
+        background-color: (255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        width: 95%; left: 2%; top: 2%;
+        border: 2px solid $color-sub;
         ul {
+            line-height: 60px;
+            backdrop-filter: blur(10px);
             text-align: center;
-            background-color: aqua;
             @include responsive(pc-screens) {
                 text-align: left;
             }
         }
         li {
             display: inline-block;
-            font-size: 1.45rem;
-
+            font-size: 1.23rem;
             @include responsive(pc-screens) {
                 line-height: 1.4em;
             }
@@ -40,7 +58,6 @@ header {
         }
         @include responsive(pc-screens) {
             background-color: aqua;
-            position: fixed;
             margin-left: 3%;
             font-size: 2.313em;
     
@@ -51,16 +68,121 @@ header {
             }
         }
         
-    }
+    } // nav
+
 }
 
 main {
-    @include responsive(pc-screens) {
-        .container {
-            margin-left: 25%;
-            margin-right: 15%;
-            width: 65%;
-            // background-color: aqua;
+    section.about {
+        .mobile-me {
+            text-align: center;
+            img {
+                margin: 25% 0 10% 0;
+                width: 100%;
+                cursor: pointer;
+            }
         }
-    }
+        
+        .me-text {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+            span {
+                font-size: 2.3rem;
+                font-weight: 300;
+                line-height: 3rem;
+            }
+        }
+    } // about section end
+
+    section.skills {
+        h3 {
+            font-size: 2rem;
+            margin-top: 40%;
+            margin-bottom: 20%;
+        }
+
+        .skill {
+            margin-bottom: 4rem;
+            display: flex;
+            img {
+                width: 16%; height: 16%;
+                margin-right: 6%;
+            }
+
+            .percent {
+                margin-left: 4%;
+                height: 10px;
+                font-size: 1.6rem;
+            }
+        }
+    } // skills section end
+
+    section.portfolio {
+        h3 {
+            margin-top: 40%;
+            margin-bottom: 20%;
+        }
+
+        .circles {
+            .submarine-mobile {
+                position: relative;
+                z-index: 1;
+                width: 30%;
+                margin: auto 35% -10%;
+            }
+            .circle {
+                cursor: pointer;
+                margin-left: -2%;
+                width: 105%; height: 90%;
+                overflow: hidden;
+                border-radius: 300px;
+                
+                img {
+                    position: relative;
+                    z-index: 0;
+                    width: 190%;
+                    margin-left: -4rem; 
+                    border: 3px dashed #ccc;
+                }
+                .webPF {
+                    position: relative;
+                    z-index: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    // background-color: aqua;
+                    margin-top: -100%;
+                    text-align: center;
+                    font-size: 1.3rem;
+                    padding: 10% 10%;
+                    width: 80%; height: 40%;
+                    border-radius: 300px;
+                }
+                
+            } // circle
+            .buttons {
+                cursor: pointer;
+                display: flex;
+                // background-color: pink;
+                margin-bottom: 10%;
+                .design,
+                .detail {
+                    margin: auto 10%;
+                    text-align: center;
+                    border: 2px solid $color-sub;
+                    width: 30%;
+                    padding: 2%;
+                    border-radius: 10px;
+                }
+                .design {
+                    margin-right: 2%;
+                }
+            }
+        } // circles
+
+        .java {
+            img {
+                width: 100%;
+            }
+        }
+    } 
 }
