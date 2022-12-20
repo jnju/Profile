@@ -150,7 +150,7 @@ main {
                     z-index: 0;
                     background-color: rgba(0, 0, 0, 0.5);
                     // background-color: aqua;
-                    margin-top: -100%;
+                    margin-top: -99.5%;
                     text-align: center;
                     font-size: 1.3rem;
                     padding: 10% 10%;
@@ -179,10 +179,19 @@ main {
             }
         } // circles
 
+        .first { margin-top: 30%;}
         .java {
+            
+            margin-bottom: 10%;
             img {
                 width: 100%;
             }
         }
-    } 
+    } // section portfolio end
+
+    section.contact {
+        border: 1px solid #c5cacc;
+        border-radius: 10px;
+        width: 100%; 
+    }
 }

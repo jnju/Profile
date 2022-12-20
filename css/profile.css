@@ -175,7 +175,7 @@ main section.portfolio .circles .circle .webPF {
   position: relative;
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -100%;
+  margin-top: -99.5%;
   text-align: center;
   font-size: 1.3rem;
   padding: 10% 10%;
@@ -200,6 +200,17 @@ main section.portfolio .circles .buttons .detail {
 main section.portfolio .circles .buttons .design {
   margin-right: 2%;
 }
+main section.portfolio .first {
+  margin-top: 30%;
+}
+main section.portfolio .java {
+  margin-bottom: 10%;
+}
 main section.portfolio .java img {
+  width: 100%;
+}
+main section.contact {
+  border: 1px solid #c5cacc;
+  border-radius: 10px;
   width: 100%;
 }/*# sourceMappingURL=profile.css.map */
