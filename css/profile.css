@@ -32,8 +32,14 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h3 {
   font-size: 0;
+}
+
+h2 {
+  font-size: 250%;
+  margin-top: 40%;
+  margin-bottom: 20%;
 }
 
 html {
@@ -42,6 +48,7 @@ html {
 
 .container {
   margin: auto 6%;
+  background-color: pink;
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -73,6 +80,13 @@ header nav {
   top: 2%;
   border: 2px solid #f1f6f5;
 }
+@media screen and (min-width: 1024px) {
+  header nav {
+    border: none;
+    width: 20%;
+    margin-top: 5%;
+  }
+}
 header nav ul {
   line-height: 60px;
   -webkit-backdrop-filter: blur(10px);
@@ -91,64 +105,195 @@ header nav li {
 @media screen and (min-width: 1024px) {
   header nav li {
     line-height: 1.4em;
+    display: block;
+    line-height: 3rem;
   }
 }
 header nav img {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  header nav {
-    background-color: aqua;
-    margin-left: 3%;
-    font-size: 2.313em;
-  }
   header nav img {
     display: block;
-    width: 119px;
+    width: 100px;
     margin-bottom: 40px;
   }
 }
 
+main section.about ul {
+  display: flex;
+  flex-direction: column;
+}
+main section.about li:nth-of-type(1) {
+  order: 2;
+}
+main section.about li:nth-of-type(2) {
+  order: 1;
+}
+@media screen and (min-width: 1024px) {
+  main section.about li:nth-of-type(1) {
+    order: 1;
+  }
+  main section.about li:nth-of-type(2) {
+    order: 2;
+    display: flex;
+  }
+}
 main section.about .mobile-me {
+  display: flex;
   text-align: center;
 }
-main section.about .mobile-me img {
+@media screen and (min-width: 1024px) {
+  main section.about .mobile-me {
+    text-align: left;
+  }
+}
+main section.about .mobile-me .mobile-me-img {
   margin: 25% 0 10% 0;
   width: 100%;
   cursor: pointer;
 }
-main section.about .me-text {
+@media screen and (min-width: 1024px) {
+  main section.about .mobile-me .mobile-me-img {
+    margin: 10.5% 0 10% 3.8%;
+    width: 30%;
+    border-radius: 200px;
+  }
+}
+main section.about .mobile-me .letters {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main section.about .mobile-me .letters {
+    width: 23%;
+    display: block;
+    position: absolute;
+    margin: 5% 0 10% 0.77%;
+    -webkit-animation: rotate_image 20s linear infinite;
+            animation: rotate_image 20s linear infinite;
+    transform-origin: 50% 50%;
+  }
+  @-webkit-keyframes rotate_image {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate_image {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+main section.about .introduction {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main section.about .introduction {
+    position: absolute;
+    margin-top: 6%;
+    margin-left: 30%;
+    line-height: 3.5rem;
+    display: block;
+    font-size: 1.2rem;
+  }
+  main section.about .introduction h4 {
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+  }
+  main section.about .introduction span {
+    font-size: 1.4rem;
+  }
+  main section.about .introduction table td:first-child {
+    padding-right: 6rem;
+  }
+}
+main section.about .forchange {
+  display: flex;
+}
+main section.about .forchange .me-text {
   text-align: center;
   font-size: 1.2rem;
   line-height: 2.1rem;
 }
-main section.about .me-text span {
+@media screen and (min-width: 1024px) {
+  main section.about .forchange .me-text {
+    text-align: left;
+    margin-top: 18%;
+  }
+}
+main section.about .forchange .me-text span {
   font-size: 2.3rem;
   font-weight: 300;
   line-height: 3rem;
 }
-main section.skills h3 {
-  font-size: 2rem;
-  margin-top: 40%;
-  margin-bottom: 20%;
+@media screen and (min-width: 1024px) {
+  main section.skills .for-pc-skill {
+    display: flex;
+    margin-top: -12%;
+  }
+  main section.skills .for-pc-skill .for-pc-skill-second {
+    margin-left: 11%;
+    margin-top: -13.8%;
+  }
 }
 main section.skills .skill {
   margin-bottom: 4rem;
   display: flex;
 }
-main section.skills .skill img {
+@media screen and (min-width: 1024px) {
+  main section.skills .skill {
+    width: 50%;
+    margin-bottom: 20%;
+  }
+  main section.skills .skill .skill-text {
+    position: absolute;
+    margin-top: 3.5%;
+    width: 29%;
+  }
+}
+main section.skills .skill .boat {
   width: 16%;
   height: 16%;
   margin-right: 6%;
+}
+@media screen and (min-width: 1024px) {
+  main section.skills .skill .boat {
+    position: relative;
+    z-index: 1;
+    width: 20%;
+  }
+}
+main section.skills .skill .wave-skill {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main section.skills .skill .wave-skill {
+    display: block;
+    position: absolute;
+    height: 5%;
+    margin-top: 0.35%;
+    margin-left: 0.5%;
+  }
 }
 main section.skills .skill .percent {
   margin-left: 4%;
   height: 10px;
   font-size: 1.6rem;
 }
+@media screen and (min-width: 1024px) {
+  main section.skills .skill .percent {
+    margin-left: 143%;
+    margin-top: 8%;
+  }
+}
 main section.portfolio h3 {
   margin-top: 40%;
   margin-bottom: 20%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles {
+    display: flex;
+  }
 }
 main section.portfolio .circles .submarine-mobile {
   position: relative;
@@ -156,49 +301,96 @@ main section.portfolio .circles .submarine-mobile {
   width: 30%;
   margin: auto 35% -10%;
 }
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .submarine-mobile {
+    display: none;
+  }
+}
 main section.portfolio .circles .circle {
   cursor: pointer;
-  margin-left: -2%;
-  width: 105%;
-  height: 90%;
+  background-color: aqua;
+  width: 100%;
+  height: 80%;
   overflow: hidden;
   border-radius: 300px;
+  margin-bottom: 25%;
 }
-main section.portfolio .circles .circle img {
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle {
+    width: 100%;
+    height: 30%;
+    cursor: auto;
+    overflow: visible;
+    margin-left: 0;
+    width: 50%;
+  }
+}
+main section.portfolio .circles .circle .b {
   position: relative;
   z-index: 0;
-  width: 190%;
-  margin-left: -4rem;
-  border: 3px dashed #ccc;
+  width: 95%;
+  padding: 0 20px;
+  background-color: #fff;
+  margin-left: -1.4%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .b {
+    margin-left: 0;
+    border-radius: 800px;
+    background-color: transparent;
+  }
 }
 main section.portfolio .circles .circle .webPF {
   position: relative;
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -99.5%;
+  margin-top: -99.4%;
+  margin-left: -10%;
   text-align: center;
   font-size: 1.3rem;
-  padding: 10% 10%;
-  width: 80%;
-  height: 40%;
-  border-radius: 300px;
+  padding: 10%;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .webPF {
+    margin-top: 0;
+    width: 100%;
+    height: 30%;
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .pc-submarine-text {
+    margin-top: 150%;
+    margin-left: 50%;
+  }
+}
+main section.portfolio .circles .circle .submarine-pc {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .submarine-pc {
+    display: block;
+    width: 200%;
+  }
 }
 main section.portfolio .circles .buttons {
+  position: absolute;
+  margin: 5% 9%;
   cursor: pointer;
   display: flex;
-  margin-bottom: 10%;
 }
 main section.portfolio .circles .buttons .design,
 main section.portfolio .circles .buttons .detail {
-  margin: auto 10%;
+  margin: auto 50%;
   text-align: center;
   border: 2px solid #f1f6f5;
-  width: 30%;
-  padding: 2%;
+  padding: 5% 10%;
   border-radius: 10px;
 }
 main section.portfolio .circles .buttons .design {
-  margin-right: 2%;
+  margin-right: -30%;
 }
 main section.portfolio .first {
   margin-top: 30%;
@@ -209,8 +401,71 @@ main section.portfolio .java {
 main section.portfolio .java img {
   width: 100%;
 }
-main section.contact {
+main section.contact .contact-box {
   border: 1px solid #c5cacc;
   border-radius: 10px;
+  width: 92%;
+  padding: 4%;
+  margin-bottom: 15%;
+}
+main section.contact form {
+  line-height: 2.3rem;
+}
+main section.contact form #name,
+main section.contact form #phonenumber {
+  margin-left: 1rem;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #f1f6f5;
+}
+main section.contact form #message {
+  background-color: transparent;
   width: 100%;
+  border: 1px solid #f1f6f5;
+}
+main section.contact form #name,
+main section.contact form #phonenumber,
+main section.contact form #message {
+  color: #f1f6f5;
+}
+main section.contact form .contact-btns {
+  text-align: right;
+}
+main section.contact form .contact-btns button {
+  cursor: pointer;
+  font-family: "GmarketSansMedium";
+  font-size: 0.8rem;
+  background-color: transparent;
+  border: 1px solid #f1f6f5;
+  color: #f1f6f5;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+main section.contact form .contact-btns button:last-child {
+  margin-right: 0;
+}
+
+footer .footer-box {
+  background-color: #f1f6f5;
+  padding-top: 3%;
+  padding-bottom: 20%;
+  color: #142850;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-box {
+    padding-top: 1%;
+    padding-bottom: 0;
+  }
+}
+footer .footer-box img {
+  width: 10%;
+  padding: 5%;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-box img {
+    width: 3%;
+  }
 }/*# sourceMappingURL=profile.css.map */

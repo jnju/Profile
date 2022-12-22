@@ -2,19 +2,24 @@
 @import './common.scss';
 @import './mixin.scss';
 
-h2 {
+h3 {
     font-size: 0;
 }
+
+h2 {
+    font-size: 250%;
+    margin-top: 40%;
+    margin-bottom: 20%;
+}
+
 html { font-size: 16px; }
 .container {
     margin: auto 6%;
-    // background-color: aqua;
+    background-color: pink;
     @include responsive(pc-screens){
             margin-left: 25%;
             margin-right: 15%;
             width: 65%;
-            // background-color: aqua;
-        
     }
 }
 
@@ -37,6 +42,12 @@ header {
         backdrop-filter: blur(10px);
         width: 95%; left: 2%; top: 2%;
         border: 2px solid $color-sub;
+        @include responsive(pc-screens){
+            border: none;
+            width: 20%;
+            margin-top: 5%;
+        }
+
         ul {
             line-height: 60px;
             backdrop-filter: blur(10px);
@@ -45,11 +56,14 @@ header {
                 text-align: left;
             }
         }
+
         li {
             display: inline-block;
             font-size: 1.23rem;
             @include responsive(pc-screens) {
                 line-height: 1.4em;
+                display: block;
+                line-height: 3rem;
             }
         }
 
@@ -57,13 +71,9 @@ header {
             display: none;
         }
         @include responsive(pc-screens) {
-            background-color: aqua;
-            margin-left: 3%;
-            font-size: 2.313em;
-    
             img {
                 display: block;
-                width: 119px;
+                width: 100px;
                 margin-bottom: 40px;
             }
         }
@@ -74,46 +84,144 @@ header {
 
 main {
     section.about {
+        ul{ display: flex; flex-direction: column; }
+        li:nth-of-type(1){order: 2;}
+        li:nth-of-type(2){order: 1;}
+        @include responsive(pc-screens) {
+            li:nth-of-type(1){order: 1;}
+            li:nth-of-type(2){order: 2; display: flex;}
+        }
         .mobile-me {
+            // background-color: aqua;
+            display: flex;
             text-align: center;
-            img {
+            @include responsive(pc-screens) {
+                text-align: left;
+            }
+            .mobile-me-img {
                 margin: 25% 0 10% 0;
                 width: 100%;
                 cursor: pointer;
+                @include responsive(pc-screens) {
+                    margin: 10.5% 0 10% 3.8%;
+                    width: 30%;
+                    border-radius: 200px;
+                }
+            }
+            .letters {
+                display: none;
+                @include responsive(pc-screens) {
+                    width: 23%;
+                    display: block;
+                    position: absolute;
+                    margin: 5% 0 10% 0.77%;
+                    animation: rotate_image 20s linear infinite; transform-origin: 50% 50%;
+                    @keyframes rotate_image{
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            } // letters
+        } // mobile-me
+        .introduction {
+            display: none;
+            @include responsive(pc-screens) {
+                // background-color: pink;
+                position: absolute;
+                margin-top: 6%; margin-left: 30%;
+                line-height: 3.5rem;
+                h4 {
+                    font-size: 2rem;
+                    margin-bottom: 3.5rem;
+                }
+                display: block;
+                font-size: 1.2rem;
+                span {
+                    font-size: 1.4rem;
+                }
+                table{
+                    td:first-child { 
+                        padding-right: 6rem;
+                        // background-color: aqua;
+                    }
+                }
             }
         }
         
-        .me-text {
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 2.1rem;
-            span {
-                font-size: 2.3rem;
-                font-weight: 300;
-                line-height: 3rem;
+        .forchange {
+            display: flex;
+            .me-text {
+                text-align: center;
+                font-size: 1.2rem;
+                line-height: 2.1rem;
+                @include responsive(pc-screens) {
+                    text-align: left;
+                    margin-top: 18%;
+                }
+                span {
+                    font-size: 2.3rem;
+                    font-weight: 300;
+                    line-height: 3rem;
+                }
             }
         }
     } // about section end
 
     section.skills {
-        h3 {
-            font-size: 2rem;
-            margin-top: 40%;
-            margin-bottom: 20%;
+        .for-pc-skill {
+            @include responsive(pc-screens) {
+                // background-color: rgba(200, 100, 140, 0.5);
+                display: flex;
+                margin-top: -12%;
+                .for-pc-skill-second {
+                    margin-left: 11%;
+                    margin-top: -13.8%;
+                }
+            }
         }
 
         .skill {
             margin-bottom: 4rem;
             display: flex;
-            img {
+            @include responsive(pc-screens) {
+                width: 50%;
+                // margin-left: 6%;
+                margin-bottom: 20%;
+                .skill-text {
+                    position: absolute;
+                    margin-top: 3.5%;
+                    width: 29%;
+                }
+            }
+            .boat {
                 width: 16%; height: 16%;
                 margin-right: 6%;
+                @include responsive(pc-screens) {
+                    position: relative;
+                    z-index: 1;
+                    width: 20%;
+                }
+            }
+            .wave-skill {
+                display: none;
+                @include responsive(pc-screens) {
+                    display: block;
+                    position: absolute;
+                    height: 5%;
+                    margin-top: 0.35%; margin-left: 0.5%;
+                    // background-color: aqua;
+                }
             }
 
             .percent {
                 margin-left: 4%;
                 height: 10px;
                 font-size: 1.6rem;
+                @include responsive(pc-screens) {
+                    margin-left: 143%;
+                    margin-top: 8%;
+                }
             }
         }
     } // skills section end
@@ -125,56 +233,94 @@ main {
         }
 
         .circles {
+            @include responsive(pc-screens) {
+                display: flex;
+            }
             .submarine-mobile {
                 position: relative;
                 z-index: 1;
                 width: 30%;
                 margin: auto 35% -10%;
+                @include responsive(pc-screens) {
+                    display: none;
+                }
             }
             .circle {
                 cursor: pointer;
-                margin-left: -2%;
-                width: 105%; height: 90%;
+                background-color: aqua;
+                width: 100%; height: 80%;
                 overflow: hidden;
                 border-radius: 300px;
-                
-                img {
+                margin-bottom: 25%;
+                @include responsive(pc-screens) {
+                    width: 100%; height: 30%;
+                    cursor: auto;
+                    overflow: visible;
+                    margin-left: 0;
+                    width: 50%;
+                }
+                .b {
                     position: relative;
                     z-index: 0;
-                    width: 190%;
-                    margin-left: -4rem; 
-                    border: 3px dashed #ccc;
+                    width: 95%;
+                    padding: 0 20px;
+                    background-color: #fff;
+                    margin-left: -1.4%; 
+                    @include responsive(pc-screens) {
+                        margin-left: 0;
+                        border-radius: 800px;
+                        background-color: transparent;
+                    }
                 }
                 .webPF {
                     position: relative;
                     z-index: 0;
                     background-color: rgba(0, 0, 0, 0.5);
-                    // background-color: aqua;
-                    margin-top: -99.5%;
+                    margin-top: -99.4%; margin-left: -10%;
                     text-align: center;
                     font-size: 1.3rem;
-                    padding: 10% 10%;
-                    width: 80%; height: 40%;
-                    border-radius: 300px;
+                    padding: 10%;
+                    width: 100%; height: 100%;
+                    @include responsive(pc-screens) {
+                        margin-top: 0;
+                        width: 100%; height: 30%;
+                        background-color: transparent;
+                        
+                    }
+                }
+
+                .pc-submarine-text{
+                    @include responsive(pc-screens) {
+                        margin-top: 150%;
+                        margin-left: 50%;
+                    }
+                }
+
+                .submarine-pc {
+                    display: none;
+                    @include responsive(pc-screens) {
+                        display: block;
+                        width: 200%;
+                    }
                 }
                 
             } // circle
             .buttons {
+                position: absolute;
+                margin: 5% 9%;
                 cursor: pointer;
                 display: flex;
-                // background-color: pink;
-                margin-bottom: 10%;
                 .design,
                 .detail {
-                    margin: auto 10%;
+                    margin: auto 50%;
                     text-align: center;
                     border: 2px solid $color-sub;
-                    width: 30%;
-                    padding: 2%;
+                    padding: 5% 10%;
                     border-radius: 10px;
                 }
                 .design {
-                    margin-right: 2%;
+                    // background-color: aqua;
+                    margin-right: -30%;
                 }
             }
         } // circles
@@ -190,8 +336,76 @@ main {
     } // section portfolio end
 
     section.contact {
-        border: 1px solid #c5cacc;
-        border-radius: 10px;
-        width: 100%; 
+        .contact-box {
+            // background-color: pink;
+            border: 1px solid #c5cacc;
+            border-radius: 10px;
+            width: 92%; 
+            padding: 4%;
+            margin-bottom: 15%;
+        }
+
+        form {
+            // background-color: aqua;
+            line-height: 2.3rem;
+            #name,
+            #phonenumber {
+                margin-left: 1rem;
+                width: 80%;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $color-sub;
+            }
+            #message {
+                background-color: transparent;
+                width: 100%;
+                border: 1px solid $color-sub;
+            }
+
+            #name,
+            #phonenumber,
+            #message {
+                color: $color-sub;
+            }
+
+            .contact-btns {
+                text-align: right;
+                button {
+                    cursor: pointer;
+                    font-family: $font-main;
+                    font-size: 0.8rem;
+                    background-color: transparent;
+                    border: 1px solid $color-sub;
+                    color: $color-sub;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    margin-right: 20px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            } // contact-btns
+        } // form
+    } // section contact end
+}
+
+footer {
+    .footer-box {
+        background-color: $color-sub;
+        padding-top: 3%;
+        padding-bottom: 20%;
+        color: $color-main;
+        text-align: center;
+            @include responsive(pc-screens) {
+                padding-top: 1%;
+                padding-bottom: 0;
+            }
+        img {
+            width: 10%;
+            padding: 5%;
+            @include responsive(pc-screens) {
+                width: 3%;
+            }
+        }
     }
 }
