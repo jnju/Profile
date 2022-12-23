@@ -394,6 +394,7 @@ main {
                 margin: 5% 9%;
                 display: flex;
                 
+                
                 @include responsive(pc-screens) {
                     display: block;
                     width: 7%;
@@ -424,7 +425,7 @@ main {
 
         .java-box-container {
             @include responsive(pc-screens) {
-                display: flex;
+                float: left;
             }
         }
 

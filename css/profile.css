@@ -493,7 +493,7 @@ main section.portfolio .circles .buttons .design {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container {
-    display: flex;
+    float: left;
   }
 }
 main section.portfolio .first {
