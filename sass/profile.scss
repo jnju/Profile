@@ -393,10 +393,13 @@ main {
                 position: absolute;
                 margin: 5% 9%;
                 display: flex;
+                flex-direction: row;
                 
                 
                 @include responsive(pc-screens) {
                     display: block;
+                    flex-direction: column;
+                    flex-wrap: wrap;
                     width: 7%;
                 }
                 .design,
@@ -426,6 +429,11 @@ main {
         .java-box-container {
             @include responsive(pc-screens) {
                 float: left;
+                .java-box {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                }
             }
         }
 

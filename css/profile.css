@@ -460,10 +460,13 @@ main section.portfolio .circles .buttons {
   position: absolute;
   margin: 5% 9%;
   display: flex;
+  flex-direction: row;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons {
     display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 7%;
   }
 }
@@ -494,6 +497,11 @@ main section.portfolio .circles .buttons .design {
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container {
     float: left;
+  }
+  main section.portfolio .java-box-container .java-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 main section.portfolio .first {
