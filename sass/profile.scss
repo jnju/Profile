@@ -15,7 +15,6 @@ h2 {
 html { font-size: 16px; }
 .container {
     margin: auto 6%;
-    border: 2px solid pink;
     @include responsive(pc-screens){
             margin-left: 25%;
             margin-right: 15%;
@@ -40,12 +39,14 @@ header {
         z-index: 3;
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
-        width: 95%; left: 2%; top: 2%;
+        width: 105%; left: 1%; top: 2%;
         border: 2px solid $color-sub;
+        margin-left: -4%;
         @include responsive(pc-screens){
             border: none;
-            width: 20%;
+            width: 18%;
             margin-top: 5%;
+            margin-left: 1%;
         }
 
         ul {
@@ -56,10 +57,17 @@ header {
                 text-align: left;
             }
         }
-
+        
         li {
             display: inline-block;
-            font-size: 1.23rem;
+            font-size: 109%;
+            // background-color: pink;
+            width: 20%;
+            &:nth-child(3),
+            &:nth-child(4) {
+                width: 26%;
+                font-size: 98%;
+            }
             @include responsive(pc-screens) {
                 line-height: 1.4em;
                 display: block;
@@ -91,7 +99,48 @@ main {
             li:nth-of-type(1){order: 1;}
             li:nth-of-type(2){order: 2; display: flex;}
         }
-        .mobile-me {
+
+        .for-card-animation {
+            width: 85%;
+            // background-color: pink;
+            perspective: 1700px;
+            &:hover {
+                .front {
+                    transform: rotateY(180deg);
+                    @include responsive(pc-screens) {
+                        transform: none;
+                    }
+                }
+                .back {
+                    transform: rotateY(0deg);
+                    @include responsive(pc-screens) {
+                        transform: none;
+                    }
+                }
+            }
+            @include responsive(pc-screens) {
+                perspective: none;
+            }
+
+            .card {
+                width: 100%;
+                backface-visibility: hidden;
+                transition: 2s;
+                @include responsive(pc-screens) {
+                    transition: none;
+                }
+            }
+
+            .front {
+                position: absolute;
+                transform: rotateY(0deg);
+                @include responsive(pc-screens) {
+                    position: relative;
+                    transform: none;
+                }
+            }
+        }
+        #mobile-me {
             // background-color: aqua;
             display: flex;
             text-align: center;
@@ -99,7 +148,7 @@ main {
                 text-align: left;
             }
             .mobile-me-img {
-                margin: 25% 0 10% 0;
+                margin: 25% 7.5% 10% 7.5%;
                 width: 100%;
                 cursor: pointer;
                 @include responsive(pc-screens) {
@@ -111,10 +160,10 @@ main {
             .letters {
                 display: none;
                 @include responsive(pc-screens) {
-                    width: 23%;
+                    width: 34%;
                     display: block;
                     position: absolute;
-                    margin: 5% 0 10% 0.77%;
+                    margin: 8.4% 0 10% 1.75%;
                     animation: rotate_image 20s linear infinite; transform-origin: 50% 50%;
                     @keyframes rotate_image{
                         100% {
@@ -125,11 +174,20 @@ main {
             } // letters
         } // mobile-me
         .introduction {
-            display: none;
+            position: absolute;
+            top: 109px; left: 0px;
+            line-height: 2.7rem;
+            transform: rotateY(-180deg);
+            background-color: $color-sub;
+            color: $color-main;
+            padding: 20px 0;
+            margin: 0 10%;
+            font-size: 1rem;
             @include responsive(pc-screens) {
-                // background-color: pink;
-                position: absolute;
-                margin-top: 6%; margin-left: 30%;
+                background-color: transparent;
+                color: $color-sub;
+                transform: none;
+                margin-top: 1400px; margin-left: 1050px;
                 line-height: 3.5rem;
                 h4 {
                     font-size: 2rem;
@@ -155,6 +213,7 @@ main {
                 text-align: center;
                 font-size: 1.2rem;
                 line-height: 2.1rem;
+                margin-top: 140%;
                 @include responsive(pc-screens) {
                     text-align: left;
                     margin-top: 18%;
@@ -227,11 +286,6 @@ main {
     } // skills section end
 
     section.portfolio {
-        h3 {
-            margin-top: 40%;
-            margin-bottom: 20%;
-        }
-
         .circles {
             @include responsive(pc-screens) {
                 display: flex;
@@ -428,21 +482,25 @@ main {
 
         .java-box-container {
             @include responsive(pc-screens) {
-                float: left;
                 .java-box {
+                    width: 100%;
                     display: flex;
-                    flex-wrap: wrap;
                     flex-direction: row;
+                }
+                .first-java-box {
+                    margin-top: 50%;
+                    // background-color: palegoldenrod;
                 }
             }
         }
-
+        
         .first { 
             margin-top: 30%;
             @include responsive(pc-screens) {
-                margin-top: 55%;
+                margin-top: 0%;
+                margin-right: 10%;
                 img {
-                    margin-right: 20%;
+                    // margin-right: 20%;
                 }
             }
         }
@@ -451,7 +509,7 @@ main {
             img {
                 width: 100%;
                 @include responsive(pc-screens) {
-                    width: 40%;
+                    width: 100%;
                 }
             }
         }

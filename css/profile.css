@@ -48,7 +48,6 @@ html {
 
 .container {
   margin: auto 6%;
-  border: 2px solid pink;
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -75,16 +74,18 @@ header nav {
   background-color: 255, 255, 255, 0.1;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  width: 95%;
-  left: 2%;
+  width: 105%;
+  left: 1%;
   top: 2%;
   border: 2px solid #f1f6f5;
+  margin-left: -4%;
 }
 @media screen and (min-width: 1024px) {
   header nav {
     border: none;
-    width: 20%;
+    width: 18%;
     margin-top: 5%;
+    margin-left: 1%;
   }
 }
 header nav ul {
@@ -100,7 +101,12 @@ header nav ul {
 }
 header nav li {
   display: inline-block;
-  font-size: 1.23rem;
+  font-size: 109%;
+  width: 20%;
+}
+header nav li:nth-child(3), header nav li:nth-child(4) {
+  width: 26%;
+  font-size: 98%;
 }
 @media screen and (min-width: 1024px) {
   header nav li {
@@ -139,36 +145,82 @@ main section.about li:nth-of-type(2) {
     display: flex;
   }
 }
-main section.about .mobile-me {
+main section.about .for-card-animation {
+  width: 85%;
+  perspective: 1700px;
+}
+main section.about .for-card-animation:hover .front {
+  transform: rotateY(180deg);
+}
+@media screen and (min-width: 1024px) {
+  main section.about .for-card-animation:hover .front {
+    transform: none;
+  }
+}
+main section.about .for-card-animation:hover .back {
+  transform: rotateY(0deg);
+}
+@media screen and (min-width: 1024px) {
+  main section.about .for-card-animation:hover .back {
+    transform: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.about .for-card-animation {
+    perspective: none;
+  }
+}
+main section.about .for-card-animation .card {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: 2s;
+}
+@media screen and (min-width: 1024px) {
+  main section.about .for-card-animation .card {
+    transition: none;
+  }
+}
+main section.about .for-card-animation .front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+@media screen and (min-width: 1024px) {
+  main section.about .for-card-animation .front {
+    position: relative;
+    transform: none;
+  }
+}
+main section.about #mobile-me {
   display: flex;
   text-align: center;
 }
 @media screen and (min-width: 1024px) {
-  main section.about .mobile-me {
+  main section.about #mobile-me {
     text-align: left;
   }
 }
-main section.about .mobile-me .mobile-me-img {
-  margin: 25% 0 10% 0;
+main section.about #mobile-me .mobile-me-img {
+  margin: 25% 7.5% 10% 7.5%;
   width: 100%;
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
-  main section.about .mobile-me .mobile-me-img {
+  main section.about #mobile-me .mobile-me-img {
     margin: 10.5% 0 10% 3.8%;
     width: 30%;
     border-radius: 200px;
   }
 }
-main section.about .mobile-me .letters {
+main section.about #mobile-me .letters {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  main section.about .mobile-me .letters {
-    width: 23%;
+  main section.about #mobile-me .letters {
+    width: 34%;
     display: block;
     position: absolute;
-    margin: 5% 0 10% 0.77%;
+    margin: 8.4% 0 10% 1.75%;
     -webkit-animation: rotate_image 20s linear infinite;
             animation: rotate_image 20s linear infinite;
     transform-origin: 50% 50%;
@@ -185,13 +237,24 @@ main section.about .mobile-me .letters {
   }
 }
 main section.about .introduction {
-  display: none;
+  position: absolute;
+  top: 109px;
+  left: 0px;
+  line-height: 2.7rem;
+  transform: rotateY(-180deg);
+  background-color: #f1f6f5;
+  color: #142850;
+  padding: 20px 0;
+  margin: 0 10%;
+  font-size: 1rem;
 }
 @media screen and (min-width: 1024px) {
   main section.about .introduction {
-    position: absolute;
-    margin-top: 6%;
-    margin-left: 30%;
+    background-color: transparent;
+    color: #f1f6f5;
+    transform: none;
+    margin-top: 1400px;
+    margin-left: 1050px;
     line-height: 3.5rem;
     display: block;
     font-size: 1.2rem;
@@ -214,6 +277,7 @@ main section.about .forchange .me-text {
   text-align: center;
   font-size: 1.2rem;
   line-height: 2.1rem;
+  margin-top: 140%;
 }
 @media screen and (min-width: 1024px) {
   main section.about .forchange .me-text {
@@ -285,10 +349,6 @@ main section.skills .skill .percent {
     margin-left: 143%;
     margin-top: 8%;
   }
-}
-main section.portfolio h3 {
-  margin-top: 40%;
-  margin-bottom: 20%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles {
@@ -495,13 +555,13 @@ main section.portfolio .circles .buttons .design {
   }
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .java-box-container {
-    float: left;
-  }
   main section.portfolio .java-box-container .java-box {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+  }
+  main section.portfolio .java-box-container .first-java-box {
+    margin-top: 50%;
   }
 }
 main section.portfolio .first {
@@ -509,10 +569,8 @@ main section.portfolio .first {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .first {
-    margin-top: 55%;
-  }
-  main section.portfolio .first img {
-    margin-right: 20%;
+    margin-top: 0%;
+    margin-right: 10%;
   }
 }
 main section.portfolio .java {
@@ -523,7 +581,7 @@ main section.portfolio .java img {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java img {
-    width: 40%;
+    width: 100%;
   }
 }
 main section.contact .contact-box {
