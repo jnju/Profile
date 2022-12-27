@@ -104,6 +104,9 @@ main {
             width: 85%;
             // background-color: pink;
             perspective: 1700px;
+            @include responsive(pc-screens) {
+                perspective: none;
+            }
             &:hover {
                 .front {
                     transform: rotateY(180deg);
@@ -118,16 +121,14 @@ main {
                     }
                 }
             }
-            @include responsive(pc-screens) {
-                perspective: none;
-            }
 
-            .card {
+            .card-all {
                 width: 100%;
                 backface-visibility: hidden;
                 transition: 2s;
                 @include responsive(pc-screens) {
                     transition: none;
+                    width: 30%;
                 }
             }
 
@@ -137,6 +138,7 @@ main {
                 @include responsive(pc-screens) {
                     position: relative;
                     transform: none;
+                    width: 100%;
                 }
             }
         }
@@ -184,12 +186,15 @@ main {
             margin: 0 10%;
             font-size: 1rem;
             @include responsive(pc-screens) {
+                transform: none;
                 background-color: transparent;
                 color: $color-sub;
-                transform: none;
                 margin-top: 1400px; margin-left: 1050px;
                 line-height: 3.5rem;
+                padding: 0;
                 h4 {
+                    // background-color: aqua;
+                    width: 240px;
                     font-size: 2rem;
                     margin-bottom: 3.5rem;
                 }
@@ -201,7 +206,6 @@ main {
                 table{
                     td:first-child { 
                         padding-right: 6rem;
-                        // background-color: aqua;
                     }
                 }
             }
@@ -253,15 +257,31 @@ main {
                     width: 29%;
                 }
             }
+
+            @keyframes rotate_boat {
+                0% { transform: rotate(-20deg); }
+                25% { transform: rotate(0deg); }
+                50% { transform: rotate(20deg);}
+                75% { transform: rotate(0deg);}
+                100%{ transform: rotate(-20deg);}
+            }
             .boat {
                 width: 16%; height: 16%;
                 margin-right: 6%;
+                animation: rotate_boat 1.5s linear infinite;
                 @include responsive(pc-screens) {
                     position: relative;
                     z-index: 1;
                     width: 20%;
                 }
             }
+            @include responsive(pc-screens) {
+                .random-move1 { animation: rotate_boat 2s linear infinite; }
+                .random-move2 { animation: rotate_boat 1s linear infinite reverse; }
+                .random-move3 { animation: rotate_boat 2.5s linear infinite alternate; }
+                .random-move4 { animation: rotate_boat 1s linear infinite; }
+            }
+
             .wave-skill {
                 display: none;
                 @include responsive(pc-screens) {
@@ -481,15 +501,45 @@ main {
         } // circles
 
         .java-box-container {
-            @include responsive(pc-screens) {
-                .java-box {
+            .java-box{
+                @include responsive(pc-screens) {
                     width: 100%;
                     display: flex;
                     flex-direction: row;
                 }
-                .first-java-box {
+                .turtle-box {
+                    position: absolute;
+                    overflow: hidden;
+                    width: 70%; height: 50%;
+                    // border: 1px solid aqua;
+                    display: none;
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+
+                    .first-turtle,
+                    .second-turtle {
+                        @include responsive(pc-screens) {
+                            // display: block;
+                            position: relative;
+                            width: 35%;
+                            left: 32%; top: -90%;
+                        }
+                    }
+    
+                    .first-turtle {
+                        transform: rotate(90deg);
+                    }
+                    .second-turtle {
+                        transform: rotate(-90deg);
+                    }
+                }
+                
+            }
+
+            .first-java-box {
+                @include responsive(pc-screens) {
                     margin-top: 50%;
-                    // background-color: palegoldenrod;
                 }
             }
         }

@@ -149,6 +149,11 @@ main section.about .for-card-animation {
   width: 85%;
   perspective: 1700px;
 }
+@media screen and (min-width: 1024px) {
+  main section.about .for-card-animation {
+    perspective: none;
+  }
+}
 main section.about .for-card-animation:hover .front {
   transform: rotateY(180deg);
 }
@@ -165,20 +170,16 @@ main section.about .for-card-animation:hover .back {
     transform: none;
   }
 }
-@media screen and (min-width: 1024px) {
-  main section.about .for-card-animation {
-    perspective: none;
-  }
-}
-main section.about .for-card-animation .card {
+main section.about .for-card-animation .card-all {
   width: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: 2s;
 }
 @media screen and (min-width: 1024px) {
-  main section.about .for-card-animation .card {
+  main section.about .for-card-animation .card-all {
     transition: none;
+    width: 30%;
   }
 }
 main section.about .for-card-animation .front {
@@ -189,6 +190,7 @@ main section.about .for-card-animation .front {
   main section.about .for-card-animation .front {
     position: relative;
     transform: none;
+    width: 100%;
   }
 }
 main section.about #mobile-me {
@@ -250,16 +252,18 @@ main section.about .introduction {
 }
 @media screen and (min-width: 1024px) {
   main section.about .introduction {
+    transform: none;
     background-color: transparent;
     color: #f1f6f5;
-    transform: none;
     margin-top: 1400px;
     margin-left: 1050px;
     line-height: 3.5rem;
+    padding: 0;
     display: block;
     font-size: 1.2rem;
   }
   main section.about .introduction h4 {
+    width: 240px;
     font-size: 2rem;
     margin-bottom: 3.5rem;
   }
@@ -315,16 +319,69 @@ main section.skills .skill {
     width: 29%;
   }
 }
+@-webkit-keyframes rotate_boat {
+  0% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes rotate_boat {
+  0% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
 main section.skills .skill .boat {
   width: 16%;
   height: 16%;
   margin-right: 6%;
+  -webkit-animation: rotate_boat 1.5s linear infinite;
+          animation: rotate_boat 1.5s linear infinite;
 }
 @media screen and (min-width: 1024px) {
   main section.skills .skill .boat {
     position: relative;
     z-index: 1;
     width: 20%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.skills .skill .random-move1 {
+    -webkit-animation: rotate_boat 2s linear infinite;
+            animation: rotate_boat 2s linear infinite;
+  }
+  main section.skills .skill .random-move2 {
+    animation: rotate_boat 1s linear infinite reverse;
+  }
+  main section.skills .skill .random-move3 {
+    -webkit-animation: rotate_boat 2.5s linear infinite alternate;
+            animation: rotate_boat 2.5s linear infinite alternate;
+  }
+  main section.skills .skill .random-move4 {
+    -webkit-animation: rotate_boat 1s linear infinite;
+            animation: rotate_boat 1s linear infinite;
   }
 }
 main section.skills .skill .wave-skill {
@@ -560,6 +617,35 @@ main section.portfolio .circles .buttons .design {
     display: flex;
     flex-direction: row;
   }
+}
+main section.portfolio .java-box-container .java-box .turtle-box {
+  position: absolute;
+  overflow: hidden;
+  width: 70%;
+  height: 50%;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .java-box-container .java-box .turtle-box {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .java-box-container .java-box .turtle-box .first-turtle,
+main section.portfolio .java-box-container .java-box .turtle-box .second-turtle {
+    position: relative;
+    width: 35%;
+    left: 32%;
+    top: -90%;
+  }
+}
+main section.portfolio .java-box-container .java-box .turtle-box .first-turtle {
+  transform: rotate(90deg);
+}
+main section.portfolio .java-box-container .java-box .turtle-box .second-turtle {
+  transform: rotate(-90deg);
+}
+@media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container .first-java-box {
     margin-top: 50%;
   }
