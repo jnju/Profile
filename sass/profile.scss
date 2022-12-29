@@ -465,9 +465,10 @@ main {
 
             .buttons {
                 position: absolute;
-                margin: 5% 9%;
+                margin: 5% -5%;
                 display: flex;
                 flex-direction: row;
+                // background-color: pink;
                 
                 
                 @include responsive(pc-screens) {
@@ -475,6 +476,7 @@ main {
                     flex-direction: column;
                     flex-wrap: wrap;
                     width: 7%;
+                    margin: 5% 9%;
                 }
                 .design,
                 .detail {
@@ -484,8 +486,8 @@ main {
                     border: 2px solid $color-sub;
                     padding: 5% 10%;
                     border-radius: 10px;
+                    // background-color: aqua;
                     @include responsive(pc-screens) {
-                        // background-color: aqua;
                         margin:0
                     }
                 }
