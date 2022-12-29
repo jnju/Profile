@@ -33,10 +33,75 @@ header {
         }        
     }
 
+    .waves {
+        // position: absolute;
+        overflow: hidden;
+        margin-left: -10%;
+        width: 116.3%; // 116.3
+        margin-top: -160px;
+        // background-color: aqua;
+        @include responsive(pc-screens){
+            width: 160.3%;
+            margin-left: -45%;
+        }
+
+        .blue-wave,
+        .sky-wave,
+        .white-wave {
+            margin-left: 200%;
+            width: 240%; //240
+            @include responsive(pc-screens){
+                width: 150%; height: 150px;
+            }
+        }
+
+        @keyframes wavemoveblue {
+            0% {margin-left: -22%;}
+            // 50% {margin-left: -33%;}
+            100%{margin-left: -7%;}
+        }
+
+        @keyframes wavemovesky {
+            0% {margin-left: -5%;}
+            // 50% {margin-left: -21%;}
+            100%{margin-left: -20%;}
+        }
+
+        @keyframes wavemovewhite {
+            0% {margin-left: -5%;}
+            100%{margin-left: -40%;}
+        }
+
+        .blue-wave {
+            margin-left: -22%;
+            margin-top: -80px;
+            animation: wavemoveblue 2s 0s infinite alternate;
+            @include responsive(pc-screens){
+                margin-left: -3%;
+                margin-top: -120px;
+            }
+        }
+
+        .sky-wave {
+            margin-left: -5%;
+            margin-top: -50px;
+            animation: wavemovesky 2s 0s infinite alternate;
+            @include responsive(pc-screens){
+                margin-top: -120px;
+            }
+        }
+
+        .white-wave {
+            margin-left: -13%;
+            animation: wavemovewhite 2s 0s infinite alternate;
+        }
+
+    }
+
 
     nav {
         position: fixed;
-        z-index: 3;
+        z-index: 5;
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         width: 105%; left: 1%; top: 2%;
@@ -333,7 +398,9 @@ main {
                     width: 50%;
                     
                 }
-                .b {
+                .b, 
+                .j,
+                .profile-capture {
                     position: relative;
                     z-index: 0;
                     width: 95%;
@@ -465,7 +532,7 @@ main {
 
             .buttons {
                 position: absolute;
-                margin: 5% -5%;
+                margin: 5% 10%;
                 display: flex;
                 flex-direction: row;
                 // background-color: pink;
@@ -476,7 +543,7 @@ main {
                     flex-direction: column;
                     flex-wrap: wrap;
                     width: 7%;
-                    margin: 5% 9%;
+                    // margin: 5% 9%;
                 }
                 .design,
                 .detail {
@@ -526,6 +593,7 @@ main {
                             position: relative;
                             width: 35%;
                             left: 32%; top: -90%;
+                            z-index: 1;
                         }
                     }
     
@@ -562,6 +630,53 @@ main {
                 width: 100%;
                 @include responsive(pc-screens) {
                     width: 100%;
+                }
+            }
+
+            .java-text {
+                // background-color: aqua;
+                width: 63%;
+                float: left;
+                @include responsive(pc-screens) {
+                    margin-right: 12%;
+                }
+            }
+
+            .buttons_java {
+                position: relative;
+                z-index: 1;
+                // background-color: pink;
+                float: left;
+                width: 20%;
+                margin-bottom: 15%;
+                @include responsive(pc-screens) {
+                    display: block;
+                    width: 20%;
+                    
+                }
+                .design,
+                .detail {
+                    cursor: pointer;
+                    margin: auto 50%; padding: 15px auto;
+                    text-align: center;
+                    border: 2px solid $color-sub;
+                    padding: 5% 10%;
+                    border-radius: 10px;
+                    // background-color: aqua;
+                    margin-right: -30%; 
+                    width: 100%;
+                    margin-bottom: 10%;
+                    // float: left;
+                    @include responsive(pc-screens) {
+                        margin:0
+                    }
+                }
+                .design {
+                    // background-color: aqua;
+                    @include responsive(pc-screens) {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }

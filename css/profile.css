@@ -68,9 +68,111 @@ header h1 {
     font-size: 3.813rem;
   }
 }
+header .waves {
+  overflow: hidden;
+  margin-left: -10%;
+  width: 116.3%;
+  margin-top: -160px;
+}
+@media screen and (min-width: 1024px) {
+  header .waves {
+    width: 160.3%;
+    margin-left: -45%;
+  }
+}
+header .waves .blue-wave,
+header .waves .sky-wave,
+header .waves .white-wave {
+  margin-left: 200%;
+  width: 240%;
+}
+@media screen and (min-width: 1024px) {
+  header .waves .blue-wave,
+header .waves .sky-wave,
+header .waves .white-wave {
+    width: 150%;
+    height: 150px;
+  }
+}
+@-webkit-keyframes wavemoveblue {
+  0% {
+    margin-left: -22%;
+  }
+  100% {
+    margin-left: -7%;
+  }
+}
+@keyframes wavemoveblue {
+  0% {
+    margin-left: -22%;
+  }
+  100% {
+    margin-left: -7%;
+  }
+}
+@-webkit-keyframes wavemovesky {
+  0% {
+    margin-left: -5%;
+  }
+  100% {
+    margin-left: -20%;
+  }
+}
+@keyframes wavemovesky {
+  0% {
+    margin-left: -5%;
+  }
+  100% {
+    margin-left: -20%;
+  }
+}
+@-webkit-keyframes wavemovewhite {
+  0% {
+    margin-left: -5%;
+  }
+  100% {
+    margin-left: -40%;
+  }
+}
+@keyframes wavemovewhite {
+  0% {
+    margin-left: -5%;
+  }
+  100% {
+    margin-left: -40%;
+  }
+}
+header .waves .blue-wave {
+  margin-left: -22%;
+  margin-top: -80px;
+  -webkit-animation: wavemoveblue 2s 0s infinite alternate;
+          animation: wavemoveblue 2s 0s infinite alternate;
+}
+@media screen and (min-width: 1024px) {
+  header .waves .blue-wave {
+    margin-left: -3%;
+    margin-top: -120px;
+  }
+}
+header .waves .sky-wave {
+  margin-left: -5%;
+  margin-top: -50px;
+  -webkit-animation: wavemovesky 2s 0s infinite alternate;
+          animation: wavemovesky 2s 0s infinite alternate;
+}
+@media screen and (min-width: 1024px) {
+  header .waves .sky-wave {
+    margin-top: -120px;
+  }
+}
+header .waves .white-wave {
+  margin-left: -13%;
+  -webkit-animation: wavemovewhite 2s 0s infinite alternate;
+          animation: wavemovewhite 2s 0s infinite alternate;
+}
 header nav {
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   background-color: 255, 255, 255, 0.1;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -441,7 +543,9 @@ main section.portfolio .circles .circle {
     width: 50%;
   }
 }
-main section.portfolio .circles .circle .b {
+main section.portfolio .circles .circle .b,
+main section.portfolio .circles .circle .j,
+main section.portfolio .circles .circle .profile-capture {
   position: relative;
   z-index: 0;
   width: 95%;
@@ -450,7 +554,9 @@ main section.portfolio .circles .circle .b {
   margin-left: -1.4%;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .circle .b {
+  main section.portfolio .circles .circle .b,
+main section.portfolio .circles .circle .j,
+main section.portfolio .circles .circle .profile-capture {
     position: absolute;
     width: 15%;
     height: 28%;
@@ -575,7 +681,7 @@ main section.portfolio .circles .submarine-three .buttons {
 }
 main section.portfolio .circles .buttons {
   position: absolute;
-  margin: 5% -5%;
+  margin: 5% 10%;
   display: flex;
   flex-direction: row;
 }
@@ -585,7 +691,6 @@ main section.portfolio .circles .buttons {
     flex-direction: column;
     flex-wrap: wrap;
     width: 7%;
-    margin: 5% 9%;
   }
 }
 main section.portfolio .circles .buttons .design,
@@ -638,6 +743,7 @@ main section.portfolio .java-box-container .java-box .turtle-box .second-turtle 
     width: 35%;
     left: 32%;
     top: -90%;
+    z-index: 1;
   }
 }
 main section.portfolio .java-box-container .java-box .turtle-box .first-turtle {
@@ -669,6 +775,53 @@ main section.portfolio .java img {
 @media screen and (min-width: 1024px) {
   main section.portfolio .java img {
     width: 100%;
+  }
+}
+main section.portfolio .java .java-text {
+  width: 63%;
+  float: left;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .java .java-text {
+    margin-right: 12%;
+  }
+}
+main section.portfolio .java .buttons_java {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 20%;
+  margin-bottom: 15%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .java .buttons_java {
+    display: block;
+    width: 20%;
+  }
+}
+main section.portfolio .java .buttons_java .design,
+main section.portfolio .java .buttons_java .detail {
+  cursor: pointer;
+  margin: auto 50%;
+  padding: 15px auto;
+  text-align: center;
+  border: 2px solid #f1f6f5;
+  padding: 5% 10%;
+  border-radius: 10px;
+  margin-right: -30%;
+  width: 100%;
+  margin-bottom: 10%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .java .buttons_java .design,
+main section.portfolio .java .buttons_java .detail {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .java .buttons_java .design {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 main section.contact .contact-box {
