@@ -34,6 +34,14 @@ $(function() {
             $('nav').css({'position':'absilute', 'top':'-60%'});
             $(window).on("scroll", function (e) {
             console.log($(document).scrollTop());
+
+            if (($(document).scrollTop() > 3850) && ($(document).scrollTop() < 5100)) {
+                $('.circles').stop().animate({'margin-left':'0'},3000);
+                $('nav').css({'border': '1px solid aqua'});
+            } else {
+                $('.circles').css({'margin-left':'-105%'});
+                $('nav').css({'border': 'none'});
+            } 
             
             if ($(document).scrollTop() < 800) {
                 $('nav').stop().animate({'position':'fixed','top':'-60%'},60);
@@ -51,14 +59,18 @@ $(function() {
                     $('.boat').stop().animate({'left': '0'});
                 } 
 
+                // $('circle').slideToggle(1000,'linear');
                 if (($(document).scrollTop() > 5200) && ($(document).scrollTop() < 6600)) {
                     $('.first-turtle').stop().animate({'left': '-90%'}, 3000);
                     $('.second-turtle').stop().animate({'left': '135%'}, 3000);
+                    $('nav').css({'border': '1px solid aqua'});
                 } else {
                     $('.first-turtle').css({'left': '32%'});
                     $('.second-turtle').css({'left': '32%'});
+                    $('nav').css({'border': 'none'}); 
                 } 
             });
+            
 
             $(".ABOUT").click(function(event){            
                 event.preventDefault();

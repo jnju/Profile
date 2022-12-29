@@ -70,20 +70,20 @@ header h1 {
 }
 header .waves {
   overflow: hidden;
-  margin-left: -10%;
-  width: 116.3%;
+  margin-left: 0%;
+  width: 100%;
   margin-top: -160px;
 }
 @media screen and (min-width: 1024px) {
   header .waves {
-    width: 160.3%;
-    margin-left: -45%;
+    width: 100%;
+    margin-left: 0%;
   }
 }
 header .waves .blue-wave,
 header .waves .sky-wave,
 header .waves .white-wave {
-  margin-left: 200%;
+  margin-left: 0%;
   width: 240%;
 }
 @media screen and (min-width: 1024px) {
@@ -510,8 +510,15 @@ main section.skills .skill .percent {
   }
 }
 @media screen and (min-width: 1024px) {
+  main section.portfolio .submarine-hide-box {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1024px) {
   main section.portfolio .circles {
     display: flex;
+    margin-left: -105%;
   }
 }
 main section.portfolio .circles .submarine-mobile {
@@ -542,6 +549,9 @@ main section.portfolio .circles .circle {
     margin-left: 0;
     width: 50%;
   }
+}
+main section.portfolio .circles .circle .first-line-fall {
+  position: relative;
 }
 main section.portfolio .circles .circle .b,
 main section.portfolio .circles .circle .j,

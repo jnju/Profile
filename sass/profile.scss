@@ -34,21 +34,19 @@ header {
     }
 
     .waves {
-        // position: absolute;
         overflow: hidden;
-        margin-left: -10%;
-        width: 116.3%; // 116.3
+        margin-left: 0%;
+        width: 100%;
         margin-top: -160px;
-        // background-color: aqua;
         @include responsive(pc-screens){
-            width: 160.3%;
-            margin-left: -45%;
+            width: 100%;
+            margin-left: 0%;
         }
 
         .blue-wave,
         .sky-wave,
         .white-wave {
-            margin-left: 200%;
+            margin-left: 0%;
             width: 240%; //240
             @include responsive(pc-screens){
                 width: 150%; height: 150px;
@@ -371,9 +369,17 @@ main {
     } // skills section end
 
     section.portfolio {
+        .submarine-hide-box {
+            @include responsive(pc-screens) {
+            // background-color: pink;
+            width: 100%;
+            overflow: hidden;
+            }
+        }
         .circles {
             @include responsive(pc-screens) {
                 display: flex;
+                margin-left: -105%;
             }
             .submarine-mobile {
                 position: relative;
@@ -397,6 +403,10 @@ main {
                     margin-left: 0;
                     width: 50%;
                     
+                }
+
+                .first-line-fall {
+                    position: relative;
                 }
                 .b, 
                 .j,
