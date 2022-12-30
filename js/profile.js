@@ -1,7 +1,14 @@
 $(function() {
     function mobile() {
-        $('nav').css({'position':'absilute', 'top':'-60%'});
+        $('nav').css({
+            'position':'absilute', 'top':'-60%',
+        });
         $(window).on("scroll", function (e) {
+            $('nav').css({
+                'border' :'2px solid $color-sub'
+            })
+
+            $('.circles').stop();
             console.log($(document).scrollTop());
             
             if ($(document).scrollTop() < 800) {
@@ -37,10 +44,10 @@ $(function() {
 
             if (($(document).scrollTop() > 3850) && ($(document).scrollTop() < 5100)) {
                 $('.circles').stop().animate({'margin-left':'0'},3000);
-                $('nav').css({'border': '1px solid aqua'});
+                // $('nav').css({'border': '1px solid aqua'});
             } else {
                 $('.circles').css({'margin-left':'-105%'});
-                $('nav').css({'border': 'none'});
+                // $('nav').css({'border': 'none'});
             } 
             
             if ($(document).scrollTop() < 800) {
@@ -63,11 +70,11 @@ $(function() {
                 if (($(document).scrollTop() > 5200) && ($(document).scrollTop() < 6600)) {
                     $('.first-turtle').stop().animate({'left': '-90%'}, 3000);
                     $('.second-turtle').stop().animate({'left': '135%'}, 3000);
-                    $('nav').css({'border': '1px solid aqua'});
+                    // $('nav').css({'border': '1px solid aqua'});
                 } else {
                     $('.first-turtle').css({'left': '32%'});
                     $('.second-turtle').css({'left': '32%'});
-                    $('nav').css({'border': 'none'}); 
+                    // $('nav').css({'border': 'none'}); 
                 } 
             });
             
@@ -94,8 +101,8 @@ $(function() {
 
         
 
-        mobile();
         pc();
+        mobile();
 
         var WinW = $(window).width();
         if (WinW > 1024) {
