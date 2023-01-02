@@ -69,8 +69,10 @@ header h1 {
   }
 }
 header .waves {
+  border: 1px solid pink;
+  position: absolute;
   overflow: hidden;
-  margin-left: 0%;
+  right: 0;
   width: 100%;
   margin-top: -160px;
 }
@@ -209,6 +211,26 @@ header nav li {
 header nav li:nth-child(3), header nav li:nth-child(4) {
   width: 26%;
   font-size: 98%;
+}
+@-webkit-keyframes hovernav {
+  0% {
+    font-size: 109%;
+  }
+  100% {
+    font-size: 120%;
+  }
+}
+@keyframes hovernav {
+  0% {
+    font-size: 109%;
+  }
+  100% {
+    font-size: 120%;
+  }
+}
+header nav li:hover {
+  -webkit-animation: hovernav 0.5s 0s alternate forwards;
+          animation: hovernav 0.5s 0s alternate forwards;
 }
 @media screen and (min-width: 1024px) {
   header nav li {
@@ -357,8 +379,8 @@ main section.about .introduction {
     transform: none;
     background-color: transparent;
     color: #f1f6f5;
-    margin-top: 1400px;
-    margin-left: 1050px;
+    margin-top: 75%;
+    margin-left: 50%;
     line-height: 3.5rem;
     padding: 0;
     display: block;
@@ -589,7 +611,6 @@ main section.portfolio .circles .circle .webPF {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .webPF {
-    margin-top: 0;
     background-color: transparent;
     padding: 0;
   }
@@ -615,9 +636,9 @@ main section.portfolio .circles .circle .webPF {
     width: 18%;
     height: 45.3%;
     margin-left: 7%;
-    margin-top: -31%;
+    margin-top: -33.3%;
     padding-left: 1%;
-    padding-top: 8%;
+    padding-top: 10.3%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -643,9 +664,9 @@ main section.portfolio .circles .circle .webPF {
     height: 45.3%;
     position: absolute;
     margin-left: -9%;
-    margin-top: -31%;
+    margin-top: -33.3%;
     padding-right: 1%;
-    padding-top: 8%;
+    padding-top: 10%;
     border-right: 2px solid #f1f6f5;
     text-align: right;
   }
@@ -678,12 +699,21 @@ main section.portfolio .circles .circle .third-pc {
   main section.portfolio .circles .submarine-two .buttons {
     margin-top: 40%;
   }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  main section.portfolio .circles .submarine-two .buttons {
+    margin-top: 42%;
+  }
+}
+@media screen and (min-width: 1024px) {
   main section.portfolio .circles .submarine-three {
     margin-left: 8%;
   }
   main section.portfolio .circles .submarine-three .buttons {
     margin-left: 11%;
   }
+}
+@media screen and (min-width: 1024px) {
   main section.portfolio .circles .submarine-one .buttons,
 main section.portfolio .circles .submarine-three .buttons {
     margin-top: 17.5%;

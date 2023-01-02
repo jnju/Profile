@@ -8,7 +8,7 @@ $(function() {
                 'border' :'2px solid $color-sub'
             })
 
-            $('.circles').stop();
+            // $('.circles').stop();
             console.log($(document).scrollTop());
             
             if ($(document).scrollTop() < 800) {

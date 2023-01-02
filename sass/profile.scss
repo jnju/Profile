@@ -34,8 +34,10 @@ header {
     }
 
     .waves {
+        border: 1px solid pink;
+        position: absolute;
         overflow: hidden;
-        margin-left: 0%;
+        right: 0;
         width: 100%;
         margin-top: -160px;
         @include responsive(pc-screens){
@@ -130,6 +132,13 @@ header {
             &:nth-child(4) {
                 width: 26%;
                 font-size: 98%;
+            }
+            @keyframes hovernav {
+                0% {font-size: 109%;}
+                100%{font-size: 120%;}
+            }
+            &:hover{
+                animation: hovernav 0.5s 0s alternate forwards;
             }
             @include responsive(pc-screens) {
                 line-height: 1.4em;
@@ -252,7 +261,7 @@ main {
                 transform: none;
                 background-color: transparent;
                 color: $color-sub;
-                margin-top: 1400px; margin-left: 1050px;
+                margin-top: 75%; margin-left: 50%;
                 line-height: 3.5rem;
                 padding: 0;
                 h4 {
@@ -435,7 +444,6 @@ main {
                     padding: 10%;
                     width: 100%; height: 100%;
                     @include responsive(pc-screens) {
-                        margin-top: 0;
                         background-color: transparent;
                         padding: 0;
                         // background-color: aqua;
@@ -460,8 +468,8 @@ main {
                             position: absolute;
                             border-left: 2px solid $color-sub;
                             width: 18%; height: 45.3%;
-                            margin-left: 7%; margin-top: -31%;
-                            padding-left: 1%; padding-top: 8%;
+                            margin-left: 7%; margin-top: -33.3%;
+                            padding-left: 1%; padding-top: 10.3%;
                         }
                     }
                 }
@@ -485,8 +493,8 @@ main {
                         .webPF{
                             width: 18%; height: 45.3%;
                             position: absolute;
-                            margin-left: -9%; margin-top: -31%;
-                            padding-right: 1%; padding-top: 8%;
+                            margin-left: -9%; margin-top: -33.3%;
+                            padding-right: 1%; padding-top: 10%;
                             border-right: 2px solid $color-sub;
                             text-align: right;
                         }
@@ -524,6 +532,9 @@ main {
                     margin-left: 4%; 
                     .buttons {
                         margin-top: 40%;
+                        @include responsive(pc-screens) {
+                            margin-top: 42%;
+                        }
                     }
                 }
                 .submarine-three { 
