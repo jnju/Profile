@@ -23,6 +23,11 @@ html { font-size: 16px; }
 }
 
 header {
+    .logo_me {
+        position: absolute;
+        width: 5%;
+        margin: 2%; top: 0;
+    }
     h1 {
         font-size: 2rem;
         font-weight: bold;
@@ -34,7 +39,7 @@ header {
     }
 
     .waves {
-        border: 1px solid pink;
+        // border: 1px solid pink;
         position: absolute;
         overflow: hidden;
         right: 0;
@@ -389,6 +394,7 @@ main {
             @include responsive(pc-screens) {
                 display: flex;
                 margin-left: -105%;
+                width: 100%;
             }
             .submarine-mobile {
                 position: relative;
@@ -411,7 +417,12 @@ main {
                     overflow: visible;
                     margin-left: 0;
                     width: 50%;
-                    
+                    .for-slide {
+                        // border: 1px solid white;
+                        width: 200%; height: 900px;
+                        padding: 0; margin-left: -10%;
+                        margin-top: -7%;
+                    }
                 }
 
                 .first-line-fall {
@@ -427,13 +438,14 @@ main {
                     background-color: #fff;
                     margin-left: -1.4%; 
                     @include responsive(pc-screens) {
-                        position: absolute;
-                        width: 15%; height: 28%;
-                        margin-left: 0;
+                        position: relative;
+                        width: 70%; height: 28%;
                         border-radius: 1000px;
                         background-color: transparent;
                     }
                 }
+                
+                
                 .webPF {
                     position: relative;
                     z-index: 0;
@@ -452,49 +464,46 @@ main {
 
                 .pc-submarine-text{
                     @include responsive(pc-screens) {
-                        margin-top: 165%;
+                        margin-top: 0%;
                         margin-left: 20%;
-                        width: 200%;
+                        width: 90%;
                     }
                 }
 
                 .one{
                     @include responsive(pc-screens) {
-                        border: 1px solid $color-main;
-                        width: 0%;
-                        margin-top: 300%; margin-left: 5%;
+                        width: 100%;
+                        margin-top: 18%; margin-left: 8%;
                         .webPF{
+                            position: relative;
                             text-align: left;
-                            position: absolute;
                             border-left: 2px solid $color-sub;
-                            width: 18%; height: 45.3%;
-                            margin-left: 7%; margin-top: -33.3%;
-                            padding-left: 1%; padding-top: 10.3%;
+                            width: 100%; height: 45.3%;
+                            margin-left: 10%; margin-top: -20%;
+                            padding: 50% 6%;
                         }
                     }
                 }
 
                 .two {
-                    @include responsive(pc-screens) {
-                        margin-left: 33%; margin-top: 75%;
+                    @include responsive(pc-screens) {                            
+                        margin-left: 19%; margin-top: 40%;
                         .webPF{
-                            width: 18%;
-                            position: absolute;
-                            // border: 1px solid aqua;
+                            width: 100%;
                             text-align: center;
-                            margin-top: 20%; margin-left: 0;
+                            margin-top: 20%; margin-left: -70px;
                         }
                     }
                 }
 
                 .three{
                     @include responsive(pc-screens) {
-                        margin-top: 300%; margin-left: 57%;
+                        position: relative;
                         .webPF{
-                            width: 18%; height: 45.3%;
-                            position: absolute;
-                            margin-left: -9%; margin-top: -33.3%;
-                            padding-right: 1%; padding-top: 10%;
+                            width: 100%; height: 45.3%;
+                            // position: absolute;
+                            margin-left: -40%; margin-top: 0%;
+                            padding: 50% 6%;
                             border-right: 2px solid $color-sub;
                             text-align: right;
                         }
@@ -511,9 +520,9 @@ main {
                 }
 
                 @include responsive(pc-screens) {
-                    .second-pc,
-                    .third-pc {
-                        margin-left: 7%;
+                    .second-pc {
+                        margin-left: 8%;
+                        width: 143%;
                     }
                     .third-pc {
                         margin-left: 14%;
@@ -524,7 +533,9 @@ main {
 
             @include responsive(pc-screens) {
                 .submarine-one {
+                    position: relative;
                     .buttons {
+                        position: relative;
                         margin-left: 5.4%;
                     }
                 }
@@ -533,7 +544,7 @@ main {
                     .buttons {
                         margin-top: 40%;
                         @include responsive(pc-screens) {
-                            margin-top: 42%;
+                            // margin-top: 42%;
                         }
                     }
                 }
@@ -552,7 +563,7 @@ main {
             }
 
             .buttons {
-                position: absolute;
+                position: relative;
                 margin: 5% 10%;
                 display: flex;
                 flex-direction: row;
@@ -563,7 +574,7 @@ main {
                     display: block;
                     flex-direction: column;
                     flex-wrap: wrap;
-                    width: 7%;
+                    width: 30%;
                     // margin: 5% 9%;
                 }
                 .design,
@@ -591,6 +602,9 @@ main {
         } // circles
 
         .java-box-container {
+            @include responsive(pc-screens) {
+                margin-top: 500px;
+            }
             .java-box{
                 @include responsive(pc-screens) {
                     width: 100%;
@@ -612,8 +626,8 @@ main {
                         @include responsive(pc-screens) {
                             // display: block;
                             position: relative;
-                            width: 35%;
-                            left: 32%; top: -90%;
+                            width: 40%;
+                            left: 32%; top: -110%;
                             z-index: 1;
                         }
                     }

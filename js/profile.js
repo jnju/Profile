@@ -43,11 +43,9 @@ $(function() {
             console.log($(document).scrollTop());
 
             if (($(document).scrollTop() > 3850) && ($(document).scrollTop() < 5100)) {
-                $('.circles').stop().animate({'margin-left':'0'},3000);
-                // $('nav').css({'border': '1px solid aqua'});
+                $('.circles').stop().animate({'margin-left':'0'},2000);
             } else {
-                $('.circles').css({'margin-left':'-105%'});
-                // $('nav').css({'border': 'none'});
+                $('.circles').css({'margin-left':'-1300px'});
             } 
             
             if ($(document).scrollTop() < 800) {
