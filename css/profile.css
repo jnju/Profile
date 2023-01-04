@@ -59,9 +59,14 @@ html {
 
 header .logo_me {
   position: absolute;
-  width: 5%;
-  margin: 2%;
+  width: 19%;
+  margin: 3%;
   top: 0;
+}
+@media screen and (min-width: 1024px) {
+  header .logo_me {
+    width: 6%;
+  }
 }
 header h1 {
   font-size: 2rem;
@@ -184,7 +189,6 @@ header nav {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   width: 105%;
-  left: 1%;
   top: 2%;
   border: 2px solid #f1f6f5;
   margin-left: -4%;
@@ -563,7 +567,7 @@ main section.portfolio .circles .submarine-mobile {
 main section.portfolio .circles .circle {
   cursor: pointer;
   width: 100%;
-  height: 80%;
+  height: 390px;
   overflow: hidden;
   border-radius: 300px;
   margin-bottom: 25%;
@@ -578,11 +582,23 @@ main section.portfolio .circles .circle {
     width: 50%;
   }
   main section.portfolio .circles .circle .for-slide {
+    overflow: hidden;
     width: 200%;
-    height: 900px;
+    height: 1300px;
     padding: 0;
     margin-left: -10%;
-    margin-top: -7%;
+    margin-top: -70%;
+  }
+  main section.portfolio .circles .circle .for-slide .first-slide,
+main section.portfolio .circles .circle .for-slide .second-slide,
+main section.portfolio .circles .circle .for-slide .third-slide {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    background-color: #142850;
+    margin: 0;
+    margin-top: -1120px;
   }
 }
 main section.portfolio .circles .circle .first-line-fall {
@@ -593,10 +609,10 @@ main section.portfolio .circles .circle .j,
 main section.portfolio .circles .circle .profile-capture {
   position: relative;
   z-index: 0;
-  width: 95%;
+  width: 100%;
   padding: 0 20px;
   background-color: #fff;
-  margin-left: -1.4%;
+  margin: -100% 0 0 -5%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .b,
@@ -605,31 +621,33 @@ main section.portfolio .circles .circle .profile-capture {
     position: relative;
     width: 70%;
     height: 28%;
+    margin: 0;
     border-radius: 1000px;
     background-color: transparent;
   }
 }
 main section.portfolio .circles .circle .webPF {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -99.4%;
-  margin-left: -10%;
   text-align: center;
   font-size: 1.3rem;
-  padding: 10%;
+  padding-top: 13%;
+  padding-bottom: 15%;
   width: 100%;
   height: 100%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .webPF {
+    margin-top: -99.4%;
+    margin-left: -10%;
     background-color: transparent;
     padding: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text {
-    margin-top: 0%;
+    margin-top: 132%;
     margin-left: 20%;
     width: 90%;
   }
@@ -637,7 +655,6 @@ main section.portfolio .circles .circle .webPF {
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one {
     width: 100%;
-    margin-top: 18%;
     margin-left: 8%;
   }
   main section.portfolio .circles .circle .one .webPF {
@@ -647,19 +664,23 @@ main section.portfolio .circles .circle .webPF {
     width: 100%;
     height: 45.3%;
     margin-left: 10%;
-    margin-top: -20%;
     padding: 50% 6%;
   }
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two {
     margin-left: 19%;
-    margin-top: 40%;
+    margin-top: 71.5%;
+  }
+  main section.portfolio .circles .circle .two span {
+    padding: 182px 0 49px 0;
+    margin-left: 140px;
+    border-left: 2px solid #f1f6f5;
   }
   main section.portfolio .circles .circle .two .webPF {
     width: 100%;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 40%;
     margin-left: -70px;
   }
 }
@@ -671,7 +692,7 @@ main section.portfolio .circles .circle .webPF {
     width: 100%;
     height: 45.3%;
     margin-left: -40%;
-    margin-top: 0%;
+    margin-top: -112%;
     padding: 50% 6%;
     border-right: 2px solid #f1f6f5;
     text-align: right;
@@ -701,23 +722,22 @@ main section.portfolio .circles .circle .submarine-pc {
   }
   main section.portfolio .circles .submarine-one .buttons {
     position: relative;
-    margin-left: 5.4%;
+    margin-left: 23%;
   }
   main section.portfolio .circles .submarine-two {
     margin-left: 4%;
   }
   main section.portfolio .circles .submarine-two .buttons {
-    margin-top: 40%;
+    margin-top: 6%;
+    margin-left: 18%;
   }
   main section.portfolio .circles .submarine-three {
     margin-left: 8%;
   }
   main section.portfolio .circles .submarine-three .buttons {
+    margin-top: 24%;
     margin-left: 11%;
-  }
-  main section.portfolio .circles .submarine-one .buttons,
-main section.portfolio .circles .submarine-three .buttons {
-    margin-top: 17.5%;
+    width: 32%;
   }
 }
 main section.portfolio .circles .buttons {
@@ -760,7 +780,8 @@ main section.portfolio .circles .buttons .design {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container {
-    margin-top: 500px;
+    border: 1px solid pink;
+    margin-top: 300px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -800,7 +821,7 @@ main section.portfolio .java-box-container .java-box .turtle-box .second-turtle 
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container .first-java-box {
-    margin-top: 50%;
+    margin-top: 20%;
   }
 }
 main section.portfolio .first {
