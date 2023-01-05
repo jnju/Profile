@@ -572,6 +572,11 @@ main section.portfolio .circles .circle {
   border-radius: 300px;
   margin-bottom: 25%;
 }
+main section.portfolio .circles .circle .for-slide .first-slide,
+main section.portfolio .circles .circle .for-slide .second-slide,
+main section.portfolio .circles .circle .for-slide .third-slide {
+  display: none;
+}
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle {
     width: 100%;
@@ -592,6 +597,7 @@ main section.portfolio .circles .circle {
   main section.portfolio .circles .circle .for-slide .first-slide,
 main section.portfolio .circles .circle .for-slide .second-slide,
 main section.portfolio .circles .circle .for-slide .third-slide {
+    display: block;
     position: relative;
     z-index: 3;
     height: 100%;

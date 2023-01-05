@@ -1,15 +1,18 @@
 $(function() {
 
     function mobile() {
+        
         $('nav').css({'position':'fixed', 'top':'-60%'});
-
+        
         $(window).on("scroll", function (e) {
+            $('.circles').css({'margin-left':'0'});
             $('nav').css({
                 'border' :'2px solid $color-sub'
             });
 
             console.log($(document).scrollTop());
             
+
             if ($(document).scrollTop() < 800) {
                 $('nav').stop().animate({'position':'fixed','top':'-60%'},60);
             } else if ($(document).scrollTop() > 600) {
@@ -37,8 +40,10 @@ $(function() {
 
         function pc() {
             // var first_slide = document.querySelector('.first-slide')
+            $('.circles').css({'margin-left':'-1300px'});
             $('nav').css({'position':'absilute', 'top':'-60%'});
             $(window).on("scroll", function (e) {
+
                 console.log($(document).scrollTop());
 
                 if (($(document).scrollTop() > 3850) && ($(document).scrollTop() < 5100)) {
