@@ -622,7 +622,7 @@ main {
 
         .java-box-container {
             @include responsive(pc-screens) {
-                border: 1px solid pink;
+                // border: 1px solid pink;
                 margin-top: 300px;
             }
             .java-box{
