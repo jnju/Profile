@@ -1,7 +1,6 @@
 $(function() {
 
     function mobile() {
-        
         $('nav').css({'position':'fixed', 'top':'-60%'});
         
         $(window).on("scroll", function (e) {
@@ -39,7 +38,6 @@ $(function() {
     } // menu-mobile 
 
         function pc() {
-            // var first_slide = document.querySelector('.first-slide')
             $('.circles').css({'margin-left':'-1300px'});
             $('nav').css({'position':'absilute', 'top':'-60%'});
             $(window).on("scroll", function (e) {
@@ -106,17 +104,21 @@ $(function() {
             
         }
 
-        
 
         pc();
         mobile();
 
-        var WinW = $(window).width();
-        if (WinW > 1024) {
-            pc();
-        }
-        else if (WinW < 1024) {
-            mobile();
-        }
+
+        $(window).resize(function () {
+            var WinW = $(window).width();
+            if (WinW > 1024) {
+                pc();
+            }
+            else if (WinW < 1024) {
+                $('.circles').css({'margin-left':'0'});
+
+                mobile();
+            }
+        });
 
 });
