@@ -46,6 +46,10 @@ html {
   font-size: 16px;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   margin: auto 6%;
 }
@@ -540,29 +544,6 @@ main section.skills .skill .percent {
     margin-top: 8%;
   }
 }
-main section.portfolio .modal {
-  z-index: 5;
-  position: fixed;
-  background-color: #eee;
-  color: #000;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  margin-left: -6%;
-  overflow: hidden;
-}
-@media screen and (min-width: 1024px) {
-  main section.portfolio .modal {
-    margin-left: -25%;
-  }
-}
-main section.portfolio .modal .modal-contents {
-  position: relative;
-  border: 1px solid aqua;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
 @media screen and (min-width: 1024px) {
   main section.portfolio .submarine-hide-box {
     width: 100%;
@@ -832,6 +813,158 @@ main section.portfolio .circles .buttons .design {
     margin-right: 0;
     margin-bottom: 20px;
   }
+}
+main section.portfolio .circles .modal {
+  cursor: auto;
+  z-index: 5;
+  position: fixed;
+  background-color: white;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin-left: -6%;
+  overflow: auto;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal {
+    margin-left: -49.8%;
+  }
+}
+main section.portfolio .circles .modal .x {
+  cursor: pointer;
+  margin-left: 90%;
+  margin-top: 1%;
+  font-size: 2rem;
+}
+main section.portfolio .circles .modal .modal-contents {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 5%;
+}
+main section.portfolio .circles .modal .modal-contents h4 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal .modal-contents h4 {
+    font-size: 2.5rem;
+  }
+}
+main section.portfolio .circles .modal .modal-contents h4::after {
+  font-family: "PT Sans", sans-serif;
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 1px solid black;
+  margin: 8px auto;
+}
+main section.portfolio .circles .modal .modal-contents h5 {
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal .modal-contents h5 {
+    font-size: 2rem;
+  }
+}
+main section.portfolio .circles .modal_jujery .jujery_capture {
+  width: 100%;
+  filter: brightness(50%);
+}
+main section.portfolio .circles .modal_jujery .modal-contents p {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal_jujery .modal-contents p {
+    font-size: 1.2rem;
+  }
+}
+main section.portfolio .circles .modal_jujery .modal-contents .pc-and-mobile {
+  text-align: center;
+  margin-top: -20%;
+  margin-bottom: 20%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .pc-and-mobile .pc-jujery {
+  width: 60%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .pc-and-mobile .mobile-jujery {
+  width: 20%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .grid-system {
+  width: 100%;
+  border: 1px solid #c5cacc;
+  padding: 2%;
+  margin-bottom: 5%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .grid-system img {
+  width: 33%;
+  display: inline-block;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .grid-system p {
+  font-size: 0.5rem;
+  display: inline-block;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal_jujery .modal-contents .grid-system p {
+    font-size: 1.5rem;
+  }
+}
+main section.portfolio .circles .modal_jujery .modal-contents .concept {
+  width: 80%;
+  padding: 2%;
+  background-color: #eee;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .color-system {
+  width: 80%;
+  float: right;
+  padding: 2%;
+  background-color: #ccc;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .color-system .colors {
+  text-align: center;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .color-system .colors img {
+  width: 20%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .typograpy {
+  margin-top: 52%;
+  padding: 2%;
+  width: 80%;
+  background-color: #a0a0a0;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex {
+  display: flex;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex .sub {
+  padding-left: 10px;
+  border-left: 1px solid #333;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex span {
+  color: #6f6f6f;
+  font-size: 0.8rem;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex p span {
+  color: #000;
+  font-size: 0.6rem;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .logo {
+  margin-top: 10%;
+  padding: 5%;
+  width: 90%;
+  background-color: #f8f9fa;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .logo p {
+  font-size: 0.5rem;
+  margin-top: -20px;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .logo p::after {
+  font-family: "PT Sans", sans-serif;
+  content: "";
+  display: inline-block;
+  width: 43%;
+  border-bottom: 1px solid #b1b1b1;
+  margin: 3px 15px;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container {

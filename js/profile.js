@@ -1,5 +1,14 @@
 $(function() {
 
+    $(".pc-submarine-text").children('.buttons').children('.design').click(function(event) {
+        $('body').css('overflow','hidden');
+        $(this).parent().next().css('display','block');
+    })
+    $('.x').click(function(event) {
+        $(this).parent().css('display','none')
+        $('body').css('overflow','visible');
+    });
+
     function mobile() {
         $('nav').css({'position':'fixed', 'top':'-60%'});
         
