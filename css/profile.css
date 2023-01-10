@@ -954,17 +954,17 @@ main section.portfolio .circles .modal_jujery .modal-contents .logo {
   width: 90%;
   background-color: #f8f9fa;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .logo p {
-  font-size: 0.5rem;
-  margin-top: -20px;
-}
-main section.portfolio .circles .modal_jujery .modal-contents .logo p::after {
+main section.portfolio .circles .modal_jujery .modal-contents .logo .logo-text::after {
   font-family: "PT Sans", sans-serif;
   content: "";
   display: inline-block;
-  width: 43%;
-  border-bottom: 1px solid #b1b1b1;
-  margin: 3px 15px;
+  width: 38%;
+  border-bottom: 1px solid black;
+  margin: 3px 10px;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .logo .jujery-logo {
+  margin: 5% 30%;
+  width: 40%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container {

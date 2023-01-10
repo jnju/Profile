@@ -783,18 +783,20 @@ main {
                         padding: 5%;
                         width: 90%;
                         background-color: #f8f9fa;
-                        p {
-                            font-size: 0.5rem;
-                            margin-top: -20px;
-                            &::after {
-                                font-family: 'PT Sans', sans-serif;
-                                content: '';
-                                display: inline-block;
-                                width: 43%; 
-                                border-bottom: 1px solid #b1b1b1;
-                                margin: 3px 15px;
-                            }
-                        }
+                        .logo-text {
+							&::after {
+								font-family: 'PT Sans', sans-serif;
+								content: '';
+								display: inline-block;
+								width: 38%; 
+								border-bottom: 1px solid black;
+								margin: 3px 10px;
+							}
+						}
+						.jujery-logo {
+							margin: 5% 30%;
+							width: 40%;
+						}
                     }
                 }
             }
