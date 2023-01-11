@@ -841,9 +841,14 @@ main section.portfolio .circles .modal {
 }
 main section.portfolio .circles .modal .x-box {
   position: fixed;
-  width: 99.1%;
+  width: 97%;
   background-color: white;
   z-index: 5;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal .x-box {
+    width: 99.1%;
+  }
 }
 main section.portfolio .circles .modal .x-box .x {
   cursor: pointer;

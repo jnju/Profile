@@ -658,9 +658,12 @@ main {
 				}
                 .x-box {
                     position: fixed;
-                    width: 99.1%;
+                    width: 97%;
                     background-color: white;
                     z-index: 5;
+                    @include responsive(pc-screens) {
+                        width: 99.1%;
+                    }
                     .x {
                         cursor: pointer;
                         margin-left: 90%;
