@@ -537,10 +537,10 @@ main {
                     @include responsive(pc-screens) {                            
                         margin-left: 19%;
                         margin-top: 71.5%;
-                        span {
+                        span.line {
                             padding: 182px 0 49px 0;
                             margin-left: 140px;
-                            border-left: 2px solid $color-sub;
+                            border: 1px solid $color-sub;
                         }
                     }
                 }
@@ -553,7 +553,6 @@ main {
                         margin-top: -9%;
                         @include responsive(pc-screens) {
                             width: 100%; height: 45.3%;
-                            // position: absolute;
                             margin-left: -40%; margin-top: -112%;
                             padding: 50% 6%;
                             border-right: 2px solid $color-sub;
@@ -567,7 +566,6 @@ main {
                     @include responsive(pc-screens) {
                         display: inline-block;
                         width: 170%;
-                        // border: 1px solid aqua;
                     }
                 }
 
@@ -646,7 +644,7 @@ main {
 
             .modal {
                 cursor: auto;
-				// display: none;
+				display: none;
 				z-index: 5;
 				position: fixed;
 				background-color: white;
@@ -658,11 +656,17 @@ main {
 				@include responsive(pc-screens) {
                     margin-left: -49.8%;
 				}
-                .x {
-                    cursor: pointer;
-                    margin-left: 90%;
-                    margin-top: 1%;
-                    font-size: 2rem;
+                .x-box {
+                    position: fixed;
+                    width: 99.1%;
+                    background-color: white;
+                    z-index: 5;
+                    .x {
+                        cursor: pointer;
+                        margin-left: 90%;
+                        margin-top: 1%;
+                        font-size: 2rem;
+                    }
                 }
 				.modal-contents {
 					position: relative;
@@ -759,6 +763,9 @@ main {
                         padding: 2%;
                         width: 80%; 
                         background-color: #a0a0a0;
+                        @include responsive(pc-screens) {
+                            margin-top: 30.6%;
+                        }
                         .main-sub-flex {
                             display: flex;
                             .sub {
@@ -839,17 +846,44 @@ main {
                     } // main-page-design
                     .sub-page {
                         margin-top: 20%;
+                        .pc1,
+                        .pc2 {
+                            display: block;
+                            margin-left: 10%;
+                            margin-top: -70%;
+                            width: 80%;
+                        @include responsive(pc-screens) {
+                            width: 50%;
+                            margin-left: 25%;
+                            margin-top: -20%;
+                        }
+                        }
+                        .mobile-long,
+                        .mobile-short {
+                            position: relative;
+                            width: 30%;
+                            display: inline-block;
+                        @include responsive(pc-screens) {
+                            width: 16%;
+                        }
+                        }
+                        .mobile-long{
+                            margin: -15% 0 0 10%;
+                        }
                         tr {
                             border-collapse: collapse;
                             &:nth-child(1),
                             &:nth-child(4) {
-                                padding-bottom: 50px;
-                                height: 250px;
                                 background-color: #d8d8d8;
+                                td {
+                                    padding: 40px 0 120px 0;
+                                }
                             }
                             &:nth-child(2),&:nth-child(5){
                                 text-align: center;
-                                height: 350px;
+                                td {
+                                    padding: 200px 0 100px 0;
+                                }
                             }
                             &:nth-child(2){
                                 background-color: #fdea8c;
@@ -859,8 +893,19 @@ main {
                             }
                             td {
                                 border-collapse: collapse;
+                                p {
+                                    width: 50%;
+                                    margin-left: 5%;
+                                    display: inline-block;
+                                }
+                                h5 {
+                                    padding-left: 30px;
+                                }
                             }
                         }
+                    }
+                    .captures {
+                        width: 100%;
                     }
                 }
             }

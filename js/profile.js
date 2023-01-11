@@ -5,7 +5,7 @@ $(function() {
         $(this).parent().next().css('display','block');
     })
     $('.x').click(function(event) {
-        $(this).parent().css('display','none')
+        $(this).parent().parent().css('display','none')
         $('body').css('overflow','visible');
     });
 
