@@ -32,6 +32,13 @@ a {
   text-decoration: none;
 }
 
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border: none;
+}
+
 h3 {
   font-size: 0;
 }
@@ -965,6 +972,68 @@ main section.portfolio .circles .modal_jujery .modal-contents .logo .logo-text::
 main section.portfolio .circles .modal_jujery .modal-contents .logo .jujery-logo {
   margin: 5% 30%;
   width: 40%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design h4 {
+  margin-top: 20%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design ul {
+  width: 36%;
+  display: inline-block;
+  margin-right: 3%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design ul li {
+  margin-bottom: 3%;
+  padding: 10%;
+  background-color: #eee;
+  text-align: center;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design ul li:nth-child(2) {
+  padding: 30% 10%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-pc-jujery {
+  display: inline-block;
+  width: 43%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-mobile-jujery {
+  width: 15%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-design-text {
+  margin-top: 10%;
+  text-align: center;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-capture {
+  text-align: center;
+  margin-top: 3%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-capture .main-page-pc {
+  width: 51.4%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-capture .main-page {
+  width: 35%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .sub-page {
+  margin-top: 20%;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr {
+  border-collapse: collapse;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr:nth-child(1), main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr:nth-child(4) {
+  padding-bottom: 50px;
+  height: 250px;
+  background-color: #d8d8d8;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr:nth-child(2), main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr:nth-child(5) {
+  text-align: center;
+  height: 350px;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr:nth-child(2) {
+  background-color: #fdea8c;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr:nth-child(5) {
+  background-color: #f2c989;
+}
+main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr td {
+  border-collapse: collapse;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container {

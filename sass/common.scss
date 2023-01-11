@@ -21,3 +21,10 @@ a {
     color: $color-sub;
     text-decoration: none;
 }
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border: none;
+}

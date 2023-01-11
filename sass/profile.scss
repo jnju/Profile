@@ -797,6 +797,70 @@ main {
 							margin: 5% 30%;
 							width: 40%;
 						}
+                    } // logo
+                    .main-page-design {
+                        h4{
+                            margin-top: 20%;
+                        }
+                        ul {
+                            width: 36%;
+                            display: inline-block;
+                            margin-right: 3%;
+                            li{
+                                margin-bottom: 3%; padding: 10%;
+                                background-color: #eee;
+                                text-align: center;
+                                &:nth-child(2) {
+                                    padding: 30% 10%;
+                                }
+                            }
+                        }
+                        .main-page-pc-jujery {
+                            display: inline-block;
+                            width: 43%;
+                        }
+                        .main-page-mobile-jujery {
+                            width: 15%;
+                        }
+                        .main-page-design-text{
+                            margin-top: 10%;
+                            text-align: center;
+                        }
+                        .main-page-capture {
+                            text-align: center;
+                            margin-top: 3%;
+                            .main-page-pc {
+                                width: 51.4%;
+                            }
+                            .main-page {
+                                width: 35%;
+                            }
+                        }
+                    } // main-page-design
+                    .sub-page {
+                        margin-top: 20%;
+                        tr {
+                            border-collapse: collapse;
+                            &:nth-child(1),
+                            &:nth-child(4) {
+                                padding-bottom: 50px;
+                                height: 250px;
+                                background-color: #d8d8d8;
+                            }
+                            &:nth-child(2),&:nth-child(5){
+                                text-align: center;
+                                height: 350px;
+                            }
+                            &:nth-child(2){
+                                background-color: #fdea8c;
+                            }
+                            &:nth-child(5){
+                                background-color: #f2c989;
+                            }
+                            td {
+                                border-collapse: collapse;
+                            }
+                        }
                     }
                 }
             }
