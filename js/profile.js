@@ -53,7 +53,7 @@ $(function() {
 
                 console.log($(document).scrollTop());
 
-                if (($(document).scrollTop() > 3850) && ($(document).scrollTop() < 5100)) {
+                if (($(document).scrollTop() > 3650) && ($(document).scrollTop() < 5100)) {
                     $('.circles').stop().animate({'margin-left':'0'},2000);
                     setTimeout(function() {
                         $('.first-slide').stop().animate({'margin': '0'},3000);

@@ -600,7 +600,7 @@ main section.portfolio .circles .circle .for-slide .third-slide {
   main section.portfolio .circles .circle .for-slide {
     overflow: hidden;
     width: 200%;
-    height: 1300px;
+    height: 1350px;
     padding: 0;
     margin-left: -10%;
     margin-top: -70%;
@@ -814,9 +814,10 @@ main section.portfolio .circles .buttons {
   }
 }
 main section.portfolio .circles .buttons .design,
-main section.portfolio .circles .buttons .detail {
+main section.portfolio .circles .buttons .detail,
+main section.portfolio .circles .buttons .git {
   cursor: pointer;
-  margin: auto 50%;
+  margin: auto 40%;
   text-align: center;
   border: 2px solid #f1f6f5;
   padding: 5% 10%;
@@ -824,7 +825,8 @@ main section.portfolio .circles .buttons .detail {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons .design,
-main section.portfolio .circles .buttons .detail {
+main section.portfolio .circles .buttons .detail,
+main section.portfolio .circles .buttons .git {
     margin: 0;
   }
 }
@@ -835,6 +837,16 @@ main section.portfolio .circles .buttons .design {
   main section.portfolio .circles .buttons .design {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+}
+main section.portfolio .circles .buttons .git {
+  margin-left: -27%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .buttons .git {
+    width: 75%;
+    margin-top: 17%;
+    margin-left: 0%;
   }
 }
 main section.portfolio .circles .modal {
@@ -1111,6 +1123,11 @@ main section.portfolio .circles .modal_jujery .modal-contents .sub-page tr td h5
 }
 main section.portfolio .circles .modal_jujery .modal-contents .captures {
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal_portfolio {
+    margin-left: -74.3%;
+  }
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container {

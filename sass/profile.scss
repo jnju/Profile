@@ -436,7 +436,7 @@ main {
                     .for-slide {
                         overflow: hidden;
                         // border: 1px solid white;
-                        width: 200%; height: 1300px;
+                        width: 200%; height: 1350px;
                         padding: 0; margin-left: -10%;
                         margin-top: -70%;
                         .first-slide,
@@ -632,9 +632,10 @@ main {
                     margin: 5% 10%;
                 }
                 .design,
-                .detail {
+                .detail,
+                .git {
                     cursor: pointer;
-                    margin: auto 50%;
+                    margin: auto 40%;
                     text-align: center;
                     border: 2px solid $color-sub;
                     padding: 5% 10%;
@@ -648,6 +649,14 @@ main {
                     @include responsive(pc-screens) {
                         margin-right: 0;
                         margin-bottom: 20px;
+                    }
+                }
+                .git {
+                    margin-left: -27%;
+                    @include responsive(pc-screens) {
+                        width: 75%;
+                        margin-top: 17%;
+                        margin-left: 0%;
                     }
                 }
             }
@@ -920,6 +929,11 @@ main {
                     .captures {
                         width: 100%;
                     }
+                }
+            } // modal-jujery
+            .modal_portfolio {
+                @include responsive(pc-screens) {
+                    margin-left: -74.3%;
                 }
             }
         } // circles

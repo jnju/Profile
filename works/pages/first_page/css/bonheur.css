@@ -1,0 +1,448 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700);
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.container {
+    position: relative;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+    /* overflow; */
+    /* background-color: pink; */
+}
+
+.wrapper {
+    width: 100%;
+}
+/* --------header--------- */
+header {
+    position: relative;
+    width: 100%;
+    height: 210px;
+}
+/* ---------login---------- */
+.login-line {
+    width: 100%;
+    background-color: #f2f2f4;
+    border-bottom: 1px solid #b8b8b8;
+}
+
+.login-box {
+    height: 23px;
+}
+
+.login-list li {
+    display: inline-block;
+    float: right;
+    margin: 7px;
+    font-size: 12px;
+}
+
+.login-list li:hover {
+    font-weight: bold;
+}
+/* 로고와 검색창 묶음 */
+.logo-and-search {
+    margin-top: 66px;
+    margin-bottom: 69px;
+}
+
+/* ---------logo---------- */
+h2 > a {
+    float: left;
+    font-family: 'Roboto';
+    font-weight: bolder;
+    color: #0000cb;
+    margin-left: 90px;
+    margin-right: 102px;
+}
+
+h2 a p {
+    color: #0000cb;
+    font-family: 'Jeju Gothic', sans-serif;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+/* --------search-------- */
+.find-box {
+    float: left;
+}
+
+.find {
+    height: 58px; width: 477px;
+    padding: 15px;
+    background: transparent;
+    border-radius: 50px;
+    border: 7px solid #0000cb;
+}
+
+
+
+/* ---------메인---------- */
+.main-img img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.main-img p {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    transform: translate(0, -770%);
+}
+
+.main-img p span {
+    font-size: 20px;
+}
+
+
+/* --------메인 메뉴---------- */
+.main-menu {
+    transform: translate(0, -75px);
+    opacity: 70%;
+    background-color: black;
+    margin-top: 0px;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb li {
+    flex: 200px;
+    width: 100%;
+    padding: 30px 0;
+    margin-left: 65px;
+}
+
+.gnb li a{
+    font-weight: 100;
+    opacity: 1;
+    color: white;
+}
+
+.gnb li a:hover {
+    font-weight: bold;
+}
+
+/* --------trip type---------- */
+.triptype {
+    margin-top: 64px;
+}
+
+.triptype h4::after {
+    font-family: 'PT Sans', sans-serif;
+    content: '';
+    display: block;
+    width: 40px; 
+    border-bottom: 2px solid #0000cb;
+    margin: 8px auto;
+}
+
+.typeboxes {
+    display: flex;
+    margin-top: 32px;
+}
+
+.typeboxes img {
+    width: 237px;
+}
+
+.typebox {
+    margin: 8px;
+}
+
+.typebox p strong {
+    font-family: 'PT Sans', sans-serif;
+}
+
+@keyframes upimg {
+    0% { top:0; }
+    100% { top: -10px; }
+}
+
+.typebox:hover {
+    position: relative;
+    float: left;
+    display: block;
+    animation: upimg 0.5s alternate;
+    top: -10px;
+    text-decoration: underline;
+    z-index: 2;
+}
+
+/* ----------트립타입 표 영역---------- */
+.friend-course,
+.family-course,
+.love-course,
+.alone-course {
+    position: absolute;
+    float: left;
+    border: 1px solid #333;
+    margin-top: 25px;
+    padding: 0 123px;
+}
+
+.friend-course img,
+.family-course img,
+.love-course img,
+.alone-course img {
+    width: 745px;   
+}
+
+.family-course,
+.love-course,
+.alone-course {
+    display: none;
+}
+
+.friend-course {
+    z-index: 1;
+}
+
+.family-course {
+    left: 17px
+}
+
+.love-course {
+    left: 17px;
+}
+
+.alone-course {
+    left: 18px;
+}
+
+/* -----------like-------------- */
+.Like h4 {
+    margin-top: 700px;
+}
+
+.Like h4::after {
+    font-family: 'PT Sans', sans-serif;
+    content: '';
+    display: block;
+    width: 40px; 
+    border-bottom: 2px solid #0000cb;
+    margin: 8px auto;
+}
+
+.likebox {
+    display: inline-block;
+    padding: 4px;
+    margin-top: 65px;
+    background-color: #eee;
+}
+
+.likeboxes{
+    margin: 20px 10px;
+    display: flex;
+}
+
+.likelist {
+    margin: 5px;
+    height: 340px;
+    opacity: 80%;
+}
+
+.likelist:hover {
+    opacity: 100%;
+    font-weight: bold;
+}
+
+.likelist img {
+    width: 234px;
+}
+
+.likelist .heart {
+    width: 50px;
+    opacity: 80%;
+    transform: translate(8px, -60px);
+}
+
+.likelist p {
+    transform: translate(0, -55px);
+    line-height: 28px;
+}
+
+.likelist p a strong {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.likelist p span {
+    font-size: 13px;
+}
+
+.left,
+.right {
+    width: 41px;
+    height: 63px;
+}
+
+.left {
+    transform: translate(1000px, -240px);
+}
+
+.right {
+    transform: translate(-80px, -240px);
+}
+
+
+/* --------CONTACT US----------- */
+.contactus h4::after {
+    font-family: 'PT Sans', sans-serif;
+    content: '';
+    display: block;
+    width: 40px; 
+    border-bottom: 2px solid #0000cb;
+    margin: 8px auto;
+}
+
+.contactus h4 {
+    margin-top: 120px;
+    margin-bottom: 47px;
+}
+
+.contactcircle {
+    text-align: center;
+    margin-bottom: 125px;
+}
+
+.circle {
+    display: inline-block;
+    text-align: center;
+    width: 162px;
+    padding: 25px 28px;
+    margin: 30px;
+    border: 5px solid #333;
+    border-radius: 100%;
+}
+
+@keyframes bigimg {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.circle:hover {
+    animation: upimg 0.5s alternate;
+    transform: scale(1.1);
+}
+
+.circle img {
+    width: 96px;
+}
+
+
+/* ---------푸터----------- */
+.snsline{
+    width: 100%; height: 79px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.low-menu {
+    float: left;
+}
+
+.low-menu li {
+    display: inline-block;
+    font-size: 14px;
+    padding: 32px 0px;
+}
+
+.low-menu li a {
+    padding: 0px 15px;
+    border-right: 1px solid #333;
+}
+
+.low-menu li:last-child a{
+    border-right: none;
+}
+
+.low-menu li a:hover {
+    text-decoration: underline;
+}
+
+.sns {
+    float: right;
+    margin-left: 40px;
+    margin-top: 18px;
+}
+
+.sns img {
+    width: 42px;
+}
+
+/* ---------푸터하단---------- */
+.logo-info-security {
+    float: left;
+    display: flex;
+    flex-direction: row;   
+    margin-top: 30px;
+}
+
+.under-logo h2 {
+    font-size: 35px;
+    font-family: 'Roboto';
+    font-weight: bolder;
+    color: #0000cb;
+    line-height: 23px;
+}
+
+.under-logo h2 p {
+    color: #0000cb;
+    font-family: 'Jeju Gothic', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+address {
+    font-style: normal;
+    font-size: 13px;
+    line-height: 33px;
+}
+
+.info-copyright {
+    width: 90%;
+    border-right: 1px solid #333;
+}
+
+.copyright {
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.security {
+    width: 40%;
+    padding-left: 20px;
+    line-height: 25px;
+}
+
+.security h5 {
+    text-align: left;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+.security .safe {
+    line-height: 35px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.fixed-menu {
+    position: fixed;
+    right: 100px;
+    bottom: 50px;
+    background-color: #0000cb;
+}
+
+.fixed-menu li > a {
+    color: #fff;
+    width: 96px; height: 30px;
+    line-height: 38px;
+    text-align: center;
+    margin: 10px;
+}
