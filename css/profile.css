@@ -683,6 +683,14 @@ main section.portfolio .circles .circle .webPF {
     margin-left: 8%;
   }
 }
+main section.portfolio .circles .circle .one .buttons {
+  margin-top: -13%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .one .buttons {
+    margin-top: 0;
+  }
+}
 main section.portfolio .circles .circle .one .webPF {
   margin-top: -8%;
 }
@@ -723,6 +731,14 @@ main section.portfolio .circles .circle .two .webPF {
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .three {
     position: relative;
+  }
+}
+main section.portfolio .circles .circle .three .buttons {
+  margin-top: -5%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .three .buttons {
+    margin-top: 23%;
   }
 }
 main section.portfolio .circles .circle .three .webPF {
@@ -783,7 +799,7 @@ main section.portfolio .circles .circle .submarine-pc {
 }
 main section.portfolio .circles .buttons {
   position: absolute;
-  margin: -10% 10%;
+  margin: 0% 3%;
   display: flex;
   flex-direction: row;
 }
