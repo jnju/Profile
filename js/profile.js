@@ -1,5 +1,10 @@
 $(function() {
 
+    $(".pc-submarine-text").children('.webPF').children('.left-right').children('.design').click(function(event) {
+        console.log('버튼 추적 성공');
+        $('body').css('overflow','hidden');
+        $(this).parent().parent().next().next().css('display','block');
+    })
     $(".pc-submarine-text").children('.buttons').children('.design').click(function(event) {
         $('body').css('overflow','hidden');
         $(this).parent().next().css('display','block');
@@ -53,12 +58,12 @@ $(function() {
 
                 console.log($(document).scrollTop());
 
-                if (($(document).scrollTop() > 3650) && ($(document).scrollTop() < 5100)) {
+                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5100)) {
                     $('.circles').stop().animate({'margin-left':'0'},2000);
                     setTimeout(function() {
-                        $('.first-slide').stop().animate({'margin': '0'},3000);
-                        $('.second-slide').stop().animate({'margin': '0'},4000);
-                        $('.third-slide').stop().animate({'margin': '0'},5000);
+                        $('.first-slide').stop().animate({'margin': '0'},1000);
+                        $('.second-slide').stop().animate({'margin': '0'},2000);
+                        $('.third-slide').stop().animate({'margin': '0'},3000);
                     }, 3000);
                 } else {
                     $('.circles').css({'margin-left':'-1300px'});
@@ -73,7 +78,7 @@ $(function() {
                         $('nav').stop().animate({'position':'fixed','top':'5%'},60);
                     } 
 
-                if (($(document).scrollTop() > 2050) && ($(document).scrollTop() < 2864)) {
+                if (($(document).scrollTop() > 1450) && ($(document).scrollTop() < 2864)) {
                     $('.random-move1').stop().animate({'left': '115%'}, 3000);
                     $('.random-move2').stop().animate({'left': '100%'}, 3000);
                     $('.random-move3').stop().animate({'left': '95%'}, 3000);
@@ -124,7 +129,7 @@ $(function() {
                 pc();
             }
             else if (WinW < 1024) {
-                $('.circles').css({'margin-left':'0'});
+                // $('.circles').css({'margin-left':'0'});
 
                 mobile();
             }

@@ -208,7 +208,7 @@ header nav {
   header nav {
     border: none;
     width: 18%;
-    margin-top: 5%;
+    margin-top: 15%;
     margin-left: 1%;
   }
 }
@@ -590,6 +590,7 @@ main section.portfolio .circles .circle .for-slide .third-slide {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle {
+    border-radius: 0px;
     width: 100%;
     height: 30%;
     cursor: auto;
@@ -639,7 +640,7 @@ main section.portfolio .circles .circle .profile-capture {
     width: 70%;
     height: 28%;
     margin: 0;
-    border-radius: 1000px;
+    border-radius: 0px;
     background-color: transparent;
   }
 }
@@ -683,11 +684,13 @@ main section.portfolio .circles .circle .webPF {
     margin-left: 8%;
   }
 }
-main section.portfolio .circles .circle .one .buttons {
+main section.portfolio .circles .circle .one .buttons,
+main section.portfolio .circles .circle .one .left-right {
   margin-top: -13%;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .circle .one .buttons {
+  main section.portfolio .circles .circle .one .buttons,
+main section.portfolio .circles .circle .one .left-right {
     margin-top: 0;
   }
 }
@@ -733,11 +736,13 @@ main section.portfolio .circles .circle .two .webPF {
     position: relative;
   }
 }
-main section.portfolio .circles .circle .three .buttons {
+main section.portfolio .circles .circle .three .buttons,
+main section.portfolio .circles .circle .three .left-right {
   margin-top: -5%;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .circle .three .buttons {
+  main section.portfolio .circles .circle .three .buttons,
+main section.portfolio .circles .circle .three .left-right {
     margin-top: 23%;
   }
 }
@@ -797,14 +802,16 @@ main section.portfolio .circles .circle .submarine-pc {
     width: 32%;
   }
 }
-main section.portfolio .circles .buttons {
+main section.portfolio .circles .buttons,
+main section.portfolio .circles .left-right {
   position: absolute;
   margin: 0% 3%;
   display: flex;
   flex-direction: row;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .buttons {
+  main section.portfolio .circles .buttons,
+main section.portfolio .circles .left-right {
     position: relative;
     display: block;
     flex-direction: column;
@@ -815,7 +822,10 @@ main section.portfolio .circles .buttons {
 }
 main section.portfolio .circles .buttons .design,
 main section.portfolio .circles .buttons .detail,
-main section.portfolio .circles .buttons .git {
+main section.portfolio .circles .buttons .git,
+main section.portfolio .circles .left-right .design,
+main section.portfolio .circles .left-right .detail,
+main section.portfolio .circles .left-right .git {
   cursor: pointer;
   margin: auto 40%;
   text-align: center;
@@ -826,24 +836,31 @@ main section.portfolio .circles .buttons .git {
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons .design,
 main section.portfolio .circles .buttons .detail,
-main section.portfolio .circles .buttons .git {
+main section.portfolio .circles .buttons .git,
+main section.portfolio .circles .left-right .design,
+main section.portfolio .circles .left-right .detail,
+main section.portfolio .circles .left-right .git {
     margin: 0;
   }
 }
-main section.portfolio .circles .buttons .design {
+main section.portfolio .circles .buttons .design,
+main section.portfolio .circles .left-right .design {
   margin-right: -30%;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .buttons .design {
+  main section.portfolio .circles .buttons .design,
+main section.portfolio .circles .left-right .design {
     margin-right: 0;
     margin-bottom: 20px;
   }
 }
-main section.portfolio .circles .buttons .git {
+main section.portfolio .circles .buttons .git,
+main section.portfolio .circles .left-right .git {
   margin-left: -27%;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .buttons .git {
+  main section.portfolio .circles .buttons .git,
+main section.portfolio .circles .left-right .git {
     width: 75%;
     margin-top: 17%;
     margin-left: 0%;
@@ -884,6 +901,10 @@ main section.portfolio .circles .modal .x-box .x {
   margin-top: 1%;
   font-size: 2rem;
 }
+main section.portfolio .circles .modal .head_capture {
+  width: 100%;
+  filter: brightness(50%);
+}
 main section.portfolio .circles .modal .modal-contents {
   position: relative;
   width: 90%;
@@ -915,98 +936,100 @@ main section.portfolio .circles .modal .modal-contents h5 {
     font-size: 2rem;
   }
 }
-main section.portfolio .circles .modal_jujery .jujery_capture {
-  width: 100%;
-  filter: brightness(50%);
-}
-main section.portfolio .circles .modal_jujery .modal-contents p {
+main section.portfolio .circles .modal .modal-contents p {
   font-size: 0.8rem;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .modal_jujery .modal-contents p {
+  main section.portfolio .circles .modal .modal-contents p {
     font-size: 1.2rem;
   }
 }
-main section.portfolio .circles .modal_jujery .modal-contents .pc-and-mobile {
+main section.portfolio .circles .modal .modal-contents .pc-and-mobile {
   text-align: center;
   margin-top: -20%;
   margin-bottom: 20%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .pc-and-mobile .pc-jujery {
+main section.portfolio .circles .modal .modal-contents .pc-and-mobile .pc-jujery {
   width: 60%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .pc-and-mobile .mobile-jujery {
+main section.portfolio .circles .modal .modal-contents .pc-and-mobile .mobile-jujery {
   width: 20%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .grid-system {
+main section.portfolio .circles .modal .modal-contents .grid-system {
   width: 100%;
   border: 1px solid #c5cacc;
   padding: 2%;
   margin-bottom: 5%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .grid-system img {
+main section.portfolio .circles .modal .modal-contents .grid-system .jujery-grid {
   width: 33%;
   display: inline-block;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .grid-system p {
+main section.portfolio .circles .modal .modal-contents .grid-system .bonheur-grid1 {
+  width: 40%;
+}
+main section.portfolio .circles .modal .modal-contents .grid-system .bonheur-grid2 {
+  width: 30%;
+}
+main section.portfolio .circles .modal .modal-contents .grid-system p {
   font-size: 0.5rem;
   display: inline-block;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .modal_jujery .modal-contents .grid-system p {
+  main section.portfolio .circles .modal .modal-contents .grid-system p {
     font-size: 1.5rem;
   }
 }
-main section.portfolio .circles .modal_jujery .modal-contents .concept {
+main section.portfolio .circles .modal .modal-contents .concept {
   width: 80%;
   padding: 2%;
   background-color: #eee;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .color-system {
+main section.portfolio .circles .modal .modal-contents .color-system {
   width: 80%;
   float: right;
   padding: 2%;
   background-color: #ccc;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .color-system .colors {
+main section.portfolio .circles .modal .modal-contents .color-system .colors {
   text-align: center;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .color-system .colors img {
+main section.portfolio .circles .modal .modal-contents .color-system .colors img {
   width: 20%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .typograpy {
+main section.portfolio .circles .modal .modal-contents .typograpy {
   margin-top: 52%;
   padding: 2%;
   width: 80%;
   background-color: #a0a0a0;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .modal_jujery .modal-contents .typograpy {
+  main section.portfolio .circles .modal .modal-contents .typograpy {
     margin-top: 30.6%;
   }
 }
-main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex {
+main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex {
   display: flex;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex .sub {
+main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex .sub {
   padding-left: 10px;
   border-left: 1px solid #333;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex span {
+main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex span {
   color: #6f6f6f;
   font-size: 0.8rem;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .typograpy .main-sub-flex p span {
+main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex p span {
   color: #000;
   font-size: 0.6rem;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .logo {
+main section.portfolio .circles .modal .modal-contents .logo {
   margin-top: 10%;
   padding: 5%;
   width: 90%;
   background-color: #f8f9fa;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .logo .logo-text::after {
+main section.portfolio .circles .modal .modal-contents .logo .logo-text::after {
   font-family: "PT Sans", sans-serif;
   content: "";
   display: inline-block;
@@ -1014,47 +1037,52 @@ main section.portfolio .circles .modal_jujery .modal-contents .logo .logo-text::
   border-bottom: 1px solid black;
   margin: 3px 10px;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .logo .jujery-logo {
+main section.portfolio .circles .modal .modal-contents .logo .jujery-logo {
   margin: 5% 30%;
   width: 40%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design h4 {
+main section.portfolio .circles .modal .modal-contents .main-page-design h4 {
   margin-top: 20%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design ul {
+main section.portfolio .circles .modal .modal-contents .main-page-design ul {
   width: 36%;
   display: inline-block;
   margin-right: 3%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design ul li {
+main section.portfolio .circles .modal .modal-contents .main-page-design ul li {
   margin-bottom: 3%;
   padding: 10%;
   background-color: #eee;
   text-align: center;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design ul li:nth-child(2) {
+main section.portfolio .circles .modal .modal-contents .main-page-design ul li:nth-child(2) {
   padding: 30% 10%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-pc-jujery {
+main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-pc-jujery {
   display: inline-block;
   width: 43%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-mobile-jujery {
+main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-mobile-jujery {
   width: 15%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-design-text {
+main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-design-text {
   margin-top: 10%;
   text-align: center;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-capture {
+main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-capture {
   text-align: center;
   margin-top: 3%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-capture .main-page-pc {
+main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-capture .main-page-pc {
   width: 51.4%;
 }
-main section.portfolio .circles .modal_jujery .modal-contents .main-page-design .main-page-capture .main-page {
+main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-capture .main-page {
   width: 35%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal_bonheur {
+    margin-left: -25.6%;
+  }
 }
 main section.portfolio .circles .modal_jujery .modal-contents .sub-page {
   margin-top: 20%;
