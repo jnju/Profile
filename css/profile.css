@@ -623,7 +623,6 @@ main section.portfolio .circles .circle .for-slide .third-slide {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle {
-    border-radius: 0px;
     width: 100%;
     height: 30%;
     cursor: auto;
@@ -657,7 +656,6 @@ main section.portfolio .circles .circle .first-line-fall {
 main section.portfolio .circles .circle .webPF {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   font-size: 1.3rem;
   padding-top: 13%;
@@ -673,6 +671,10 @@ main section.portfolio .circles .circle .webPF {
     padding: 0;
   }
 }
+main section.portfolio .circles .circle .pc-submarine-text {
+  border: 1px solid #f1f6f5;
+  margin-bottom: 10%;
+}
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text {
     margin-top: 132%;
@@ -680,19 +682,13 @@ main section.portfolio .circles .circle .webPF {
     width: 90%;
   }
 }
-main section.portfolio .circles .circle .pc-submarine-text .img-box {
-  border: 1px solid #f1f6f5;
-  width: 85%;
-  height: 100%;
-}
 main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
   position: relative;
   z-index: 0;
-  width: 100%;
+  width: 60%;
   border: 1px solid pink;
-  background-color: #fff;
   margin: -100% 0 0 -5%;
 }
 @media screen and (min-width: 1024px) {
@@ -721,10 +717,6 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box .j {
     margin-left: 8%;
   }
 }
-main section.portfolio .circles .circle .one .buttons,
-main section.portfolio .circles .circle .one .left-right {
-  background-color: pink;
-}
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .buttons,
 main section.portfolio .circles .circle .one .left-right {
@@ -746,9 +738,6 @@ main section.portfolio .circles .circle .one .webPF {
     padding: 50% 6%;
   }
 }
-main section.portfolio .circles .circle .two .webPF {
-  margin-top: -97%;
-}
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two .webPF {
     width: 100%;
@@ -757,12 +746,22 @@ main section.portfolio .circles .circle .two .webPF {
     margin-left: -70px;
   }
 }
+main section.portfolio .circles .circle .two ul {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two {
     margin-left: 19%;
     margin-top: 71.5%;
   }
+}
+main section.portfolio .circles .circle .two span.line {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two span.line {
+    display: block;
     padding: 182px 0 49px 0;
     margin-left: 140px;
     border: 1px solid #f1f6f5;
@@ -797,28 +796,28 @@ main section.portfolio .circles .circle .three .webPF {
     text-align: right;
   }
 }
-main section.portfolio .circles .circle .one ul,
-main section.portfolio .circles .circle .three ul {
-  display: flex;
-  flex-direction: column;
+main section.portfolio .circles .circle .one .left-right,
+main section.portfolio .circles .circle .three .left-right {
+  width: 30%;
 }
-main section.portfolio .circles .circle .one li:nth-of-type(2),
-main section.portfolio .circles .circle .three li:nth-of-type(2) {
-  order: 3;
+main section.portfolio .circles .circle .one .left-right .design,
+main section.portfolio .circles .circle .one .left-right .detail,
+main section.portfolio .circles .circle .one .left-right .git,
+main section.portfolio .circles .circle .three .left-right .design,
+main section.portfolio .circles .circle .three .left-right .detail,
+main section.portfolio .circles .circle .three .left-right .git {
+  width: 70px;
+  padding: 5px 30px;
+  margin-left: 50%;
 }
-main section.portfolio .circles .circle .one li:nth-of-type(3),
-main section.portfolio .circles .circle .three li:nth-of-type(3) {
-  order: 2;
+main section.portfolio .circles .circle .one .left-right .git,
+main section.portfolio .circles .circle .three .left-right .git {
+  margin-left: 58%;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .circle .one li:nth-of-type(2),
-main section.portfolio .circles .circle .three li:nth-of-type(2) {
-    order: 2;
-  }
-  main section.portfolio .circles .circle .one li:nth-of-type(3),
-main section.portfolio .circles .circle .three li:nth-of-type(3) {
-    order: 3;
-    display: flex;
+  main section.portfolio .circles .circle .one .left-right .git,
+main section.portfolio .circles .circle .three .left-right .git {
+    margin-left: 50%;
   }
 }
 main section.portfolio .circles .circle .submarine-pc {
