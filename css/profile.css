@@ -39,14 +39,46 @@ td {
   border: none;
 }
 
-h3 {
-  font-size: 0;
+body {
+  background-color: #142850;
+}
+
+.bubbles {
+  display: inline-block;
+  font-family: arial;
+  position: relative;
+  height: 1000px;
+  width: 700px;
+}
+@media screen and (min-width: 1024px) {
+  .bubbles {
+    margin-left: 850px;
+  }
+}
+.bubbles .for-bubbles {
+  position: relative;
+  margin: 1em 0 0;
+  font-family: "Luckiest Guy", cursive;
+  color: #fff;
+  z-index: 2;
+}
+
+.individual-bubble {
+  position: absolute;
+  border-radius: 100%;
+  bottom: 100px;
+  background-color: #fff;
+  z-index: 1;
 }
 
 h2 {
   font-size: 250%;
   margin-top: 40%;
   margin-bottom: 20%;
+}
+
+h3 {
+  font-size: 0;
 }
 
 html {
@@ -80,13 +112,15 @@ header .logo_me {
   }
 }
 header h1 {
+  position: absolute;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin: 400px auto;
+  margin: 60% 30%;
 }
 @media screen and (min-width: 1024px) {
   header h1 {
+    margin: 20% 30%;
     font-size: 3.813rem;
   }
 }
@@ -579,7 +613,6 @@ main section.portfolio .circles .circle {
   cursor: pointer;
   width: 100%;
   height: 390px;
-  overflow: hidden;
   border-radius: 300px;
   margin-bottom: 25%;
 }
@@ -594,14 +627,13 @@ main section.portfolio .circles .circle .for-slide .third-slide {
     width: 100%;
     height: 30%;
     cursor: auto;
-    overflow: visible;
     margin-left: 0;
     width: 50%;
   }
   main section.portfolio .circles .circle .for-slide {
     overflow: hidden;
     width: 200%;
-    height: 1350px;
+    height: 1400px;
     padding: 0;
     margin-left: -10%;
     margin-top: -70%;
@@ -621,36 +653,6 @@ main section.portfolio .circles .circle .for-slide .third-slide {
 }
 main section.portfolio .circles .circle .first-line-fall {
   position: relative;
-}
-main section.portfolio .circles .circle .b,
-main section.portfolio .circles .circle .j,
-main section.portfolio .circles .circle .profile-capture {
-  position: relative;
-  z-index: 0;
-  width: 100%;
-  padding: 0 20px;
-  background-color: #fff;
-  margin: -100% 0 0 -5%;
-}
-@media screen and (min-width: 1024px) {
-  main section.portfolio .circles .circle .b,
-main section.portfolio .circles .circle .j,
-main section.portfolio .circles .circle .profile-capture {
-    position: relative;
-    width: 70%;
-    height: 28%;
-    margin: 0;
-    border-radius: 0px;
-    background-color: transparent;
-  }
-}
-main section.portfolio .circles .circle .j {
-  margin-top: -13%;
-}
-@media screen and (min-width: 1024px) {
-  main section.portfolio .circles .circle .j {
-    margin-top: 1%;
-  }
 }
 main section.portfolio .circles .circle .webPF {
   position: relative;
@@ -678,6 +680,41 @@ main section.portfolio .circles .circle .webPF {
     width: 90%;
   }
 }
+main section.portfolio .circles .circle .pc-submarine-text .img-box {
+  border: 1px solid #f1f6f5;
+  width: 85%;
+  height: 100%;
+}
+main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
+main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
+main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  border: 1px solid pink;
+  background-color: #fff;
+  margin: -100% 0 0 -5%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
+main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
+main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
+    position: relative;
+    width: 70%;
+    height: 28%;
+    margin: 0;
+    border-radius: 0px;
+    background-color: transparent;
+  }
+}
+main section.portfolio .circles .circle .pc-submarine-text .img-box .j {
+  margin-top: -13%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .pc-submarine-text .img-box .j {
+    margin-top: 1%;
+  }
+}
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one {
     width: 100%;
@@ -686,7 +723,7 @@ main section.portfolio .circles .circle .webPF {
 }
 main section.portfolio .circles .circle .one .buttons,
 main section.portfolio .circles .circle .one .left-right {
-  margin-top: -13%;
+  background-color: pink;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .buttons,
@@ -738,7 +775,7 @@ main section.portfolio .circles .circle .two .webPF {
 }
 main section.portfolio .circles .circle .three .buttons,
 main section.portfolio .circles .circle .three .left-right {
-  margin-top: -5%;
+  margin-top: 0%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .three .buttons,
@@ -758,6 +795,30 @@ main section.portfolio .circles .circle .three .webPF {
     padding: 50% 6%;
     border-right: 2px solid #f1f6f5;
     text-align: right;
+  }
+}
+main section.portfolio .circles .circle .one ul,
+main section.portfolio .circles .circle .three ul {
+  display: flex;
+  flex-direction: column;
+}
+main section.portfolio .circles .circle .one li:nth-of-type(2),
+main section.portfolio .circles .circle .three li:nth-of-type(2) {
+  order: 3;
+}
+main section.portfolio .circles .circle .one li:nth-of-type(3),
+main section.portfolio .circles .circle .three li:nth-of-type(3) {
+  order: 2;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .one li:nth-of-type(2),
+main section.portfolio .circles .circle .three li:nth-of-type(2) {
+    order: 2;
+  }
+  main section.portfolio .circles .circle .one li:nth-of-type(3),
+main section.portfolio .circles .circle .three li:nth-of-type(3) {
+    order: 3;
+    display: flex;
   }
 }
 main section.portfolio .circles .circle .submarine-pc {

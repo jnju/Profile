@@ -1,7 +1,28 @@
+jQuery(document).ready(function($){
+    var bArray = [];
+    var sArray = [4,6,8,10];
+    for (var i = 0; i < $('.bubbles').width(); i++) {
+        bArray.push(i);
+    }
+    function randomValue(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+    setInterval(function(){
+        var size = randomValue(sArray);
+        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+        $('.individual-bubble').animate({
+            'bottom': '100%',
+            'opacity' : '-=0.7'
+        }, 3000, function(){
+            $(this).remove()
+        }
+        );
+    }, 350);
+});
+
 $(function() {
 
     $(".pc-submarine-text").children('.webPF').children('.left-right').children('.design').click(function(event) {
-        console.log('버튼 추적 성공');
         $('body').css('overflow','hidden');
         $(this).parent().parent().next().next().css('display','block');
     })
@@ -58,7 +79,7 @@ $(function() {
 
                 console.log($(document).scrollTop());
 
-                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5100)) {
+                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5400)) {
                     $('.circles').stop().animate({'margin-left':'0'},2000);
                     setTimeout(function() {
                         $('.first-slide').stop().animate({'margin': '0'},1000);

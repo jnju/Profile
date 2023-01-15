@@ -2,14 +2,47 @@
 @import './common.scss';
 @import './mixin.scss';
 
-h3 {
-    font-size: 0;
+body {
+    background-color: $color-main;
 }
+
+.bubbles {
+    display: inline-block;
+    font-family: arial;
+    position: relative;
+    height: 1000px;
+    width: 700px;
+    @include responsive(pc-screens){
+        margin-left: 850px;
+    }
+    .for-bubbles {
+        position: relative;
+        margin: 1em 0 0;
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        z-index: 2;
+        
+    }
+}
+
+
+.individual-bubble {
+    position: absolute;
+    border-radius: 100%;
+    bottom: 100px;
+    background-color: #fff;
+    z-index: 1;
+}
+
 
 h2 {
     font-size: 250%;
     margin-top: 40%;
     margin-bottom: 20%;
+}
+
+h3 {
+    font-size: 0;
 }
 
 html { font-size: 16px; }
@@ -19,7 +52,6 @@ html { font-size: 16px; }
 }
 .container {
     margin: auto 6%;
-    // background-color: pink; 
     @include responsive(pc-screens){
             margin-left: 25%;
             margin-right: 15%;
@@ -37,12 +69,14 @@ header {
         }
     }
     h1 {
+        position: absolute;
         font-size: 2rem;
         font-weight: bold;
         text-align: center;
-        margin: 400px auto; 
+        margin: 60% 30%;
         @include responsive(pc-screens) {
-        font-size: 3.813rem;
+            margin: 20% 30%;
+            font-size: 3.813rem;
         }        
     }
 
@@ -186,7 +220,6 @@ main {
 
         .for-card-animation {
             width: 85%;
-            // background-color: pink;
             perspective: 1700px;
             @include responsive(pc-screens) {
                 perspective: none;
@@ -227,7 +260,6 @@ main {
             }
         }
         #mobile-me {
-            // background-color: aqua;
             display: flex;
             text-align: center;
             @include responsive(pc-screens) {
@@ -318,7 +350,6 @@ main {
     section.skills {
         .for-pc-skill {
             @include responsive(pc-screens) {
-                // background-color: rgba(200, 100, 140, 0.5);
                 display: flex;
                 margin-top: -12%;
                 .for-pc-skill-second {
@@ -333,7 +364,6 @@ main {
             display: flex;
             @include responsive(pc-screens) {
                 width: 50%;
-                // margin-left: 6%;
                 margin-bottom: 20%;
                 .skill-text {
                     position: absolute;
@@ -373,7 +403,6 @@ main {
                     position: absolute;
                     height: 5%;
                     margin-top: 0.35%; margin-left: 0.5%;
-                    // background-color: aqua;
                 }
             }
 
@@ -392,7 +421,6 @@ main {
     section.portfolio {
         .submarine-hide-box {
             @include responsive(pc-screens) {
-            // background-color: pink;
             width: 100%;
             overflow: hidden;
             }
@@ -407,7 +435,6 @@ main {
                 position: relative;
                 z-index: 2;
                 width: 25%;
-                // background-color: palegoldenrod;
                 margin: 0% 35% -7% 35%;
                 @include responsive(pc-screens) {
                     display: none;
@@ -416,7 +443,6 @@ main {
             .circle {
                 cursor: pointer;
                 width: 100%; height: 390px;
-                overflow: hidden;
                 border-radius: 300px;
                 margin-bottom: 25%;
                 .for-slide {
@@ -430,12 +456,11 @@ main {
                     border-radius: 0px;
                     width: 100%; height: 30%;
                     cursor: auto;
-                    overflow: visible;
                     margin-left: 0;
                     width: 50%;
                     .for-slide {
                         overflow: hidden;
-                        width: 200%; height: 1350px;
+                        width: 200%; height: 1400px;
                         padding: 0; margin-left: -10%;
                         margin-top: -70%;
                         .first-slide,
@@ -445,7 +470,6 @@ main {
                             position: relative;
                             z-index: 3;
                             height: 100%; width: 100%;
-                            // border: 1px solid pink;
                             background-color: $color-main;
                             margin: 0;
                             margin-top: -1120px;
@@ -457,32 +481,6 @@ main {
                     position: relative;
                 }
 
-                .b, 
-                .j,
-                .profile-capture {
-                    position: relative;
-                    z-index: 0;
-                    width: 100%;
-                    padding: 0 20px;
-                    background-color: #fff;
-                    margin: -100% 0 0 -5%;
-                    @include responsive(pc-screens) {
-                        position: relative;
-                        width: 70%; height: 28%;
-                        margin: 0;
-                        border-radius: 0px;
-                        background-color: transparent;
-                    }
-                }
-                .j {
-                    margin-top: -13%;
-                    @include responsive(pc-screens) {
-                        margin-top: 1%;
-                    }
-                }
-            
-                
-                
                 .webPF {
                     position: relative;
                     z-index: 1;
@@ -504,6 +502,33 @@ main {
                         margin-left: 20%;
                         width: 90%;
                     }
+                    .img-box {
+                        border: 1px solid $color-sub;
+                        width: 85%; height: 100%;
+                        .b, 
+                        .j,
+                        .profile-capture {
+                            position: relative;
+                            z-index: 0;
+                            width: 100%;
+                            border: 1px solid pink;
+                            background-color: #fff;
+                            margin: -100% 0 0 -5%;
+                            @include responsive(pc-screens) {
+                                position: relative;
+                                width: 70%; height: 28%;
+                                margin: 0;
+                                border-radius: 0px;
+                                background-color: transparent;
+                            }
+                        }
+                        .j {
+                            margin-top: -13%;
+                            @include responsive(pc-screens) {
+                                margin-top: 1%;
+                            }
+                        }
+                    }
                 }
 
                 .one{
@@ -513,7 +538,7 @@ main {
                     }
                     .buttons,
                     .left-right {
-                        margin-top: -13%;
+                        background-color: pink;
                         @include responsive(pc-screens) {
                             margin-top: 0;
                         }
@@ -557,7 +582,7 @@ main {
                     }
                     .buttons,
                     .left-right {
-                        margin-top: -5%;
+                        margin-top: 0%;
                         @include responsive(pc-screens) {
                             margin-top: 23%;
                         }
@@ -571,6 +596,20 @@ main {
                             border-right: 2px solid $color-sub;
                             text-align: right;
                         }
+                    }
+                }
+                
+                .one,
+                .three {
+
+
+
+                    ul{ display: flex; flex-direction: column; }
+                    li:nth-of-type(2){order: 3;}
+                    li:nth-of-type(3){order: 2;}
+                    @include responsive(pc-screens) {
+                        li:nth-of-type(2){order: 2;}
+                        li:nth-of-type(3){order: 3; display: flex;}
                     }
                 }
 
