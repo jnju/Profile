@@ -1,5 +1,4 @@
 $(function() {
-
     var canvas = document.querySelector('canvas');
     var c = canvas.getContext('2d');
 
@@ -176,7 +175,7 @@ $(function() {
         $('nav').css({'position':'fixed', 'top':'-70%'});
         
         $(window).on("scroll", function (e) {
-            $('.circles').css({'margin-left':'0'});
+            // $('.circles').css({'margin-left':'0'});
             $('nav').css({
                 'border' :'2px solid $color-sub'
             });
@@ -216,7 +215,7 @@ $(function() {
 
                 console.log($(document).scrollTop());
 
-                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5400)) {
+                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5600)) {
                     $('.circles').stop().animate({'margin-left':'0'},2000);
                     setTimeout(function() {
                         $('.first-slide').stop().animate({'margin': '0'},800);

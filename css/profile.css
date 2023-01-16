@@ -809,10 +809,6 @@ main section.portfolio .circles .circle .two .webPF {
     margin-left: -70px;
   }
 }
-main section.portfolio .circles .circle .two ul {
-  display: flex;
-  flex-direction: column;
-}
 main section.portfolio .circles .circle .two .buttons {
   margin-top: -10%;
 }
