@@ -14,9 +14,12 @@
   margin: 0;
   padding: 0;
   font-family: "GmarketSansMedium";
+  box-sizing: border-box;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   color: #f1f6f5;
   background-color: #142850;
 }
@@ -37,38 +40,6 @@ tr,
 td {
   border-collapse: collapse;
   border: none;
-}
-
-body {
-  background-color: #142850;
-}
-
-.bubbles {
-  display: inline-block;
-  font-family: arial;
-  position: relative;
-  height: 1000px;
-  width: 700px;
-}
-@media screen and (min-width: 1024px) {
-  .bubbles {
-    margin-left: 850px;
-  }
-}
-.bubbles .for-bubbles {
-  position: relative;
-  margin: 1em 0 0;
-  font-family: "Luckiest Guy", cursive;
-  color: #fff;
-  z-index: 2;
-}
-
-.individual-bubble {
-  position: absolute;
-  border-radius: 100%;
-  bottom: 100px;
-  background-color: #fff;
-  z-index: 1;
 }
 
 h2 {
@@ -100,27 +71,39 @@ html {
   }
 }
 
+header .head {
+  position: absolute;
+  margin-top: -900px;
+}
+@media screen and (min-width: 1024px) {
+  header .head {
+    position: relative;
+    margin-top: -780px;
+  }
+}
 header .logo_me {
   position: absolute;
   width: 19%;
-  margin: 3%;
-  top: 0;
+  margin: 5%;
+  margin-top: 35%;
 }
 @media screen and (min-width: 1024px) {
   header .logo_me {
     width: 6%;
+    margin: 3%;
+    margin-top: -24%;
   }
 }
 header h1 {
-  position: absolute;
+  z-index: 0;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin: 60% 30%;
+  margin: 450px 20%;
 }
 @media screen and (min-width: 1024px) {
   header h1 {
-    margin: 20% 30%;
+    margin: 20% 20%;
     font-size: 3.813rem;
   }
 }
@@ -129,10 +112,11 @@ header .waves {
   overflow: hidden;
   right: 0;
   width: 100%;
-  margin-top: -160px;
+  margin-top: -200px;
 }
 @media screen and (min-width: 1024px) {
   header .waves {
+    margin-top: -200px;
     width: 100%;
     margin-left: 0%;
   }
@@ -227,6 +211,27 @@ header .waves .white-wave {
   -webkit-animation: wavemovewhite 2s 0s infinite alternate;
           animation: wavemovewhite 2s 0s infinite alternate;
 }
+header .support {
+  z-index: 3;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 0px;
+  display: flex;
+  width: 100%;
+}
+header .support1,
+header .support2 {
+  z-index: 3;
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 400ms ease;
+}
+header .support1:hover,
+header .support2:hover {
+  color: #f1f6f5;
+}
 header nav {
   position: fixed;
   z-index: 5;
@@ -237,12 +242,13 @@ header nav {
   top: 2%;
   border: 2px solid #f1f6f5;
   margin-left: -4%;
+  margin-top: -4%;
 }
 @media screen and (min-width: 1024px) {
   header nav {
+    margin-top: 15%;
     border: none;
     width: 18%;
-    margin-top: 15%;
     margin-left: 1%;
   }
 }
@@ -259,12 +265,17 @@ header nav ul {
 }
 header nav li {
   display: inline-block;
-  font-size: 109%;
+  font-size: 1rem;
   width: 20%;
 }
 header nav li:nth-child(3), header nav li:nth-child(4) {
   width: 26%;
-  font-size: 98%;
+  font-size: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  header nav li:nth-child(3), header nav li:nth-child(4) {
+    font-size: 1.5rem;
+  }
 }
 @-webkit-keyframes hovernav {
   0% {
@@ -282,13 +293,35 @@ header nav li:nth-child(3), header nav li:nth-child(4) {
     font-size: 120%;
   }
 }
+@-webkit-keyframes hovernavpc {
+  0% {
+    font-size: 1.5rem;
+  }
+  100% {
+    font-size: 1.6rem;
+  }
+}
+@keyframes hovernavpc {
+  0% {
+    font-size: 1.5rem;
+  }
+  100% {
+    font-size: 1.6rem;
+  }
+}
 header nav li:hover {
   -webkit-animation: hovernav 0.5s 0s alternate forwards;
           animation: hovernav 0.5s 0s alternate forwards;
 }
 @media screen and (min-width: 1024px) {
+  header nav li:hover {
+    -webkit-animation: hovernavpc 0.5s 0s alternate forwards;
+            animation: hovernavpc 0.5s 0s alternate forwards;
+  }
+}
+@media screen and (min-width: 1024px) {
   header nav li {
-    line-height: 1.4em;
+    font-size: 1.4em;
     display: block;
     line-height: 3rem;
   }
@@ -304,6 +337,14 @@ header nav img {
   }
 }
 
+main {
+  margin-top: 500px;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    margin-top: 0;
+  }
+}
 main section.about ul {
   display: flex;
   flex-direction: column;
@@ -672,14 +713,26 @@ main section.portfolio .circles .circle .webPF {
   }
 }
 main section.portfolio .circles .circle .pc-submarine-text {
-  border: 1px solid #f1f6f5;
   margin-bottom: 10%;
+  border: 1px solid #f1f6f5;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text {
+    border: none;
     margin-top: 132%;
     margin-left: 20%;
     width: 90%;
+  }
+}
+main section.portfolio .circles .circle .pc-submarine-text .img-box {
+  border: none;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .pc-submarine-text .img-box {
+    border: 2px solid #f1f6f5;
+    padding: 0;
+    width: 78%;
+    height: 305px;
   }
 }
 main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
@@ -688,7 +741,6 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-cap
   position: relative;
   z-index: 0;
   width: 60%;
-  border: 1px solid pink;
   margin: -100% 0 0 -5%;
 }
 @media screen and (min-width: 1024px) {
@@ -696,8 +748,7 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-cap
 main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
     position: relative;
-    width: 70%;
-    height: 28%;
+    width: 100%;
     margin: 0;
     border-radius: 0px;
     background-color: transparent;
@@ -720,7 +771,8 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box .j {
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .buttons,
 main section.portfolio .circles .circle .one .left-right {
-    margin-top: 0;
+    margin-top: 8%;
+    margin-left: -15%;
   }
 }
 main section.portfolio .circles .circle .one .webPF {
@@ -735,20 +787,47 @@ main section.portfolio .circles .circle .one .webPF {
     height: 45.3%;
     margin-left: 10%;
     margin-top: -99%;
-    padding: 50% 6%;
+    padding: 50% 6% 43% 6%;
   }
+}
+main section.portfolio .circles .circle .two {
+  height: 400px;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .two {
+    height: auto;
+  }
+}
+main section.portfolio .circles .circle .two .webPF {
+  margin-top: -45%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two .webPF {
     width: 100%;
     text-align: center;
-    margin-top: 40%;
+    margin-top: 30%;
     margin-left: -70px;
   }
 }
 main section.portfolio .circles .circle .two ul {
   display: flex;
   flex-direction: column;
+}
+main section.portfolio .circles .circle .two .buttons {
+  margin-top: -10%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .two .buttons {
+    margin-top: 5%;
+    margin-left: 23%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .two .buttons .design,
+main section.portfolio .circles .circle .two .buttons .detail,
+main section.portfolio .circles .circle .two .buttons .git {
+    width: 70%;
+  }
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two {
@@ -762,9 +841,10 @@ main section.portfolio .circles .circle .two span.line {
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two span.line {
     display: block;
-    padding: 182px 0 49px 0;
+    padding: 182px 0 50px 0;
+    margin-top: -182px;
     margin-left: 140px;
-    border: 1px solid #f1f6f5;
+    border-left: 2px solid #f1f6f5;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -774,12 +854,13 @@ main section.portfolio .circles .circle .two span.line {
 }
 main section.portfolio .circles .circle .three .buttons,
 main section.portfolio .circles .circle .three .left-right {
-  margin-top: 0%;
+  margin-top: 2%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .three .buttons,
 main section.portfolio .circles .circle .three .left-right {
-    margin-top: 23%;
+    margin-top: 7%;
+    margin-left: 60%;
   }
 }
 main section.portfolio .circles .circle .three .webPF {
@@ -791,7 +872,7 @@ main section.portfolio .circles .circle .three .webPF {
     height: 45.3%;
     margin-left: -40%;
     margin-top: -112%;
-    padding: 50% 6%;
+    padding: 57% 6% 49% 6%;
     border-right: 2px solid #f1f6f5;
     text-align: right;
   }
@@ -806,17 +887,32 @@ main section.portfolio .circles .circle .one .left-right .git,
 main section.portfolio .circles .circle .three .left-right .design,
 main section.portfolio .circles .circle .three .left-right .detail,
 main section.portfolio .circles .circle .three .left-right .git {
-  width: 70px;
-  padding: 5px 30px;
-  margin-left: 50%;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 5px 9px;
+  margin-left: 63%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .one .left-right .design,
+main section.portfolio .circles .circle .one .left-right .detail,
+main section.portfolio .circles .circle .one .left-right .git,
+main section.portfolio .circles .circle .three .left-right .design,
+main section.portfolio .circles .circle .three .left-right .detail,
+main section.portfolio .circles .circle .three .left-right .git {
+    font-size: 1rem;
+    width: 90%;
+    margin-left: 50%;
+  }
 }
 main section.portfolio .circles .circle .one .left-right .git,
 main section.portfolio .circles .circle .three .left-right .git {
-  margin-left: 58%;
+  margin-left: 115%;
+  width: 180%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .left-right .git,
 main section.portfolio .circles .circle .three .left-right .git {
+    width: 90%;
     margin-left: 50%;
   }
 }
@@ -1388,12 +1484,24 @@ footer .footer-box {
     padding-bottom: 0;
   }
 }
-footer .footer-box img {
-  width: 10%;
+footer .footer-box .footer-img1,
+footer .footer-box .footer-img2 {
+  width: 20%;
   padding: 5%;
 }
 @media screen and (min-width: 1024px) {
-  footer .footer-box img {
-    width: 3%;
+  footer .footer-box .footer-img1,
+footer .footer-box .footer-img2 {
+    padding: 10px;
+    position: relative;
+    width: 4%;
+  }
+}
+footer .footer-box .footer-img2 {
+  margin-left: 10%;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-box .footer-img2 {
+    margin-left: 20px;
   }
 }/*# sourceMappingURL=profile.css.map */

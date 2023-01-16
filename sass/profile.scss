@@ -2,38 +2,6 @@
 @import './common.scss';
 @import './mixin.scss';
 
-body {
-    background-color: $color-main;
-}
-
-.bubbles {
-    display: inline-block;
-    font-family: arial;
-    position: relative;
-    height: 1000px;
-    width: 700px;
-    @include responsive(pc-screens){
-        margin-left: 850px;
-    }
-    .for-bubbles {
-        position: relative;
-        margin: 1em 0 0;
-        font-family: 'Luckiest Guy', cursive;
-        color: #fff;
-        z-index: 2;
-        
-    }
-}
-
-
-.individual-bubble {
-    position: absolute;
-    border-radius: 100%;
-    bottom: 100px;
-    background-color: #fff;
-    z-index: 1;
-}
-
 
 h2 {
     font-size: 250%;
@@ -60,33 +28,46 @@ html { font-size: 16px; }
 }
 
 header {
+    .head {
+        position: absolute;
+        margin-top: -900px;
+        @include responsive(pc-screens) {
+            position: relative;
+            margin-top: -780px;
+        }
+    }
     .logo_me {
         position: absolute;
         width: 19%;
-        margin: 3%; top: 0;
+        margin: 5%; margin-top: 35%;
         @include responsive(pc-screens) {
             width: 6%;
+            margin: 3%;
+            margin-top: -24%;
         }
     }
     h1 {
-        position: absolute;
+        z-index: 0;
         font-size: 2rem;
         font-weight: bold;
         text-align: center;
-        margin: 60% 30%;
+        margin: 450px 20%;
         @include responsive(pc-screens) {
-            margin: 20% 30%;
+            margin: 20% 20%;
             font-size: 3.813rem;
         }        
     }
+
+    
 
     .waves {
         position: absolute;
         overflow: hidden;
         right: 0;
         width: 100%;
-        margin-top: -160px;
+        margin-top: -200px;
         @include responsive(pc-screens){
+            margin-top: -200px;
             width: 100%;
             margin-left: 0%;
         }
@@ -144,6 +125,28 @@ header {
 
     }
 
+    .support{
+        z-index: 3;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: 0px;
+        display: flex;
+        width: 100%;
+    }
+    .support1,
+    .support2 {
+        z-index: 3;
+        margin: 0;
+        color: #fff;
+        font-size: 1.5rem;
+        transition: all 400ms ease;
+        &:hover{
+            color: $color-sub;
+        }
+    }
+    
+
 
     nav {
         position: fixed;
@@ -153,10 +156,11 @@ header {
         width: 105%; top: 2%;
         border: 2px solid $color-sub;
         margin-left: -4%;
+        margin-top: -4%;
         @include responsive(pc-screens){
+            margin-top: 15%;
             border: none;
             width: 18%;
-            margin-top: 15%;
             margin-left: 1%;
         }
 
@@ -171,23 +175,33 @@ header {
         
         li {
             display: inline-block;
-            font-size: 109%;
-            // background-color: pink;
+            font-size: 1rem;
             width: 20%;
             &:nth-child(3),
             &:nth-child(4) {
                 width: 26%;
-                font-size: 98%;
+                font-size: 1rem;
+                @include responsive(pc-screens) {
+                    font-size: 1.5rem;
+                }
             }
             @keyframes hovernav {
                 0% {font-size: 109%;}
                 100%{font-size: 120%;}
+                
+            }
+            @keyframes hovernavpc {
+                0% {font-size: 1.5rem;}
+                100%{font-size: 1.6rem;}
             }
             &:hover{
                 animation: hovernav 0.5s 0s alternate forwards;
+                @include responsive(pc-screens) {
+                    animation: hovernavpc 0.5s 0s alternate forwards;
+                }
             }
             @include responsive(pc-screens) {
-                line-height: 1.4em;
+                font-size: 1.4em;
                 display: block;
                 line-height: 3rem;
             }
@@ -209,6 +223,10 @@ header {
 }
 
 main {
+    margin-top: 500px;
+    @include responsive(pc-screens) {
+        margin-top: 0;
+    }
     section.about {
         ul{ display: flex; flex-direction: column; }
         li:nth-of-type(1){order: 2;}
@@ -495,25 +513,31 @@ main {
                 }
 
                 .pc-submarine-text{
-                    border: 1px solid $color-sub;
                     margin-bottom: 10%;
+                    border: 1px solid $color-sub;
                     @include responsive(pc-screens) {
+                        border: none;
                         margin-top: 132%;
                         margin-left: 20%;
                         width: 90%;
                     }
                     .img-box {
+                        border: none;
+                        @include responsive(pc-screens) {
+                            border: 2px solid $color-sub;
+                            padding: 0;
+                            width: 78%; height: 305px;
+                        }
                         .b, 
                         .j,
                         .profile-capture {
                             position: relative;
                             z-index: 0;
                             width: 60%;
-                            border: 1px solid pink;
                             margin: -100% 0 0 -5%;
                             @include responsive(pc-screens) {
                                 position: relative;
-                                width: 70%; height: 28%;
+                                width: 100%;
                                 margin: 0;
                                 border-radius: 0px;
                                 background-color: transparent;
@@ -536,7 +560,8 @@ main {
                     .buttons,
                     .left-right {
                         @include responsive(pc-screens) {
-                            margin-top: 0;
+                            margin-top: 8%;
+                            margin-left: -15%;
                         }
                     }
                     .webPF{
@@ -547,21 +572,41 @@ main {
                             border-left: 2px solid $color-sub;
                             width: 100%; height: 45.3%;
                             margin-left: 10%; margin-top: -99%;
-                            padding: 50% 6%;
+                            padding: 50% 6% 43% 6%;
                         }
                     }
                 }
                 
                 .two {
+                    height: 400px;
+                    @include responsive(pc-screens) {     
+                        height: auto;
+                    }
                     .webPF{
+                        margin-top: -45%;
                         @include responsive(pc-screens) {     
                             width: 100%;
                             text-align: center;
-                            margin-top: 40%; margin-left: -70px;                       
+                            margin-top: 30%; margin-left: -70px;                       
                         }
                     }
                     ul {
                         display:flex; flex-direction:column;
+                    }
+
+                    .buttons {
+                        margin-top: -10%;
+                        @include responsive(pc-screens) {  
+                            margin-top: 5%;
+                            margin-left: 23%;                          
+                        }
+                        .design,
+                        .detail,
+                        .git { 
+                            @include responsive(pc-screens) {                            
+                                width: 70%;
+                            }
+                        }
                     }
                     
                     @include responsive(pc-screens) {                            
@@ -572,9 +617,10 @@ main {
                         display: none;
                         @include responsive(pc-screens) { 
                             display: block;                           
-                            padding: 182px 0 49px 0;
+                            padding: 182px 0 50px 0;
+                            margin-top: -182px;
                             margin-left: 140px;
-                            border: 1px solid $color-sub;
+                            border-left: 2px solid $color-sub;
                         }
                     }
                 }
@@ -585,9 +631,10 @@ main {
                     }
                     .buttons,
                     .left-right {
-                        margin-top: 0%;
+                        margin-top: 2%;
                         @include responsive(pc-screens) {
-                            margin-top: 23%;
+                            margin-top: 7%;
+                            margin-left: 60%;
                         }
                     }
                     .webPF{
@@ -595,7 +642,7 @@ main {
                         @include responsive(pc-screens) {
                             width: 100%; height: 45.3%;
                             margin-left: -40%; margin-top: -112%;
-                            padding: 50% 6%;
+                            padding: 57% 6% 49% 6%;
                             border-right: 2px solid $color-sub;
                             text-align: right;
                         }
@@ -609,13 +656,21 @@ main {
                         .design,
                         .detail,
                         .git {
-                            width: 70px;
-                            padding: 5px 30px;
-                            margin-left: 50%;
+                            width: 100%;
+                            font-size: 0.9rem;
+                            padding: 5px 9px;
+                            margin-left: 63%;
+                            @include responsive(pc-screens) {
+                                font-size: 1rem;
+                                width: 90%;
+                                margin-left: 50%;
+                            }
                         }
                         .git {
-                            margin-left: 58%;
+                            margin-left: 115%;
+                            width: 180%;
                             @include responsive(pc-screens) {
+                                width: 90%;
                                 margin-left: 50%;
                             }
                         }
@@ -1171,12 +1226,25 @@ footer {
             @include responsive(pc-screens) {
                 padding-top: 1%;
                 padding-bottom: 0;
+                .contact-link {
+                    .link{
+                    }
+                }
             }
-        img {
-            width: 10%;
+        .footer-img1,
+        .footer-img2 {
+            width: 20%;
             padding: 5%;
             @include responsive(pc-screens) {
-                width: 3%;
+                padding: 10px;
+                position: relative;
+                width: 4%;
+            }
+        }
+        .footer-img2 {
+            margin-left: 10%;
+            @include responsive(pc-screens) {
+                margin-left: 20px;
             }
         }
     }

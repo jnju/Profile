@@ -1,26 +1,163 @@
-jQuery(document).ready(function($){
-    var bArray = [];
-    var sArray = [4,6,8,10];
-    for (var i = 0; i < $('.bubbles').width(); i++) {
-        bArray.push(i);
-    }
-    function randomValue(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
-    }
-    setInterval(function(){
-        var size = randomValue(sArray);
-        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
-        $('.individual-bubble').animate({
-            'bottom': '100%',
-            'opacity' : '-=0.7'
-        }, 3000, function(){
-            $(this).remove()
-        }
-        );
-    }, 350);
-});
-
 $(function() {
+
+    var canvas = document.querySelector('canvas');
+    var c = canvas.getContext('2d');
+
+    canvas.height = innerHeight-80;
+    canvas.width = innerWidth-50;
+
+    var mouse = {
+        x: 0,
+        y: 0
+    };
+
+    function randomIntFromRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    class Bubbles {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = {
+                bg: 'rgba(255, 255, 255, 0.45)'
+            };
+            this.velocity = {
+                x: (Math.random() - 0.5) * 4.5,
+                y: Math.random() * 5
+            };
+            this.opacity = 1;
+        }
+    }
+    Bubbles.prototype.draw = function () {
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color.bg;
+        c.fill();
+        c.closePath();
+    };
+    Bubbles.prototype.update = function () {
+        this.y -= this.velocity.y;
+        this.draw();
+    };
+
+
+    class miniBubbles {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = {
+                bg: 'rgba(255, 255, 255, 0.45)',
+            };
+            this.velocity = {
+                x: (Math.random() - 0.5) * 0.6,
+                y: (Math.random() - 1) * 1.5
+            }
+            this.gravity = -0.3;
+            this.timeToLive = 200;
+        }
+    }
+    miniBubbles.prototype.draw = function () {
+        c.save();
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color.bg;
+        c.fill();
+        c.closePath();
+        c.restore();
+    }
+    miniBubbles.prototype.update = function () {
+        if (this.y - this.radius < 0) {
+            this.velocity.y = this.velocity.y;
+        } else {
+            this.velocity.y += this.gravity;
+        }
+        this.x += this.velocity.x;
+        this.y += this.velocity.y;
+        this.timeToLive -= 1;
+        this.draw();
+    }
+
+    const backgroundGradient = c.createLinearGradient(0, 0, 0, canvas.height);
+    backgroundGradient.addColorStop(0, '#142850')
+    backgroundGradient.addColorStop(1, '#142850')
+    var bubbles = [];
+    var minibubbles = [];
+    var timer = 0;
+    var spawnRate = 99;
+
+    function init() {
+        bubbles = [];
+        minibubbles = [];
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        c.fillStyle = backgroundGradient;
+        c.fillRect(0, 0, canvas.width, canvas.height);
+
+        bubbles.forEach((bubble, index) => {
+            bubble.update();
+            if (bubble.radius == 0) {
+                bubbles.splice(index, 1);
+            }
+        });
+        minibubbles.forEach((minibubble, index) => {
+            minibubble.update();
+            if (minibubble.timeToLive == 0) {
+                minibubbles.splice(index, 1);
+            }
+        });
+
+        timer++;
+        if (timer % spawnRate == 0) {
+            const radius = randomIntFromRange(15, 30);
+            const minradius = Math.random() * 2 + 1;
+            const x = Math.max(radius, Math.random() * canvas.width - radius);
+            const y = innerHeight + 100;
+            bubbles.push(new Bubbles(x, y, radius, 'white'));
+            minibubbles.push(new miniBubbles(x, y, minradius));
+            spawnRate = randomIntFromRange(70, 200);
+        }
+
+        for (var i = 0; i < bubbles.length; i++) {
+            if (
+                mouse.x > bubbles[i].x - bubbles[i].radius &&
+                mouse.x < bubbles[i].x + bubbles[i].radius
+            ) {
+                if (
+                    mouse.y > bubbles[i].y - bubbles[i].radius &&
+                    mouse.y < bubbles[i].y + bubbles[i].radius
+                ) {
+                    var x = bubbles[i].x;
+                    var y = bubbles[i].y;
+                    var radius = Math.random() * 2 + 1;
+                    bubbles[i].radius -= bubbles[i].radius;
+                    for (let a = 0; a < Math.random() * 2 + 2; a++) {
+                        minibubbles.push(new miniBubbles(x, y, radius));
+                    }
+                }
+            }
+        }
+    }
+
+
+    canvas.addEventListener('mousemove', mouseMove);
+
+    function mouseMove(e) {
+        mouse.x = e.offsetX;
+        mouse.y = e.offsetY;
+    }
+    addEventListener('resize', function () {
+        canvas.height = innerHeight-80;
+        canvas.width = innerWidth-50;
+        init();
+    });
+
+    animate();
+    init();
 
     $(".pc-submarine-text").children('.webPF').children('.left-right').children('.design').click(function(event) {
         $('body').css('overflow','hidden');
@@ -36,7 +173,7 @@ $(function() {
     });
 
     function mobile() {
-        $('nav').css({'position':'fixed', 'top':'-60%'});
+        $('nav').css({'position':'fixed', 'top':'-70%'});
         
         $(window).on("scroll", function (e) {
             $('.circles').css({'margin-left':'0'});
@@ -50,7 +187,7 @@ $(function() {
             if ($(document).scrollTop() < 800) {
                 $('nav').stop().animate({'position':'fixed','top':'-60%'},60);
             } else if ($(document).scrollTop() > 600) {
-                    $('nav').stop().animate({'position':'fixed','top':'5%'},60);
+                    $('nav').stop().animate({'position':'fixed','top':'5%', 'margin-top':'3%'},60);
                 } 
             
             $(".ABOUT").click(function(event){            
@@ -74,7 +211,7 @@ $(function() {
 
         function pc() {
             $('.circles').css({'margin-left':'-1300px'});
-            $('nav').css({'position':'absilute', 'top':'-60%'});
+            $('nav').css({'position':'absilute', 'top':'-500px'});
             $(window).on("scroll", function (e) {
 
                 console.log($(document).scrollTop());
@@ -82,9 +219,9 @@ $(function() {
                 if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5400)) {
                     $('.circles').stop().animate({'margin-left':'0'},2000);
                     setTimeout(function() {
-                        $('.first-slide').stop().animate({'margin': '0'},1000);
-                        $('.second-slide').stop().animate({'margin': '0'},2000);
-                        $('.third-slide').stop().animate({'margin': '0'},3000);
+                        $('.first-slide').stop().animate({'margin': '0'},800);
+                        $('.second-slide').stop().animate({'margin': '0'},1000);
+                        $('.third-slide').stop().animate({'margin': '0'},1200);
                     }, 3000);
                 } else {
                     $('.circles').css({'margin-left':'-1300px'});
@@ -96,22 +233,22 @@ $(function() {
                 if ($(document).scrollTop() < 800) {
                     $('nav').stop().animate({'position':'fixed','top':'-60%'},60);
                 } else if ($(document).scrollTop() > 600) {
-                        $('nav').stop().animate({'position':'fixed','top':'5%'},60);
+                        $('nav').stop().animate({'position':'fixed','margin-top':'40%'},60);
                     } 
 
-                if (($(document).scrollTop() > 1450) && ($(document).scrollTop() < 2864)) {
-                    $('.random-move1').stop().animate({'left': '115%'}, 3000);
-                    $('.random-move2').stop().animate({'left': '100%'}, 3000);
-                    $('.random-move3').stop().animate({'left': '95%'}, 3000);
-                    $('.random-move4').stop().animate({'left': '105%'}, 3000);
+                if (($(document).scrollTop() > 1350) && ($(document).scrollTop() < 2864)) {
+                    $('.random-move1').stop().animate({'left': '115%'}, 700);
+                    $('.random-move2').stop().animate({'left': '100%'}, 700);
+                    $('.random-move3').stop().animate({'left': '95%'}, 700);
+                    $('.random-move4').stop().animate({'left': '105%'}, 700);
 
                 } else {
                     $('.boat').stop().animate({'left': '0'});
                 } 
 
-                if (($(document).scrollTop() > 5200) && ($(document).scrollTop() < 6600)) {
-                    $('.first-turtle').stop().animate({'left': '-90%'}, 3000);
-                    $('.second-turtle').stop().animate({'left': '135%'}, 3000);
+                if (($(document).scrollTop() > 4600) && ($(document).scrollTop() < 6600)) {
+                    $('.first-turtle').stop().animate({'left': '-90%'}, 800);
+                    $('.second-turtle').stop().animate({'left': '135%'}, 800);
                 } else {
                     $('.first-turtle').css({'left': '32%'});
                     $('.second-turtle').css({'left': '32%'});
@@ -150,8 +287,6 @@ $(function() {
                 pc();
             }
             else if (WinW < 1024) {
-                // $('.circles').css({'margin-left':'0'});
-
                 mobile();
             }
         });
