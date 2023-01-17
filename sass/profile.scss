@@ -19,6 +19,7 @@ html { font-size: 16px; }
     overflow: hidden;
 }
 .container {
+    overflow: hidden;
     margin: auto 6%;
     @include responsive(pc-screens){
             margin-left: 25%;
@@ -522,6 +523,8 @@ main {
                         width: 90%;
                     }
                     .img-box {
+                        display: flex;
+                        overflow: hidden;
                         border: none;
                         @include responsive(pc-screens) {
                             border: 2px solid $color-sub;
@@ -579,13 +582,13 @@ main {
                 
                 .two {
                     height: 400px;
-                    @include responsive(pc-screens) {     
+                    @include responsive(pc-screens) { 
+                        // width: 30%;    
                         height: auto;
                     }
                     .webPF{
-                        margin-top: -45%;
+                        margin-top: -11%;
                         @include responsive(pc-screens) {     
-                            width: 100%;
                             text-align: center;
                             margin-top: 30%; margin-left: -70px;                       
                         }
@@ -1165,7 +1168,7 @@ main {
         .contact-box {
             border: 1px solid #c5cacc;
             border-radius: 10px;
-            width: 92%; 
+            width: 100%; 
             padding: 4%;
             margin-bottom: 15%;
         }
@@ -1223,10 +1226,6 @@ footer {
             @include responsive(pc-screens) {
                 padding-top: 1%;
                 padding-bottom: 0;
-                .contact-link {
-                    .link{
-                    }
-                }
             }
         .footer-img1,
         .footer-img2 {

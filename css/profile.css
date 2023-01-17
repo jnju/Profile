@@ -61,6 +61,7 @@ html {
 }
 
 .container {
+  overflow: hidden;
   margin: auto 6%;
 }
 @media screen and (min-width: 1024px) {
@@ -725,6 +726,8 @@ main section.portfolio .circles .circle .pc-submarine-text {
   }
 }
 main section.portfolio .circles .circle .pc-submarine-text .img-box {
+  display: flex;
+  overflow: hidden;
   border: none;
 }
 @media screen and (min-width: 1024px) {
@@ -799,11 +802,10 @@ main section.portfolio .circles .circle .two {
   }
 }
 main section.portfolio .circles .circle .two .webPF {
-  margin-top: -45%;
+  margin-top: -11%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two .webPF {
-    width: 100%;
     text-align: center;
     margin-top: 30%;
     margin-left: -70px;
@@ -1424,7 +1426,7 @@ main section.portfolio .java .buttons_java .detail {
 main section.contact .contact-box {
   border: 1px solid #c5cacc;
   border-radius: 10px;
-  width: 92%;
+  width: 100%;
   padding: 4%;
   margin-bottom: 15%;
 }

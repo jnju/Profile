@@ -1,4 +1,5 @@
 $(function() {
+
     var canvas = document.querySelector('canvas');
     var c = canvas.getContext('2d');
 
@@ -175,7 +176,7 @@ $(function() {
         $('nav').css({'position':'fixed', 'top':'-70%'});
         
         $(window).on("scroll", function (e) {
-            // $('.circles').css({'margin-left':'0'});
+            
             $('nav').css({
                 'border' :'2px solid $color-sub'
             });
@@ -188,6 +189,12 @@ $(function() {
             } else if ($(document).scrollTop() > 600) {
                     $('nav').stop().animate({'position':'fixed','top':'5%', 'margin-top':'3%'},60);
                 } 
+
+            if ($(document).scrollTop() < 850 && $(document).scrollTop() < 1050) {
+                $('.about').addClass('animate__animated animate__backInRight');
+            } else {
+                $('.about').removeClass('animate__animated animate__backInRight');
+            } 
             
             $(".ABOUT").click(function(event){            
                 event.preventDefault();
@@ -205,6 +212,22 @@ $(function() {
                 event.preventDefault();
                 $('html,body').stop().animate({scrollTop: 7600}, 800);
             });
+            if ($(document).scrollTop() > 2500 && $(document).scrollTop() < 3200) {
+                $('.skills').addClass('animate__animated animate__slower animate__backInRight');
+            } else {
+                $('.skills').removeClass('animate__animated animate__slower animate__backInRight');
+            };
+            if ($(document).scrollTop() > 1200 && $(document).scrollTop() < 1700) {
+                $('.about').addClass('animate__animated animate__slower animate__backInRight');
+            } else {
+                $('.about').removeClass('animate__animated animate__slower animate__backInRight');
+            };
+
+            if ($(document).scrollTop() > 7150) {
+                $('.contact').addClass('animate__animated animate__slower animate__backInRight');
+            } else {
+                $('.contact').removeClass('animate__animated animate__slower animate__backInRight');
+            };
         });
     } // menu-mobile 
 
@@ -212,10 +235,9 @@ $(function() {
             $('.circles').css({'margin-left':'-1300px'});
             $('nav').css({'position':'absilute', 'top':'-500px'});
             $(window).on("scroll", function (e) {
-
                 console.log($(document).scrollTop());
 
-                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5600)) {
+                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 6600)) { // 5500
                     $('.circles').stop().animate({'margin-left':'0'},2000);
                     setTimeout(function() {
                         $('.first-slide').stop().animate({'margin': '0'},800);
@@ -236,10 +258,10 @@ $(function() {
                     } 
 
                 if (($(document).scrollTop() > 1350) && ($(document).scrollTop() < 2864)) {
-                    $('.random-move1').stop().animate({'left': '115%'}, 700);
-                    $('.random-move2').stop().animate({'left': '100%'}, 700);
-                    $('.random-move3').stop().animate({'left': '95%'}, 700);
-                    $('.random-move4').stop().animate({'left': '105%'}, 700);
+                    $('.random-move1').stop().delay(2000).animate({'left': '115%'}, 1000);
+                    $('.random-move2').stop().delay(2000).animate({'left': '100%'}, 1000);
+                    $('.random-move3').stop().delay(2000).animate({'left': '95%'}, 1000);
+                    $('.random-move4').stop().delay(2000).animate({'left': '105%'}, 1000);
 
                 } else {
                     $('.boat').stop().animate({'left': '0'});
@@ -252,7 +274,25 @@ $(function() {
                     $('.first-turtle').css({'left': '32%'});
                     $('.second-turtle').css({'left': '32%'});
                 } 
+
+                if ($(document).scrollTop() > 2300 && $(document).scrollTop() < 2800) {
+                    $('.skills').addClass('animate__animated animate__slower animate__backInRight');
+                } else {
+                    $('.skills').removeClass('animate__animated animate__slower animate__backInRight');
+                };
+                if ($(document).scrollTop() > 1150 && $(document).scrollTop() < 1550) {
+                    $('.about').addClass('animate__animated animate__slower animate__backInRight');
+                } else {
+                    $('.about').removeClass('animate__animated animate__slower animate__backInRight');
+                };
+    
+                if ($(document).scrollTop() > 7150) {
+                    $('.contact').addClass('animate__animated animate__slower animate__backInRight');
+                } else {
+                    $('.contact').removeClass('animate__animated animate__slower animate__backInRight');
+                };
             });
+
             
 
             $(".ABOUT").click(function(event){            
