@@ -151,7 +151,7 @@ header {
 
     nav {
         position: fixed;
-        z-index: 5;
+        z-index: 50;
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         width: 105%; top: 2%;
@@ -452,7 +452,7 @@ main {
             }
             .submarine-mobile {
                 position: relative;
-                z-index: 2;
+                z-index: 13;
                 width: 25%;
                 margin: 0% 35% -7% 35%;
                 @include responsive(pc-screens) {
@@ -500,15 +500,15 @@ main {
                 }
 
                 .webPF {
-                    position: relative;
-                    z-index: 1;
+                    position: absolute;
+                    z-index: 11;
                     text-align: center;
                     font-size: 1.3rem;
                     padding-top: 13%; padding-bottom: 15%;
                     width: 100%; height: 100%;
                     @include responsive(pc-screens) {
+                        position: relative;
                         margin-top: -99.4%; margin-left: -10%;
-                        background-color: transparent;
                         padding: 0;
                     }
                 }
@@ -523,24 +523,30 @@ main {
                         width: 90%;
                     }
                     .img-box {
+                        position: relative;
+                        background-color: pink;
                         display: flex;
                         overflow: hidden;
                         border: none;
+                        z-index: 10;
+                        height: 400px;
                         @include responsive(pc-screens) {
+                            position: relative;
                             border: 2px solid $color-sub;
                             padding: 0;
-                            width: 78%; height: 305px;
+                            width: 300px; height: 305px;
                         }
                         .b, 
                         .j,
                         .profile-capture {
+                            border: 1px solid aqua;
                             position: relative;
                             z-index: 0;
-                            width: 60%;
-                            margin: -100% 0 0 -5%;
+                            width: 100%;
+                            margin: -80% 0 0 -5%;
                             @include responsive(pc-screens) {
                                 position: relative;
-                                width: 100%;
+                                width: 100%; 
                                 margin: 0;
                                 border-radius: 0px;
                                 background-color: transparent;
@@ -573,7 +579,6 @@ main {
                             position: relative;
                             text-align: left;
                             border-left: 2px solid $color-sub;
-                            width: 100%; height: 45.3%;
                             margin-left: 10%; margin-top: -99%;
                             padding: 50% 6% 43% 6%;
                         }
@@ -583,11 +588,11 @@ main {
                 .two {
                     height: 400px;
                     @include responsive(pc-screens) { 
-                        // width: 30%;    
+                        width: 100%;    
                         height: auto;
                     }
                     .webPF{
-                        margin-top: -11%;
+                        margin-top: -63%;
                         @include responsive(pc-screens) {     
                             text-align: center;
                             margin-top: 30%; margin-left: -70px;                       
@@ -688,7 +693,6 @@ main {
                 @include responsive(pc-screens) {
                     .second-pc {
                         margin-left: 8%;
-                        width: 143%;
                     }
                     .third-pc {
                         margin-left: 14%;
@@ -706,7 +710,8 @@ main {
                     }
                 }
                 .submarine-two{ 
-                    margin-left: 4%; 
+                    margin-left: 3%; 
+                    // width: 34%;
                     .buttons {
                         margin-top: 6%;
                         margin-left: 18%; 

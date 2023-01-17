@@ -235,7 +235,7 @@ header .support2:hover {
 }
 header nav {
   position: fixed;
-  z-index: 5;
+  z-index: 50;
   background-color: 255, 255, 255, 0.1;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -642,7 +642,7 @@ main section.skills .skill .percent {
 }
 main section.portfolio .circles .submarine-mobile {
   position: relative;
-  z-index: 2;
+  z-index: 13;
   width: 25%;
   margin: 0% 35% -7% 35%;
 }
@@ -696,8 +696,8 @@ main section.portfolio .circles .circle .first-line-fall {
   position: relative;
 }
 main section.portfolio .circles .circle .webPF {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 11;
   text-align: center;
   font-size: 1.3rem;
   padding-top: 13%;
@@ -707,9 +707,9 @@ main section.portfolio .circles .circle .webPF {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .webPF {
+    position: relative;
     margin-top: -99.4%;
     margin-left: -10%;
-    background-color: transparent;
     padding: 0;
   }
 }
@@ -726,25 +726,31 @@ main section.portfolio .circles .circle .pc-submarine-text {
   }
 }
 main section.portfolio .circles .circle .pc-submarine-text .img-box {
+  position: relative;
+  background-color: pink;
   display: flex;
   overflow: hidden;
   border: none;
+  z-index: 10;
+  height: 400px;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text .img-box {
+    position: relative;
     border: 2px solid #f1f6f5;
     padding: 0;
-    width: 78%;
+    width: 300px;
     height: 305px;
   }
 }
 main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
+  border: 1px solid aqua;
   position: relative;
   z-index: 0;
-  width: 60%;
-  margin: -100% 0 0 -5%;
+  width: 100%;
+  margin: -80% 0 0 -5%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
@@ -786,8 +792,6 @@ main section.portfolio .circles .circle .one .webPF {
     position: relative;
     text-align: left;
     border-left: 2px solid #f1f6f5;
-    width: 100%;
-    height: 45.3%;
     margin-left: 10%;
     margin-top: -99%;
     padding: 50% 6% 43% 6%;
@@ -798,11 +802,12 @@ main section.portfolio .circles .circle .two {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two {
+    width: 100%;
     height: auto;
   }
 }
 main section.portfolio .circles .circle .two .webPF {
-  margin-top: -11%;
+  margin-top: -63%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two .webPF {
@@ -926,7 +931,6 @@ main section.portfolio .circles .circle .submarine-pc {
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .second-pc {
     margin-left: 8%;
-    width: 143%;
   }
   main section.portfolio .circles .circle .third-pc {
     margin-left: 14%;
@@ -941,7 +945,7 @@ main section.portfolio .circles .circle .submarine-pc {
     margin-left: 23%;
   }
   main section.portfolio .circles .submarine-two {
-    margin-left: 4%;
+    margin-left: 3%;
   }
   main section.portfolio .circles .submarine-two .buttons {
     margin-top: 6%;
