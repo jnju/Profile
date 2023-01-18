@@ -684,7 +684,7 @@ main section.portfolio .circles .circle .for-slide .second-slide,
 main section.portfolio .circles .circle .for-slide .third-slide {
     display: block;
     position: relative;
-    z-index: 3;
+    z-index: 30;
     height: 100%;
     width: 100%;
     background-color: #142850;
@@ -726,11 +726,8 @@ main section.portfolio .circles .circle .pc-submarine-text {
   }
 }
 main section.portfolio .circles .circle .pc-submarine-text .img-box {
-  position: relative;
-  display: flex;
-  overflow: hidden;
   border: none;
-  z-index: 1;
+  z-index: 30;
   height: 400px;
 }
 @media screen and (min-width: 1024px) {
@@ -742,27 +739,29 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box {
     height: 305px;
   }
 }
+main section.portfolio .circles .circle .pc-submarine-text .img-box .to-the-top {
+  z-index: 20;
+}
 main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
   position: relative;
   z-index: 0;
-  width: 100%;
-  margin: -80% 0 0 -5%;
+  width: 410px;
+  height: 410px;
+  margin: 0;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
     position: relative;
-    width: 100%;
+    width: 300px;
+    height: 300px;
     margin: 0;
     border-radius: 0px;
     background-color: transparent;
   }
-}
-main section.portfolio .circles .circle .pc-submarine-text .img-box .j {
-  margin-top: -5.9%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text .img-box .j {
@@ -779,7 +778,6 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box .j {
   main section.portfolio .circles .circle .one .buttons,
 main section.portfolio .circles .circle .one .left-right {
     margin-top: 8%;
-    margin-left: -15%;
   }
 }
 main section.portfolio .circles .circle .one .webPF {
@@ -870,7 +868,7 @@ main section.portfolio .circles .circle .three .left-right {
   main section.portfolio .circles .circle .three .buttons,
 main section.portfolio .circles .circle .three .left-right {
     margin-top: 7%;
-    margin-left: 60%;
+    margin-left: -20%;
   }
 }
 main section.portfolio .circles .circle .three .webPF {
@@ -890,6 +888,14 @@ main section.portfolio .circles .circle .three .webPF {
 main section.portfolio .circles .circle .one .left-right,
 main section.portfolio .circles .circle .three .left-right {
   width: 30%;
+  margin-left: 20%;
+  padding: 0 0px;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .one .left-right,
+main section.portfolio .circles .circle .three .left-right {
+    margin-left: 0%;
+  }
 }
 main section.portfolio .circles .circle .one .left-right .design,
 main section.portfolio .circles .circle .one .left-right .detail,
@@ -897,10 +903,9 @@ main section.portfolio .circles .circle .one .left-right .git,
 main section.portfolio .circles .circle .three .left-right .design,
 main section.portfolio .circles .circle .three .left-right .detail,
 main section.portfolio .circles .circle .three .left-right .git {
-  width: 100%;
+  width: 100px;
   font-size: 0.9rem;
   padding: 5px 9px;
-  margin-left: 80%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .left-right .design,
@@ -910,20 +915,17 @@ main section.portfolio .circles .circle .three .left-right .design,
 main section.portfolio .circles .circle .three .left-right .detail,
 main section.portfolio .circles .circle .three .left-right .git {
     font-size: 1rem;
-    width: 90%;
-    margin-left: 50%;
+    width: 100px;
   }
 }
 main section.portfolio .circles .circle .one .left-right .git,
 main section.portfolio .circles .circle .three .left-right .git {
-  margin-left: 155%;
   width: 180%;
 }
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .circle .one .left-right .git,
-main section.portfolio .circles .circle .three .left-right .git {
-    width: 90%;
-    margin-left: 50%;
+  main section.portfolio .circles .circle .three .buttons,
+main section.portfolio .circles .circle .three .left-right {
+    margin-left: 223px;
   }
 }
 main section.portfolio .circles .circle .submarine-pc {
@@ -1005,18 +1007,21 @@ main section.portfolio .circles .buttons .git,
 main section.portfolio .circles .left-right .design,
 main section.portfolio .circles .left-right .detail,
 main section.portfolio .circles .left-right .git {
-    margin: 0;
+    margin: 20px 0;
   }
 }
 main section.portfolio .circles .buttons .design,
 main section.portfolio .circles .left-right .design {
   margin-right: -30%;
 }
+main section.portfolio .circles .buttons .btn-align,
+main section.portfolio .circles .left-right .btn-align {
+  margin: 0 24px;
+}
 @media screen and (min-width: 1024px) {
-  main section.portfolio .circles .buttons .design,
-main section.portfolio .circles .left-right .design {
-    margin-right: 0;
-    margin-bottom: 20px;
+  main section.portfolio .circles .buttons .btn-align,
+main section.portfolio .circles .left-right .btn-align {
+    margin: 20px 0;
   }
 }
 main section.portfolio .circles .buttons .git,
@@ -1026,8 +1031,7 @@ main section.portfolio .circles .left-right .git {
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons .git,
 main section.portfolio .circles .left-right .git {
-    width: 75%;
-    margin-top: 17%;
+    margin-top: 20px;
     margin-left: 0%;
   }
 }

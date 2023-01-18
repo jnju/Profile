@@ -8,10 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image" href="img/pearl_shell.png" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="./css/profile.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/profile.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider();
+        });
+    </script>
     <title>Jinju Portfolio</title>
 </head>
 <body>
@@ -233,12 +240,29 @@
                                             제작했습니다
                                             <div class="buttons left-right">
                                                 <div class="design">Design</div>
-                                                <a href="works/pages/first_page/index.html" target="_blank"><div class="detail">Detail</div></a>
-                                                <a href="https://github.com/jnju/Bonheur.git" target="_blank"><div class="git">git</div></a>
+                                                <div class="btn-align">
+                                                    <a href="works/pages/first_page/index.html#test" target="_blank" class="detail">Detail</a>
+                                                </div>
+                                                <div class="btn-align">
+                                                    <a href="https://github.com/jnju/Bonheur.git" target="_blank" class="git">git</a>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="img-box">
-                                            <img src="img/capture/j.PNG" alt="web-portolio1" class="profile-capture">
+                                            <div class="slider">
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="b">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="b">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="b">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="b">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="modal modal_bonheur">
                                             <div class="x-box"><p class="x">x</p></div>
@@ -350,7 +374,20 @@
                                     <div class="pc-submarine-text two">
                                         <span class="line"><br></span>
                                         <div class="img-box">
-                                            <div><img src="img/capture/profile-capture.PNG" alt="web-portolio1" class="j"></div>
+                                            <div class="slider to-the-top">
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="j">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="j">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="j">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="j">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="webPF">
                                             #2 주저리<br><br>
@@ -528,15 +565,32 @@
                                             포트폴리오의 내용을<br> 
                                             담기 위해 제작된 <br>
                                             프로필 포트폴리오 <br>
-                                            웹 사이트입니다.
+                                            웹 사이트입니다.<br>
                                             <div class="buttons left-right">
                                                 <div class="design">Design</div>
-                                                <a href="#"><div class="detail">Detail</div></a>
-                                                <a href="https://github.com/jnju/Profile.git" target="_blank"><div class="git">git</div></a>
+                                                <div class="btn-align">
+                                                    <a href="profile.html" class="detail" target="_blank">Detail</a>
+                                                </div>
+                                                <div class="btn-align">
+                                                    <a href="https://github.com/jnju/Profile.git" target="_blank" class="git">git</a>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="img-box">
-                                            <img src="img/capture/profile-capture.PNG" alt="web-portolio1" class="profile-capture">
+                                            <div class="slider">
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="profile-capture">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="profile-capture">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="profile-capture">
+                                                </div>
+                                                <div>
+                                                    <img src="img/capture/j.PNG" alt="web-portolio1" class="profile-capture">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="modal modal_portfolio">
                                             <div class="x-box"><p class="x">x</p></div>
