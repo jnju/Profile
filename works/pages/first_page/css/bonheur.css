@@ -101,10 +101,12 @@ h2 a p {
 
 /* --------메인 메뉴---------- */
 .main-menu {
+    z-index: 3;
     transform: translate(0, -75px);
     opacity: 70%;
     background-color: black;
     margin-top: 0px;
+    width: 100%;
 }
 
 .gnb {
@@ -151,6 +153,14 @@ h2 a p {
     width: 237px;
 }
 
+.for-course-box {
+    margin-top: 450px;
+    border: 1px solid black;
+    position: absolute;
+    height: 560px; width: 1010px;
+    text-align: center; padding: 273px 0;
+}
+
 .typebox {
     margin: 8px;
 }
@@ -181,9 +191,13 @@ h2 a p {
 .alone-course {
     position: absolute;
     float: left;
-    border: 1px solid #333;
     margin-top: 25px;
     padding: 0 123px;
+}
+
+.course {
+    margin-top: 400px;
+    height: 550px; width: 1010px;
 }
 
 .friend-course img,
@@ -193,14 +207,16 @@ h2 a p {
     width: 745px;   
 }
 
-.family-course,
-.love-course,
-.alone-course {
-    display: none;
+.family-course img,
+.love-course img,
+.alone-course img {
+    display: none;   
 }
 
-.friend-course {
-    z-index: 1;
+.family-course h5,
+.love-course h5,
+.alone-course h5 {
+    display: none;   
 }
 
 .family-course {
@@ -217,7 +233,7 @@ h2 a p {
 
 /* -----------like-------------- */
 .Like h4 {
-    margin-top: 700px;
+    margin-top: 800px;
 }
 
 .Like h4::after {
@@ -234,6 +250,7 @@ h2 a p {
     padding: 4px;
     margin-top: 65px;
     background-color: #eee;
+    height: 410px; width: 100%;
 }
 
 .likeboxes{
@@ -253,13 +270,21 @@ h2 a p {
 }
 
 .likelist img {
+    z-index: 1;
     width: 234px;
 }
 
+.heart-box { z-index: 1; margin-top: -60px;}
 .likelist .heart {
+    display: block;
+    position: absolute;
     width: 50px;
     opacity: 80%;
-    transform: translate(8px, -60px);
+}
+
+.likelist .heart-line {
+    width: 50px;
+    z-index: 2;
 }
 
 .likelist p {
@@ -275,19 +300,27 @@ h2 a p {
     font-size: 13px;
 }
 
+.like-text {
+    margin-top: 20px;
+    line-height: 30px;
+}
+
 .left,
 .right {
+    position: absolute;
+    margin-top: -250px;
     width: 41px;
     height: 63px;
 }
 
 .left {
-    transform: translate(1000px, -240px);
+    margin-left: 1030px;
 }
 
 .right {
-    transform: translate(-80px, -240px);
+    margin-left: -80px;
 }
+
 
 
 /* --------CONTACT US----------- */

@@ -475,7 +475,7 @@ main section.about .introduction {
     transform: none;
     background-color: transparent;
     color: #f1f6f5;
-    margin-top: 75%;
+    margin-top: 40%;
     margin-left: 50%;
     line-height: 3.5rem;
     padding: 0;
@@ -535,7 +535,7 @@ main section.skills .skill {
   }
   main section.skills .skill .skill-text {
     position: absolute;
-    margin-top: 3.5%;
+    margin-top: 5%;
     width: 29%;
   }
 }

@@ -6,7 +6,7 @@
   <meta name="Author" content="박진주" />
   <meta name="description" content="여행사">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image" href="img/" />
+  <link rel="shortcut icon" type="image" href="img/RsOHZpQV.ico" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/bonheur.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -75,6 +75,9 @@
             <section class="triptype">
                 <h1>Trip Type</h1>
                 <div class="container">
+                    <div class="for-course-box">
+                        &nbsp;
+                    </div>
                     <h4>Trip Type</h4>
                     <div class="typeboxes">
                         <div class="typebox box1">
@@ -85,10 +88,10 @@
                                     친구들과 떠나는 신나는 여행
                                 </a>
                             </p>
-                            <div class="friend-course">
-                                <img src="img/images/친구표.png" alt="friend">
-                                <h5>친구들과 떠나는 신나는 여행</h5>
-                            </div>
+                        </div>
+                        <div class="course friend-course">
+                            <img src="img/images/친구표.png" alt="friend">
+                            <h5>친구들과 떠나는 신나는 여행</h5>
                         </div>
                         <div class="typebox box2">
                             <img src="./img/images/가족여행_02.png" alt="family">
@@ -98,10 +101,10 @@
                                     가족과 함께하는 힐링 여행
                                 </a>
                             </p>
-                            <div class="family-course">
-                                <img src="img/images/가족표.png" alt="family">
-                                <h5>가족과 함께하는 힐링 여행</h5>
-                            </div>
+                        </div>
+                        <div class="course family-course">
+                            <img src="img/images/가족표.png" alt="family">
+                            <h5>가족과 함께하는 힐링 여행</h5>
                         </div>
                         <div class="typebox box3">
                             <img src="./img/images/연인과여행_03.png" alt="love">
@@ -111,10 +114,10 @@
                                     연인과 단둘이서 설레는 여행
                                 </a>
                             </p>
-                            <div class="love-course">
-                                <img src="img/images/연인표.png" alt="love">
-                                <h5>연인과 단둘이서 설레는 여행</h5>
-                            </div>
+                        </div>
+                        <div class="course love-course">
+                            <img src="img/images/연인표.png" alt="love">
+                            <h5>연인과 단둘이서 설레는 여행</h5>
                         </div>
                         <div class="typebox box4">
                             <img src="./img/images/홀로여행_03.png" alt="alone">
@@ -124,10 +127,10 @@
                                     혼자서 즐기는 자유로운 여행
                                 </a>
                             </p>
-                            <div class="alone-course">
-                                <img src="img/images/혼자표.png" alt="alone">
-                                <h5>혼자서 즐기는 자유로운 여행</h5>
-                            </div>
+                        </div>
+                        <div class="course alone-course">
+                            <img src="img/images/혼자표.png" alt="alone">
+                            <h5>혼자서 즐기는 자유로운 여행</h5>
                         </div>
                     </div> <!--typeboxes-->
                 </div> <!--container-->
@@ -140,48 +143,52 @@
                     <div class="likebox"> <!--회색박스-->
                         <div class="likeboxes"> <!--중복되는형태양식-->
                             <div class="likelist">
-                                <a href="#"><img src="./img/images/루브르보정.png" alt="루브르"></a>
-                                <a href="#"><img src="img/heart.png" alt="heart" class="heart heart1"></a>
-                                <p>
-                                    <a href="#">
-                                        <strong>Louvre Museum</strong><br>
-                                        루브르 박물관<br>
-                                        <span>#피라미드 #모나리자 #역사여행</span>
-                                    </a>
-                                </p>
+                                <img src="./img/images/루브르보정.png" alt="루브르" class="place-img">
+                                <div class="heart-box">
+                                    <img src="img/heart.png" alt="heart" class="heart heart1">
+                                    <img src="img/heart_line.gif" alt="heart-line" class="heart-line">
+                                </div>
+                                <div class="like-text">
+                                    <strong>Louvre Museum</strong><br>
+                                    루브르 박물관<br>
+                                    <span>#피라미드 #모나리자 #역사여행</span>
+                                </div>
                             </div> <!--likelist-->
                             <div class="likelist">
-                                <a href="#"><img src="./img/images/개선문보정.png" alt="개선문"></a>
-                                <a href="#"><img src="img/heart.png" alt="heart" class="heart heart2"></a>
-                                <p>
-                                    <a href="#">
-                                        <strong>Arc de Triomphe</strong><br>
-                                        에투알 개선문<br>
-                                        <span>#전망대 #야경 #신혼여행</span>
-                                    </a>
-                                </p>
+                                <img src="./img/images/개선문보정.png" alt="개선문" class="place-img">
+                                <div class="heart-box">
+                                    <img src="img/heart.png" alt="heart" class="heart heart2">
+                                    <img src="img/heart_line.gif" alt="heart-line" class="heart-line">
+                                </div>
+                                <div class="like-text">
+                                    <strong>Arc de Triomphe</strong><br>
+                                    에투알 개선문<br>
+                                    <span>#전망대 #야경 #신혼여행</span>
+                                </div>
                             </div> <!--likelist-->
                             <div class="likelist">
-                                <a href="#"><img src="./img/images/노트르담보정.png" alt="노트르담"></a>
-                                <a href="#"><img src="img/heart.png" alt="heart" class="heart heart3"></a>
-                                <p>
-                                    <a href="#">
-                                        <strong>Notre-Dame</strong><br>
-                                        노트르담 대성당<br>
-                                        <span>#종탑 #성모마리아 #광장</span>
-                                    </a>
-                                </p>
+                                <img src="./img/images/노트르담보정.png" alt="노트르담" class="place-img">
+                                <div class="heart-box">
+                                    <img src="img/heart.png" alt="heart" class="heart heart3">
+                                    <img src="img/heart_line.gif" alt="heart-line" class="heart-line">
+                                </div>
+                                <div class="like-text">
+                                    <strong>Notre-Dame</strong><br>
+                                    노트르담 대성당<br>
+                                    <span>#종탑 #성모마리아 #광장</span>
+                                </div>
                             </div> <!--likelist-->
                             <div class="likelist">
-                                <a href="#"><img src="./img/images/공원보정.png" alt="뤽상부르공원"></a>
-                                <a href="#"><img src="img/heart.png" alt="heart" class="heart heart4"></a>
-                                <p>
-                                    <a href="#">
-                                        <strong>Luxembourg Gardens</strong><br>
-                                        뤽상부르 공원<br>
-                                        <span>#자유의여신상 #궁궐 #피크닉</span>
-                                    </a>
-                                </p>
+                                <img src="./img/images/공원보정.png" alt="뤽상부르공원" class="place-img">
+                                <div class="heart-box">
+                                    <img src="img/heart.png" alt="heart" class="heart heart4">
+                                    <img src="img/heart_line.gif" alt="heart-line" class="heart-line">
+                                </div>
+                                <div class="like-text">
+                                    <strong>Luxembourg Gardens</strong><br>
+                                    뤽상부르 공원<br>
+                                    <span>#자유의여신상 #궁궐 #피크닉</span>
+                                </div>
                             </div> <!--likelist-->
                         </div> <!--likeboxes-->
                     </div> <!--likebox-->

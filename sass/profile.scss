@@ -324,11 +324,10 @@ main {
                 transform: none;
                 background-color: transparent;
                 color: $color-sub;
-                margin-top: 75%; margin-left: 50%;
+                margin-top: 40%; margin-left: 50%;
                 line-height: 3.5rem;
                 padding: 0;
                 h4 {
-                    // background-color: aqua;
                     width: 240px;
                     font-size: 2rem;
                     margin-bottom: 3.5rem;
@@ -386,7 +385,7 @@ main {
                 margin-bottom: 20%;
                 .skill-text {
                     position: absolute;
-                    margin-top: 3.5%;
+                    margin-top: 5%;
                     width: 29%;
                 }
             }
