@@ -501,14 +501,15 @@ main {
 
                 .webPF {
                     position: absolute;
-                    z-index: 11;
+                    z-index: 3;
                     text-align: center;
                     font-size: 1.3rem;
                     padding-top: 13%; padding-bottom: 15%;
                     width: 100%; height: 100%;
+                    margin-left: -10%;
                     @include responsive(pc-screens) {
                         position: relative;
-                        margin-top: -99.4%; margin-left: -10%;
+                        margin-top: -99.4%;
                         padding: 0;
                     }
                 }
@@ -524,11 +525,10 @@ main {
                     }
                     .img-box {
                         position: relative;
-                        background-color: pink;
                         display: flex;
                         overflow: hidden;
                         border: none;
-                        z-index: 10;
+                        z-index: 1;
                         height: 400px;
                         @include responsive(pc-screens) {
                             position: relative;
@@ -539,7 +539,6 @@ main {
                         .b, 
                         .j,
                         .profile-capture {
-                            border: 1px solid aqua;
                             position: relative;
                             z-index: 0;
                             width: 100%;
@@ -553,7 +552,7 @@ main {
                             }
                         }
                         .j {
-                            margin-top: -13%;
+                            margin-top: -5.9%;
                             @include responsive(pc-screens) {
                                 margin-top: 1%;
                             }
@@ -591,8 +590,9 @@ main {
                         width: 100%;    
                         height: auto;
                     }
+
                     .webPF{
-                        margin-top: -63%;
+                        margin-top: -92%;
                         @include responsive(pc-screens) {     
                             text-align: center;
                             margin-top: 30%; margin-left: -70px;                       
@@ -600,7 +600,8 @@ main {
                     }
 
                     .buttons {
-                        margin-top: -10%;
+                        z-index: 4;
+                        margin-top: -20%;
                         @include responsive(pc-screens) {  
                             margin-top: 5%;
                             margin-left: 23%;                          
@@ -608,10 +609,15 @@ main {
                         .design,
                         .detail,
                         .git { 
+                            font-size: 0.9rem;
+                            width: 70%;
+                            padding: 6px 10px;
                             @include responsive(pc-screens) {                            
                                 width: 70%;
+                                font-size: 1rem;
                             }
                         }
+
                     }
                     
                     @include responsive(pc-screens) {                            
@@ -664,7 +670,7 @@ main {
                             width: 100%;
                             font-size: 0.9rem;
                             padding: 5px 9px;
-                            margin-left: 63%;
+                            margin-left: 80%;
                             @include responsive(pc-screens) {
                                 font-size: 1rem;
                                 width: 90%;
@@ -672,7 +678,7 @@ main {
                             }
                         }
                         .git {
-                            margin-left: 115%;
+                            margin-left: 155%;
                             width: 180%;
                             @include responsive(pc-screens) {
                                 width: 90%;
@@ -774,7 +780,7 @@ main {
             .modal {
                 cursor: auto;
 				display: none;
-				z-index: 5;
+				z-index: 100;
 				position: fixed;
 				background-color: white;
 				color: #000;

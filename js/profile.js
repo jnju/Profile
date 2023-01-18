@@ -233,11 +233,11 @@ $(function() {
 
         function pc() {
             $('.circles').css({'margin-left':'-1300px'});
-            $('nav').css({'position':'absilute', 'top':'-500px'});
+            $('nav').css({'position':'absolute', 'top':'-500px'});
             $(window).on("scroll", function (e) {
                 console.log($(document).scrollTop());
 
-                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 6600)) { // 5500
+                if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5500)) { // 5500
                     $('.circles').stop().animate({'margin-left':'0'},2000);
                     setTimeout(function() {
                         $('.first-slide').stop().animate({'margin': '0'},800);
@@ -258,16 +258,16 @@ $(function() {
                     } 
 
                 if (($(document).scrollTop() > 1350) && ($(document).scrollTop() < 2864)) {
-                    $('.random-move1').stop().delay(2000).animate({'left': '115%'}, 1000);
-                    $('.random-move2').stop().delay(2000).animate({'left': '100%'}, 1000);
-                    $('.random-move3').stop().delay(2000).animate({'left': '95%'}, 1000);
-                    $('.random-move4').stop().delay(2000).animate({'left': '105%'}, 1000);
+                    $('.random-move1').stop().delay(3000).animate({'left': '115%'}, 1000);
+                    $('.random-move2').stop().delay(3000).animate({'left': '100%'}, 1000);
+                    $('.random-move3').stop().delay(3000).animate({'left': '95%'}, 1000);
+                    $('.random-move4').stop().delay(3000).animate({'left': '105%'}, 1000);
 
                 } else {
                     $('.boat').stop().animate({'left': '0'});
                 } 
 
-                if (($(document).scrollTop() > 4600) && ($(document).scrollTop() < 6600)) {
+                if (($(document).scrollTop() > 4750) && ($(document).scrollTop() < 6600)) {
                     $('.first-turtle').stop().animate({'left': '-90%'}, 800);
                     $('.second-turtle').stop().animate({'left': '135%'}, 800);
                 } else {
@@ -275,18 +275,20 @@ $(function() {
                     $('.second-turtle').css({'left': '32%'});
                 } 
 
-                if ($(document).scrollTop() > 2300 && $(document).scrollTop() < 2800) {
+                if ($(document).scrollTop() > 1000 && $(document).scrollTop() < 2800) {
+                    $('.skills').css('padding','10px');
                     $('.skills').addClass('animate__animated animate__slower animate__backInRight');
                 } else {
                     $('.skills').removeClass('animate__animated animate__slower animate__backInRight');
                 };
-                if ($(document).scrollTop() > 1150 && $(document).scrollTop() < 1550) {
-                    $('.about').addClass('animate__animated animate__slower animate__backInRight');
+
+                if ($(document).scrollTop() > 800 && $(document).scrollTop() < 800) {
+                    $('.about').addClass('animate__animated animate__fast animate__backInRight');
                 } else {
-                    $('.about').removeClass('animate__animated animate__slower animate__backInRight');
+                    $('.about').removeClass('animate__animated animate__fast animate__backInRight');
                 };
     
-                if ($(document).scrollTop() > 7150) {
+                if ($(document).scrollTop() > 7050) {
                     $('.contact').addClass('animate__animated animate__slower animate__backInRight');
                 } else {
                     $('.contact').removeClass('animate__animated animate__slower animate__backInRight');
