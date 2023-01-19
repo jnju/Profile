@@ -40,7 +40,7 @@ header {
     .logo_me {
         position: absolute;
         width: 19%;
-        margin: 5%; margin-top: 35%;
+        margin: 5%; margin-top: 46%;
         @include responsive(pc-screens) {
             width: 6%;
             margin: 3%;
@@ -159,7 +159,8 @@ header {
         margin-left: -4%;
         margin-top: -4%;
         @include responsive(pc-screens){
-            margin-top: 15%;
+            background-color: none;
+            margin-top: 0%;
             border: none;
             width: 18%;
             margin-left: 1%;
@@ -525,15 +526,21 @@ main {
                     .img-box {
                         border: none;
                         z-index: 30;
-                        height: 400px;
+                        height: 420px;
                         @include responsive(pc-screens) {
                             position: relative;
                             border: 2px solid $color-sub;
                             padding: 0;
-                            width: 300px; height: 305px;
+                            width: 300px; height: 314px;
                         }
+                        .slider { z-index: 10;}
                         .to-the-top {
                             z-index: 20;
+                            a.bx-next {
+                                display: none;
+                                position: relative;
+                                z-index: 10;
+                            }
                         }
                         .b, 
                         .j,
@@ -598,9 +605,21 @@ main {
                         }
                     }
 
+                    .design {
+                        margin-right: -46px;
+                    }
+
+                    .btn-align {
+                        margin-left: 25px;
+                        @include responsive(pc-screens) {  
+                            margin-left: 0;
+                        }
+                    }
+
                     .buttons {
                         z-index: 4;
-                        margin-top: -20%;
+                        margin-top: -21.5%;
+                        margin-left: -5%;                          
                         @include responsive(pc-screens) {  
                             margin-top: 5%;
                             margin-left: 23%;                          
@@ -609,10 +628,10 @@ main {
                         .detail,
                         .git { 
                             font-size: 0.9rem;
-                            width: 70%;
+                            width: 100%;
                             padding: 6px 10px;
-                            @include responsive(pc-screens) {                            
-                                width: 70%;
+                            @include responsive(pc-screens) { 
+                                width: 100px;
                                 font-size: 1rem;
                             }
                         }
@@ -677,6 +696,15 @@ main {
                             @include responsive(pc-screens) {
                                 font-size: 1rem;
                                 width: 100px;
+                            }
+                        }
+
+                        @include responsive(pc-screens) {
+                            .detail {
+                                padding: 5px 23px;
+                            }
+                            .git {
+                                padding: 5px 37px;
                             }
                         }
 
@@ -774,6 +802,7 @@ main {
 
                 .btn-align {
                     margin: 0 24px;
+                    width: 100px;
                     @include responsive(pc-screens) {
                         margin: 20px 0;
                     }
@@ -806,7 +835,7 @@ main {
                     position: fixed;
                     width: 97%;
                     background-color: white;
-                    z-index: 5;
+                    z-index: 100;
                     @include responsive(pc-screens) {
                         width: 99.1%;
                     }
@@ -875,10 +904,10 @@ main {
                             display: inline-block;
                         }
                         .bonheur-grid1 {
-                            width: 40%;
+                            width: 38%;
                         }
                         .bonheur-grid2 {
-                            width: 30%;
+                            width: 28%;
                         }
                         p {
                             font-size: 0.5rem;

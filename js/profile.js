@@ -220,7 +220,7 @@ $(function() {
                 if ($(document).scrollTop() < 800) {
                     $('nav').stop().animate({'position':'fixed','top':'-60%'},60);
                 } else if ($(document).scrollTop() > 600) {
-                        $('nav').stop().animate({'position':'fixed','top':'40%'},60);
+                        $('nav').stop().animate({'position':'fixed','top':'35%'},60);
                     } 
 
                 if (($(document).scrollTop() > 3250) && ($(document).scrollTop() < 5700)) { // 5500

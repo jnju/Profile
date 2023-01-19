@@ -86,7 +86,7 @@ header .logo_me {
   position: absolute;
   width: 19%;
   margin: 5%;
-  margin-top: 35%;
+  margin-top: 46%;
 }
 @media screen and (min-width: 1024px) {
   header .logo_me {
@@ -247,7 +247,8 @@ header nav {
 }
 @media screen and (min-width: 1024px) {
   header nav {
-    margin-top: 15%;
+    background-color: none;
+    margin-top: 0%;
     border: none;
     width: 18%;
     margin-left: 1%;
@@ -728,7 +729,7 @@ main section.portfolio .circles .circle .pc-submarine-text {
 main section.portfolio .circles .circle .pc-submarine-text .img-box {
   border: none;
   z-index: 30;
-  height: 400px;
+  height: 420px;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text .img-box {
@@ -736,11 +737,19 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box {
     border: 2px solid #f1f6f5;
     padding: 0;
     width: 300px;
-    height: 305px;
+    height: 314px;
   }
+}
+main section.portfolio .circles .circle .pc-submarine-text .img-box .slider {
+  z-index: 10;
 }
 main section.portfolio .circles .circle .pc-submarine-text .img-box .to-the-top {
   z-index: 20;
+}
+main section.portfolio .circles .circle .pc-submarine-text .img-box .to-the-top a.bx-next {
+  display: none;
+  position: relative;
+  z-index: 10;
 }
 main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
 main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
@@ -812,9 +821,21 @@ main section.portfolio .circles .circle .two .webPF {
     margin-left: -70px;
   }
 }
+main section.portfolio .circles .circle .two .design {
+  margin-right: -46px;
+}
+main section.portfolio .circles .circle .two .btn-align {
+  margin-left: 25px;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .two .btn-align {
+    margin-left: 0;
+  }
+}
 main section.portfolio .circles .circle .two .buttons {
   z-index: 4;
-  margin-top: -20%;
+  margin-top: -21.5%;
+  margin-left: -5%;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two .buttons {
@@ -826,14 +847,14 @@ main section.portfolio .circles .circle .two .buttons .design,
 main section.portfolio .circles .circle .two .buttons .detail,
 main section.portfolio .circles .circle .two .buttons .git {
   font-size: 0.9rem;
-  width: 70%;
+  width: 100%;
   padding: 6px 10px;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two .buttons .design,
 main section.portfolio .circles .circle .two .buttons .detail,
 main section.portfolio .circles .circle .two .buttons .git {
-    width: 70%;
+    width: 100px;
     font-size: 1rem;
   }
 }
@@ -916,6 +937,16 @@ main section.portfolio .circles .circle .three .left-right .detail,
 main section.portfolio .circles .circle .three .left-right .git {
     font-size: 1rem;
     width: 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .one .left-right .detail,
+main section.portfolio .circles .circle .three .left-right .detail {
+    padding: 5px 23px;
+  }
+  main section.portfolio .circles .circle .one .left-right .git,
+main section.portfolio .circles .circle .three .left-right .git {
+    padding: 5px 37px;
   }
 }
 main section.portfolio .circles .circle .one .left-right .git,
@@ -1017,6 +1048,7 @@ main section.portfolio .circles .left-right .design {
 main section.portfolio .circles .buttons .btn-align,
 main section.portfolio .circles .left-right .btn-align {
   margin: 0 24px;
+  width: 100px;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons .btn-align,
@@ -1057,7 +1089,7 @@ main section.portfolio .circles .modal .x-box {
   position: fixed;
   width: 97%;
   background-color: white;
-  z-index: 5;
+  z-index: 100;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .modal .x-box {
@@ -1135,10 +1167,10 @@ main section.portfolio .circles .modal .modal-contents .grid-system .jujery-grid
   display: inline-block;
 }
 main section.portfolio .circles .modal .modal-contents .grid-system .bonheur-grid1 {
-  width: 40%;
+  width: 38%;
 }
 main section.portfolio .circles .modal .modal-contents .grid-system .bonheur-grid2 {
-  width: 30%;
+  width: 28%;
 }
 main section.portfolio .circles .modal .modal-contents .grid-system p {
   font-size: 0.5rem;
