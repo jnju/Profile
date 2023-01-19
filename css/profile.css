@@ -968,6 +968,54 @@ main section.portfolio .circles .circle .submarine-pc {
     width: 170%;
   }
 }
+main section.portfolio .circles .circle .bubbles {
+  position: absolute;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .circle .bubbles {
+    display: inline-block;
+    margin-top: -230px;
+    width: 380px;
+  }
+}
+@-webkit-keyframes bubblemove {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -25px;
+  }
+}
+@keyframes bubblemove {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -25px;
+  }
+}
+main section.portfolio .circles .circle .bubbles .bubbles1 {
+  position: absolute;
+  -webkit-animation: bubblemove 0.5s 0s infinite alternate;
+          animation: bubblemove 0.5s 0s infinite alternate;
+}
+main section.portfolio .circles .circle .bubbles .bubbles2 {
+  margin-left: 300px;
+  -webkit-animation: bubblemove 1s 0s infinite alternate;
+          animation: bubblemove 1s 0s infinite alternate;
+}
+main section.portfolio .circles .circle .bubbles .bubbles3 {
+  position: absolute;
+  -webkit-animation: bubblemove 0.8s 0s infinite alternate;
+          animation: bubblemove 0.8s 0s infinite alternate;
+}
+main section.portfolio .circles .circle .bubbles .bubbles4 {
+  position: absolute;
+  margin-left: 300px;
+  -webkit-animation: bubblemove 0.3s 0s infinite alternate;
+          animation: bubblemove 0.3s 0s infinite alternate;
+}
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .second-pc {
     margin-left: 8%;

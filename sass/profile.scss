@@ -730,6 +730,44 @@ main {
                         display: inline-block;
                         width: 170%;
                     }
+
+                }
+
+                .bubbles {
+                    position: absolute;
+                    display: none;
+                    @include responsive(pc-screens) {
+                        display: inline-block;
+                        margin-top: -230px;
+                        width: 380px;
+                        // background-color: aqua;
+                    }
+
+                    @keyframes bubblemove {
+                        0% {margin-top: 0;}
+                        100%{margin-top: -25px;}
+                    }
+
+                    .bubbles1 {
+                        position: absolute;
+                        animation: bubblemove 0.5s 0s infinite alternate;
+                    }
+
+                    .bubbles2 {
+                        margin-left: 300px;
+                        animation: bubblemove 1s 0s infinite alternate;
+                    }
+
+                    .bubbles3 {
+                        position: absolute;
+                        animation: bubblemove 0.8s 0s infinite alternate;
+                    }
+
+                    .bubbles4 {
+                        position: absolute;
+                        margin-left: 300px;
+                        animation: bubblemove 0.3s 0s infinite alternate;
+                    }
                 }
 
                 @include responsive(pc-screens) {
