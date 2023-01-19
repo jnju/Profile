@@ -214,7 +214,6 @@ $(function() {
 
         function pc() {
             $('.circles').css({'margin-left':'-1300px'});
-            // $('nav').css({'position':'absolute', 'top':'-500px'});
             $(window).on("scroll", function (e) {
                 console.log($(document).scrollTop());
                 if ($(document).scrollTop() < 800) {

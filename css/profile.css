@@ -430,7 +430,7 @@ main section.about #mobile-me .mobile-me-img {
 }
 @media screen and (min-width: 1024px) {
   main section.about #mobile-me .mobile-me-img {
-    margin: 10.5% 0 10% 3.8%;
+    margin: 10% 0 10% 5%;
     width: 30%;
     border-radius: 200px;
   }
@@ -440,10 +440,10 @@ main section.about #mobile-me .letters {
 }
 @media screen and (min-width: 1024px) {
   main section.about #mobile-me .letters {
-    width: 34%;
+    width: 40%;
     display: block;
     position: absolute;
-    margin: 8.4% 0 10% 1.75%;
+    margin: 5% 0 10% 0%;
     -webkit-animation: rotate_image 20s linear infinite;
             animation: rotate_image 20s linear infinite;
     transform-origin: 50% 50%;
@@ -476,7 +476,7 @@ main section.about .introduction {
     transform: none;
     background-color: transparent;
     color: #f1f6f5;
-    margin-top: 40%;
+    margin-top: 75%;
     margin-left: 50%;
     line-height: 3.5rem;
     padding: 0;
@@ -535,6 +535,7 @@ main section.skills .skill {
     margin-bottom: 20%;
   }
   main section.skills .skill .skill-text {
+    color: #3aaaff;
     position: absolute;
     margin-top: 5%;
     width: 29%;

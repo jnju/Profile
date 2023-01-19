@@ -290,7 +290,7 @@ main {
                 width: 100%;
                 cursor: pointer;
                 @include responsive(pc-screens) {
-                    margin: 10.5% 0 10% 3.8%;
+                    margin: 10% 0 10% 5%;
                     width: 30%;
                     border-radius: 200px;
                 }
@@ -298,10 +298,10 @@ main {
             .letters {
                 display: none;
                 @include responsive(pc-screens) {
-                    width: 34%;
+                    width: 40%;
                     display: block;
                     position: absolute;
-                    margin: 8.4% 0 10% 1.75%;
+                    margin: 5% 0 10% 0%;
                     animation: rotate_image 20s linear infinite; transform-origin: 50% 50%;
                     @keyframes rotate_image{
                         100% {
@@ -325,7 +325,7 @@ main {
                 transform: none;
                 background-color: transparent;
                 color: $color-sub;
-                margin-top: 40%; margin-left: 50%;
+                margin-top: 75%; margin-left: 50%;
                 line-height: 3.5rem;
                 padding: 0;
                 h4 {
@@ -385,6 +385,7 @@ main {
                 width: 50%;
                 margin-bottom: 20%;
                 .skill-text {
+                    color: #3aaaff;
                     position: absolute;
                     margin-top: 5%;
                     width: 29%;
