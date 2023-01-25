@@ -539,6 +539,10 @@ main {
                             width: 300px; height: 314px;
                         }
                         .slider { z-index: 10;}
+                        .bx-prev,
+                        .bx-next {
+                            z-index: 10;
+                        }
                         .to-the-top {
                             z-index: 20;
                             a.bx-next {

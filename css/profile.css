@@ -747,6 +747,10 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box {
 main section.portfolio .circles .circle .pc-submarine-text .img-box .slider {
   z-index: 10;
 }
+main section.portfolio .circles .circle .pc-submarine-text .img-box .bx-prev,
+main section.portfolio .circles .circle .pc-submarine-text .img-box .bx-next {
+  z-index: 10;
+}
 main section.portfolio .circles .circle .pc-submarine-text .img-box .to-the-top {
   z-index: 20;
 }
