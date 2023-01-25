@@ -249,7 +249,7 @@ $(function() {
 
                 } else {
                     $('.boat').stop().animate({'left': '0'});
-                    $('.skills').css('opacity','0.5');
+                    $('.skills').css('opacity','0.5'); 
                 } 
 
                 if (($(document).scrollTop() > 4950) && ($(document).scrollTop() < 6600)) {
