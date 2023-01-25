@@ -1122,7 +1122,7 @@ main section.portfolio .circles .left-right .git {
 main section.portfolio .circles .modal {
   cursor: auto;
   display: none;
-  z-index: 100;
+  z-index: 500;
   position: fixed;
   background-color: white;
   color: #000;
@@ -1141,7 +1141,7 @@ main section.portfolio .circles .modal .x-box {
   position: fixed;
   width: 97%;
   background-color: white;
-  z-index: 100;
+  z-index: 600;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .modal .x-box {
@@ -1316,8 +1316,12 @@ main section.portfolio .circles .modal .modal-contents .logo .logo-text::after {
   border-bottom: 1px solid black;
   margin: 3px 10px;
 }
-main section.portfolio .circles .modal .modal-contents .logo .bonheur-text::after {
+main section.portfolio .circles .modal .modal-contents .logo .bonheur-text::after,
+main section.portfolio .circles .modal .modal-contents .logo .profile-text::after {
   width: 34%;
+}
+main section.portfolio .circles .modal .modal-contents .logo .profile-text::after {
+  width: 27%;
 }
 main section.portfolio .circles .modal .modal-contents .logo .jujery-logo,
 main section.portfolio .circles .modal .modal-contents .logo .bonheur-logo {
@@ -1361,6 +1365,14 @@ main section.portfolio .circles .modal .modal-contents .main-page-design .main-p
 }
 main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-capture .main-page {
   width: 35%;
+}
+main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-capture .profile-pc {
+  margin-bottom: 1670px;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal .modal-contents .main-page-design .main-page-capture .profile-pc {
+    margin-bottom: 6547px;
+  }
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .modal_bonheur {

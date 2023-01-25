@@ -864,7 +864,7 @@ main {
             .modal {
                 cursor: auto;
 				display: none;
-				z-index: 100;
+				z-index: 500;
 				position: fixed;
 				background-color: white;
 				color: #000;
@@ -879,7 +879,7 @@ main {
                     position: fixed;
                     width: 97%;
                     background-color: white;
-                    z-index: 100;
+                    z-index: 600;
                     @include responsive(pc-screens) {
                         width: 99.1%;
                     }
@@ -1046,9 +1046,15 @@ main {
 								margin: 3px 10px;
 							}
 						}
-                        .bonheur-text {
+                        .bonheur-text,
+                        .profile-text {
 							&::after {
 								width: 34%; 
+							}
+                        }
+                        .profile-text {
+                            &::after {
+								width: 27%; 
 							}
                         }
 						.jujery-logo,
@@ -1093,6 +1099,12 @@ main {
                             }
                             .main-page {
                                 width: 35%;
+                            }
+                            .profile-pc {
+                                margin-bottom: 1670px;
+                                @include responsive(pc-screens) {
+                                    margin-bottom: 6547px;
+                                }
                             }
                         }
                     } // main-page-design
