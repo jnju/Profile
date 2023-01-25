@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 @font-face {
   font-family: "GmarketSansMedium";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
@@ -90,9 +91,10 @@ header .logo_me {
 }
 @media screen and (min-width: 1024px) {
   header .logo_me {
-    width: 6%;
+    width: 4%;
     margin: 3%;
-    margin-top: -24%;
+    margin-top: -22.5%;
+    margin-left: 4%;
   }
 }
 header h1 {
@@ -319,6 +321,7 @@ header nav li:hover {
   header nav li:hover {
     -webkit-animation: hovernavpc 0.5s 0s alternate forwards;
             animation: hovernavpc 0.5s 0s alternate forwards;
+    text-decoration: underline;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1131,7 +1134,7 @@ main section.portfolio .circles .modal {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .modal {
-    margin-left: -49.8%;
+    margin-left: -50.4%;
   }
 }
 main section.portfolio .circles .modal .x-box {
@@ -1149,17 +1152,34 @@ main section.portfolio .circles .modal .x-box .x {
   cursor: pointer;
   margin-left: 90%;
   margin-top: 1%;
+  margin-bottom: 0.4%;
   font-size: 2rem;
 }
-main section.portfolio .circles .modal .head_capture {
-  width: 100%;
-  filter: brightness(50%);
+main section.portfolio .circles .modal .x-box .x .x-img {
+  width: 55%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal .x-box .x .x-img {
+    width: 23%;
+  }
+}
+main section.portfolio .circles .modal .x-box .x-logo {
+  position: fixed;
+  width: 10%;
+  margin-left: 2%;
+  margin-top: 0.5%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .circles .modal .x-box .x-logo {
+    width: 4%;
+  }
 }
 main section.portfolio .circles .modal .modal-contents {
   position: relative;
   width: 90%;
   height: 100%;
   margin: 0 5%;
+  margin-top: 30%;
 }
 main section.portfolio .circles .modal .modal-contents h4 {
   text-align: center;
@@ -1261,6 +1281,15 @@ main section.portfolio .circles .modal .modal-contents .typograpy {
 main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex {
   display: flex;
 }
+main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex .bonheur-font {
+  font-family: "Jeju Gothic", sans-serif;
+}
+main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex .bonheur-font span {
+  font-family: "Jeju Gothic", sans-serif;
+}
+main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex .bonheur-font2 {
+  font-family: "sans-serif";
+}
 main section.portfolio .circles .modal .modal-contents .typograpy .main-sub-flex .sub {
   padding-left: 10px;
   border-left: 1px solid #333;
@@ -1287,7 +1316,11 @@ main section.portfolio .circles .modal .modal-contents .logo .logo-text::after {
   border-bottom: 1px solid black;
   margin: 3px 10px;
 }
-main section.portfolio .circles .modal .modal-contents .logo .jujery-logo {
+main section.portfolio .circles .modal .modal-contents .logo .bonheur-text::after {
+  width: 34%;
+}
+main section.portfolio .circles .modal .modal-contents .logo .jujery-logo,
+main section.portfolio .circles .modal .modal-contents .logo .bonheur-logo {
   margin: 5% 30%;
   width: 40%;
 }
@@ -1404,7 +1437,7 @@ main section.portfolio .circles .modal_jujery .modal-contents .captures {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .modal_portfolio {
-    margin-left: -74.3%;
+    margin-left: -73.3%;
   }
 }
 @media screen and (min-width: 1024px) {

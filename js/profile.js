@@ -229,11 +229,13 @@ $(function() {
                         $('.second-slide').stop().animate({'margin': '0'},1000);
                         $('.third-slide').stop().animate({'margin': '0'},1200);
                     }, 3000);
+                    $('.bubbles').stop().animate({'margin-top':'-400px','opacity':'0'},4500);
                 } else {
                     $('.circles').css({'margin-left':'-1300px'});
                     $('.first-slide').css({'margin-top': '-1120px'});
                     $('.second-slide').css({'margin-top': '-1120px'});
                     $('.third-slide').css({'margin-top': '-1120px'});
+                    $('.bubbles').stop().animate({'margin-top':'-200px','opacity':'1'},100);
                 } 
             
 

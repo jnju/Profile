@@ -2,6 +2,8 @@
 @import './common.scss';
 @import './mixin.scss';
 
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
 
 h2 {
     font-size: 250%;
@@ -42,9 +44,10 @@ header {
         width: 19%;
         margin: 5%; margin-top: 46%;
         @include responsive(pc-screens) {
-            width: 6%;
+            width: 4%;
             margin: 3%;
-            margin-top: -24%;
+            margin-top: -22.5%;
+            margin-left: 4%;
         }
     }
     h1 {
@@ -200,6 +203,7 @@ header {
                 animation: hovernav 0.5s 0s alternate forwards;
                 @include responsive(pc-screens) {
                     animation: hovernavpc 0.5s 0s alternate forwards;
+                    text-decoration: underline;
                 }
             }
             @include responsive(pc-screens) {
@@ -769,6 +773,7 @@ main {
                         margin-left: 300px;
                         animation: bubblemove 0.3s 0s infinite alternate;
                     }
+
                 }
 
                 @include responsive(pc-screens) {
@@ -868,7 +873,7 @@ main {
 				margin-left: -6%;
                 overflow: auto;
 				@include responsive(pc-screens) {
-                    margin-left: -49.8%;
+                    margin-left: -50.4%;
 				}
                 .x-box {
                     position: fixed;
@@ -878,21 +883,35 @@ main {
                     @include responsive(pc-screens) {
                         width: 99.1%;
                     }
+
                     .x {
                         cursor: pointer;
                         margin-left: 90%;
                         margin-top: 1%;
+                        margin-bottom: 0.4%;
                         font-size: 2rem;
+                        .x-img {
+                            width: 55%;
+                            @include responsive(pc-screens) {
+                                width: 23%;
+                            }
+                        }
                     }
-                }
-                .head_capture {
-                    width: 100%;
-                    filter: brightness(50%); 
+                    .x-logo {
+                        position: fixed;
+                        width: 10%;
+                        margin-left: 2%;
+                        margin-top: 0.5%;
+                        @include responsive(pc-screens) {
+                            width: 4%;
+                        }
+                    }
                 }
 				.modal-contents {
 					position: relative;
 					width: 90%; height: 100%;
 					margin: 0 5%;
+                    margin-top: 30%;
                     h4 {
                         text-align: center;
                         margin-bottom: 5%;
@@ -986,6 +1005,15 @@ main {
                         }
                         .main-sub-flex {
                             display: flex;
+                            .bonheur-font {
+                                font-family: 'Jeju Gothic', sans-serif;
+                                span {
+                                    font-family: 'Jeju Gothic', sans-serif;
+                                }
+                            }
+                            .bonheur-font2 {
+                                font-family: 'sans-serif';
+                            }
                             .sub {
                                 padding-left: 10px;
                                 border-left: 1px solid #333;
@@ -1018,7 +1046,13 @@ main {
 								margin: 3px 10px;
 							}
 						}
-						.jujery-logo {
+                        .bonheur-text {
+							&::after {
+								width: 34%; 
+							}
+                        }
+						.jujery-logo,
+                        .bonheur-logo {
 							margin: 5% 30%;
 							width: 40%;
 						}
@@ -1141,7 +1175,7 @@ main {
             } // modal-jujery
             .modal_portfolio {
                 @include responsive(pc-screens) {
-                    margin-left: -74.3%;
+                    margin-left: -73.3%;
                 }
             }
         } // circles
