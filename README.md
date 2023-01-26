@@ -30,6 +30,11 @@
 
 파도라던지 물방울같은 요소들을 집어넣고자 하였습니다.
 
+![프로필3](https://user-images.githubusercontent.com/114633681/214872640-bf0bfaa8-febe-487d-b7b8-c9944bb3a551.jpg)
+> 진주를 품은 조개 (바다 생물)
+
+
+
 
 <br/>
 
