@@ -3,7 +3,7 @@
 
 body {
     .for-slide {
-        width: 1899px; height: 5000px;
+        width: 1899px; height: 1110px;
         // background-color: aqua;
         overflow: hidden;
     }
@@ -196,7 +196,7 @@ body {
             }
             .desc-others {
                 text-align: center;
-                font-size: 3rem;
+                font-size: 2rem;
                 border: 1px solid white;
                 float: left;
                 position: absolute;
@@ -207,11 +207,27 @@ body {
                 p{
                     display: block;
                     padding: 20px 0;
-                    margin-bottom: 150px;
+                    margin-bottom: 50px;
+                }
+                .video-btn {
+                    .btn-desc {
+                        display: none;
+                        font-size: 1rem;
+                        border: 1px dashed white;
+                        padding: 10px 15px;
+                        position: absolute;
+                        margin-top: 780px;
+                        margin-left: 295px;
+                    }
+                    img {
+                        position: absolute;
+                        width: 90px;
+                        margin-top: 760px; margin-left: 215px;
+                    }
                 }
                 .other-text {
-                    padding: 50px 20px;
-                    font-size: 1.5rem;
+                    padding: 50px 40px;
+                    font-size: 1.2rem;
                     line-height: 2rem;
                 }
             }

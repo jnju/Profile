@@ -28,9 +28,14 @@ td {
   border-collapse: collapse;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 body .for-slide {
   width: 1899px;
-  height: 5000px;
+  height: 1110px;
   overflow: hidden;
 }
 body .intro {
@@ -234,7 +239,7 @@ body .second-page .contents .contents-start table tr td .tabes {
 }
 body .second-page .contents .desc-others {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   border: 1px solid white;
   float: left;
   position: absolute;
@@ -248,11 +253,26 @@ body .second-page .contents .desc-others {
 body .second-page .contents .desc-others p {
   display: block;
   padding: 20px 0;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+}
+body .second-page .contents .desc-others .video-btn .btn-desc {
+  display: none;
+  font-size: 1rem;
+  border: 1px dashed white;
+  padding: 10px 15px;
+  position: absolute;
+  margin-top: 780px;
+  margin-left: 295px;
+}
+body .second-page .contents .desc-others .video-btn img {
+  position: absolute;
+  width: 90px;
+  margin-top: 760px;
+  margin-left: 215px;
 }
 body .second-page .contents .desc-others .other-text {
-  padding: 50px 20px;
-  font-size: 1.5rem;
+  padding: 50px 40px;
+  font-size: 1.2rem;
   line-height: 2rem;
 }
 body .second-page .btn-box .prev-btn {
