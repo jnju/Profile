@@ -1318,12 +1318,15 @@ main {
                     margin-bottom: 5%;
                 }
                 .etc-text {
-                    width: 500px;
+                    width: 80%;
                     line-height: 2em;
                     margin-bottom: 3%;
                 }
                 img {
                     width: 80%;
+                    @include responsive(pc-screens) {
+                        width: 50%;
+                    }
                 }
                 box-sizing: border-box;
             }

@@ -1500,12 +1500,17 @@ main section.portfolio .etc-container .etc-box h4 {
   margin-bottom: 5%;
 }
 main section.portfolio .etc-container .etc-box .etc-text {
-  width: 500px;
+  width: 80%;
   line-height: 2em;
   margin-bottom: 3%;
 }
 main section.portfolio .etc-container .etc-box img {
   width: 80%;
+}
+@media screen and (min-width: 1024px) {
+  main section.portfolio .etc-container .etc-box img {
+    width: 50%;
+  }
 }
 main section.portfolio .wheel {
   margin: 2% 49%;

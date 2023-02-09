@@ -175,11 +175,10 @@ $(function() {
         $('body').css('overflow','visible');
     });
 
-    let d_width = 0; // 브라우저 가로
-    let d_height = 0; // 문서 전체의 높이
+    let d_width = 0;
+    let d_height = 0;
 
     function tmp() {
-        // container의 가로사이즈(화면가로 * box 개수)
         let con_width = $(window).outerWidth() * $('.etc-box').length; 
 
         $('.etc-container').css({
@@ -189,18 +188,16 @@ $(function() {
                     left: 0
                 });
 
-                // css에서 해도 상관없다.
                 $('.etc-box').css({
                     width: con_width / $('.etc-box').length,
                     float: 'left'
                 });
 
-                let w_width = $(window).width(); // 화면의 가로값
-                let w_height = $(window).height() // 화면의 세로값
+                let w_width = $(window).width(); 
+                let w_height = $(window).height();
 
-                // 스크롤 될때의 리미트
-                d_width = con_width - w_width; // 전체 가로값 - 현재 화면의 가로값
-                d_height = $('.body').height() - w_height // 전체 세로값 - 현재 화면의 세로값
+                d_width = con_width - w_width; 
+                d_height = $('.body').height() - w_height;
             }
 
             tmp();
@@ -214,31 +211,26 @@ $(function() {
             $('.etc-box').on('mousewheel DOMMouseScroll', function(){
 
                 if(chk) {
-                    // 휠 일정시간동안 막기
                     chk = false;
                     setTimeout(function(){
                         chk = true;
                     }, 500)
 
-                    // 휠 방향 감지(아래: -120, 위: 120)
                     let w_delta = event.wheelDelta / 120;
                     
-                    // 휠 아래로
                     if(w_delta < 0 && $(this).next().length > 0) {
                         $('.etc-container').animate({
-                            left: -array[$(this).index()+1]+50
+                            left: -array[$(this).index()+1]+500
                         }, 500)
                     }
-                    // 휠 위로
                     else if(w_delta > 0 && $(this).prev().length > 0) {
                         $('.etc-container').animate({
-                            left: -array[$(this).index()-1]+50
+                            left: -array[$(this).index()-1]+500
                         }, 500)
                     }
                 }
             });
 
-			//브라우저를 resize했을시를 대비해 박스의 크기는 다시 구해준다.
             $(window).resize(function(){
                 for(let i=0; i<$('.etc-box').length; i++) {
                     array[i] = $('.etc-box').eq(i).offset().left
