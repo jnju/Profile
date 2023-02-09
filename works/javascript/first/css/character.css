@@ -137,23 +137,6 @@ body .next-btn {
   margin-left: 89%;
   z-index: 3;
 }
-@-webkit-keyframes shake {
-  0% {
-    transform: rotate(-20deg);
-  }
-  25% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-20deg);
-  }
-}
 @keyframes shake {
   0% {
     transform: rotate(-20deg);
@@ -175,12 +158,10 @@ body .next-btn .next_sign1 {
   cursor: pointer;
   z-index: 20;
   width: 180px;
-  -webkit-animation: shake 1.5s linear infinite;
-          animation: shake 1.5s linear infinite;
+  animation: shake 1.5s linear infinite;
 }
 body .next-btn .next_sign1:hover {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   width: 200px;
 }
 body .next-btn p {
@@ -302,12 +283,10 @@ body .second-page .btn-box .prev-btn .prev_sign1 {
   cursor: pointer;
   z-index: 20;
   width: 180px;
-  -webkit-animation: shake 1.5s linear infinite;
-          animation: shake 1.5s linear infinite;
+  animation: shake 1.5s linear infinite;
 }
 body .second-page .btn-box .prev-btn .prev_sign1:hover {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
   width: 200px;
 }
 body .second-page .btn-box .prev-btn p {

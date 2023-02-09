@@ -132,18 +132,10 @@ header .waves .white-wave {
 }
 @media screen and (min-width: 1024px) {
   header .waves .blue-wave,
-header .waves .sky-wave,
-header .waves .white-wave {
+  header .waves .sky-wave,
+  header .waves .white-wave {
     width: 150%;
     height: 150px;
-  }
-}
-@-webkit-keyframes wavemoveblue {
-  0% {
-    margin-left: -22%;
-  }
-  100% {
-    margin-left: -7%;
   }
 }
 @keyframes wavemoveblue {
@@ -154,28 +146,12 @@ header .waves .white-wave {
     margin-left: -7%;
   }
 }
-@-webkit-keyframes wavemovesky {
-  0% {
-    margin-left: -5%;
-  }
-  100% {
-    margin-left: -20%;
-  }
-}
 @keyframes wavemovesky {
   0% {
     margin-left: -5%;
   }
   100% {
     margin-left: -20%;
-  }
-}
-@-webkit-keyframes wavemovewhite {
-  0% {
-    margin-left: -5%;
-  }
-  100% {
-    margin-left: -40%;
   }
 }
 @keyframes wavemovewhite {
@@ -189,8 +165,7 @@ header .waves .white-wave {
 header .waves .blue-wave {
   margin-left: -22%;
   margin-top: -80px;
-  -webkit-animation: wavemoveblue 2s 0s infinite alternate;
-          animation: wavemoveblue 2s 0s infinite alternate;
+  animation: wavemoveblue 2s 0s infinite alternate;
 }
 @media screen and (min-width: 1024px) {
   header .waves .blue-wave {
@@ -201,8 +176,7 @@ header .waves .blue-wave {
 header .waves .sky-wave {
   margin-left: -5%;
   margin-top: -50px;
-  -webkit-animation: wavemovesky 2s 0s infinite alternate;
-          animation: wavemovesky 2s 0s infinite alternate;
+  animation: wavemovesky 2s 0s infinite alternate;
 }
 @media screen and (min-width: 1024px) {
   header .waves .sky-wave {
@@ -211,8 +185,7 @@ header .waves .sky-wave {
 }
 header .waves .white-wave {
   margin-left: -13%;
-  -webkit-animation: wavemovewhite 2s 0s infinite alternate;
-          animation: wavemovewhite 2s 0s infinite alternate;
+  animation: wavemovewhite 2s 0s infinite alternate;
 }
 header .support {
   z-index: 3;
@@ -281,28 +254,12 @@ header nav li:nth-child(3), header nav li:nth-child(4) {
     font-size: 1.5rem;
   }
 }
-@-webkit-keyframes hovernav {
-  0% {
-    font-size: 109%;
-  }
-  100% {
-    font-size: 120%;
-  }
-}
 @keyframes hovernav {
   0% {
     font-size: 109%;
   }
   100% {
     font-size: 120%;
-  }
-}
-@-webkit-keyframes hovernavpc {
-  0% {
-    font-size: 1.5rem;
-  }
-  100% {
-    font-size: 1.6rem;
   }
 }
 @keyframes hovernavpc {
@@ -314,13 +271,11 @@ header nav li:nth-child(3), header nav li:nth-child(4) {
   }
 }
 header nav li:hover {
-  -webkit-animation: hovernav 0.5s 0s alternate forwards;
-          animation: hovernav 0.5s 0s alternate forwards;
+  animation: hovernav 0.5s 0s alternate forwards;
 }
 @media screen and (min-width: 1024px) {
   header nav li:hover {
-    -webkit-animation: hovernavpc 0.5s 0s alternate forwards;
-            animation: hovernavpc 0.5s 0s alternate forwards;
+    animation: hovernavpc 0.5s 0s alternate forwards;
     text-decoration: underline;
   }
 }
@@ -447,14 +402,8 @@ main section.about #mobile-me .letters {
     display: block;
     position: absolute;
     margin: 5% 0 10% 0%;
-    -webkit-animation: rotate_image 20s linear infinite;
-            animation: rotate_image 20s linear infinite;
+    animation: rotate_image 20s linear infinite;
     transform-origin: 50% 50%;
-  }
-  @-webkit-keyframes rotate_image {
-    100% {
-      transform: rotate(360deg);
-    }
   }
   @keyframes rotate_image {
     100% {
@@ -544,23 +493,6 @@ main section.skills .skill {
     width: 29%;
   }
 }
-@-webkit-keyframes rotate_boat {
-  0% {
-    transform: rotate(-20deg);
-  }
-  25% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-20deg);
-  }
-}
 @keyframes rotate_boat {
   0% {
     transform: rotate(-20deg);
@@ -582,8 +514,7 @@ main section.skills .skill .boat {
   width: 16%;
   height: 16%;
   margin-right: 6%;
-  -webkit-animation: rotate_boat 1.5s linear infinite;
-          animation: rotate_boat 1.5s linear infinite;
+  animation: rotate_boat 1.5s linear infinite;
 }
 @media screen and (min-width: 1024px) {
   main section.skills .skill .boat {
@@ -594,19 +525,16 @@ main section.skills .skill .boat {
 }
 @media screen and (min-width: 1024px) {
   main section.skills .skill .random-move1 {
-    -webkit-animation: rotate_boat 2s linear infinite;
-            animation: rotate_boat 2s linear infinite;
+    animation: rotate_boat 2s linear infinite;
   }
   main section.skills .skill .random-move2 {
     animation: rotate_boat 1s linear infinite reverse;
   }
   main section.skills .skill .random-move3 {
-    -webkit-animation: rotate_boat 2.5s linear infinite alternate;
-            animation: rotate_boat 2.5s linear infinite alternate;
+    animation: rotate_boat 2.5s linear infinite alternate;
   }
   main section.skills .skill .random-move4 {
-    -webkit-animation: rotate_boat 1s linear infinite;
-            animation: rotate_boat 1s linear infinite;
+    animation: rotate_boat 1s linear infinite;
   }
 }
 main section.skills .skill .wave-skill {
@@ -685,8 +613,8 @@ main section.portfolio .circles .circle .for-slide .third-slide {
     margin-top: -70%;
   }
   main section.portfolio .circles .circle .for-slide .first-slide,
-main section.portfolio .circles .circle .for-slide .second-slide,
-main section.portfolio .circles .circle .for-slide .third-slide {
+  main section.portfolio .circles .circle .for-slide .second-slide,
+  main section.portfolio .circles .circle .for-slide .third-slide {
     display: block;
     position: relative;
     z-index: 30;
@@ -770,8 +698,8 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-cap
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .pc-submarine-text .img-box .b,
-main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
-main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
+  main section.portfolio .circles .circle .pc-submarine-text .img-box .j,
+  main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-capture {
     position: relative;
     width: 300px;
     height: 300px;
@@ -793,7 +721,7 @@ main section.portfolio .circles .circle .pc-submarine-text .img-box .profile-cap
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .buttons,
-main section.portfolio .circles .circle .one .left-right {
+  main section.portfolio .circles .circle .one .left-right {
     margin-top: 8%;
   }
 }
@@ -860,8 +788,8 @@ main section.portfolio .circles .circle .two .buttons .git {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .two .buttons .design,
-main section.portfolio .circles .circle .two .buttons .detail,
-main section.portfolio .circles .circle .two .buttons .git {
+  main section.portfolio .circles .circle .two .buttons .detail,
+  main section.portfolio .circles .circle .two .buttons .git {
     width: 100px;
     font-size: 1rem;
   }
@@ -895,7 +823,7 @@ main section.portfolio .circles .circle .three .left-right {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .three .buttons,
-main section.portfolio .circles .circle .three .left-right {
+  main section.portfolio .circles .circle .three .left-right {
     margin-top: 7%;
     margin-left: -20%;
   }
@@ -922,7 +850,7 @@ main section.portfolio .circles .circle .three .left-right {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .left-right,
-main section.portfolio .circles .circle .three .left-right {
+  main section.portfolio .circles .circle .three .left-right {
     margin-left: 0%;
   }
 }
@@ -938,22 +866,22 @@ main section.portfolio .circles .circle .three .left-right .git {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .left-right .design,
-main section.portfolio .circles .circle .one .left-right .detail,
-main section.portfolio .circles .circle .one .left-right .git,
-main section.portfolio .circles .circle .three .left-right .design,
-main section.portfolio .circles .circle .three .left-right .detail,
-main section.portfolio .circles .circle .three .left-right .git {
+  main section.portfolio .circles .circle .one .left-right .detail,
+  main section.portfolio .circles .circle .one .left-right .git,
+  main section.portfolio .circles .circle .three .left-right .design,
+  main section.portfolio .circles .circle .three .left-right .detail,
+  main section.portfolio .circles .circle .three .left-right .git {
     font-size: 1rem;
     width: 100px;
   }
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .one .left-right .detail,
-main section.portfolio .circles .circle .three .left-right .detail {
+  main section.portfolio .circles .circle .three .left-right .detail {
     padding: 5px 23px;
   }
   main section.portfolio .circles .circle .one .left-right .git,
-main section.portfolio .circles .circle .three .left-right .git {
+  main section.portfolio .circles .circle .three .left-right .git {
     padding: 5px 37px;
   }
 }
@@ -963,7 +891,7 @@ main section.portfolio .circles .circle .three .left-right .git {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .three .buttons,
-main section.portfolio .circles .circle .three .left-right {
+  main section.portfolio .circles .circle .three .left-right {
     margin-left: 223px;
   }
 }
@@ -987,14 +915,6 @@ main section.portfolio .circles .circle .bubbles {
     width: 380px;
   }
 }
-@-webkit-keyframes bubblemove {
-  0% {
-    margin-top: 0;
-  }
-  100% {
-    margin-top: -25px;
-  }
-}
 @keyframes bubblemove {
   0% {
     margin-top: 0;
@@ -1005,24 +925,20 @@ main section.portfolio .circles .circle .bubbles {
 }
 main section.portfolio .circles .circle .bubbles .bubbles1 {
   position: absolute;
-  -webkit-animation: bubblemove 0.5s 0s infinite alternate;
-          animation: bubblemove 0.5s 0s infinite alternate;
+  animation: bubblemove 0.5s 0s infinite alternate;
 }
 main section.portfolio .circles .circle .bubbles .bubbles2 {
   margin-left: 300px;
-  -webkit-animation: bubblemove 1s 0s infinite alternate;
-          animation: bubblemove 1s 0s infinite alternate;
+  animation: bubblemove 1s 0s infinite alternate;
 }
 main section.portfolio .circles .circle .bubbles .bubbles3 {
   position: absolute;
-  -webkit-animation: bubblemove 0.8s 0s infinite alternate;
-          animation: bubblemove 0.8s 0s infinite alternate;
+  animation: bubblemove 0.8s 0s infinite alternate;
 }
 main section.portfolio .circles .circle .bubbles .bubbles4 {
   position: absolute;
   margin-left: 300px;
-  -webkit-animation: bubblemove 0.3s 0s infinite alternate;
-          animation: bubblemove 0.3s 0s infinite alternate;
+  animation: bubblemove 0.3s 0s infinite alternate;
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .circle .second-pc {
@@ -1065,7 +981,7 @@ main section.portfolio .circles .left-right {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons,
-main section.portfolio .circles .left-right {
+  main section.portfolio .circles .left-right {
     position: relative;
     display: block;
     flex-direction: column;
@@ -1089,11 +1005,11 @@ main section.portfolio .circles .left-right .git {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons .design,
-main section.portfolio .circles .buttons .detail,
-main section.portfolio .circles .buttons .git,
-main section.portfolio .circles .left-right .design,
-main section.portfolio .circles .left-right .detail,
-main section.portfolio .circles .left-right .git {
+  main section.portfolio .circles .buttons .detail,
+  main section.portfolio .circles .buttons .git,
+  main section.portfolio .circles .left-right .design,
+  main section.portfolio .circles .left-right .detail,
+  main section.portfolio .circles .left-right .git {
     margin: 20px 0;
   }
 }
@@ -1108,7 +1024,7 @@ main section.portfolio .circles .left-right .btn-align {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons .btn-align,
-main section.portfolio .circles .left-right .btn-align {
+  main section.portfolio .circles .left-right .btn-align {
     margin: 20px 0;
   }
 }
@@ -1118,7 +1034,7 @@ main section.portfolio .circles .left-right .git {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .buttons .git,
-main section.portfolio .circles .left-right .git {
+  main section.portfolio .circles .left-right .git {
     margin-top: 20px;
     margin-left: 0%;
   }
@@ -1395,7 +1311,7 @@ main section.portfolio .circles .modal_jujery .modal-contents .sub-page .pc2 {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .modal_jujery .modal-contents .sub-page .pc1,
-main section.portfolio .circles .modal_jujery .modal-contents .sub-page .pc2 {
+  main section.portfolio .circles .modal_jujery .modal-contents .sub-page .pc2 {
     width: 50%;
     margin-left: 25%;
     margin-top: -20%;
@@ -1409,7 +1325,7 @@ main section.portfolio .circles .modal_jujery .modal-contents .sub-page .mobile-
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .circles .modal_jujery .modal-contents .sub-page .mobile-long,
-main section.portfolio .circles .modal_jujery .modal-contents .sub-page .mobile-short {
+  main section.portfolio .circles .modal_jujery .modal-contents .sub-page .mobile-short {
     width: 16%;
   }
 }
@@ -1482,7 +1398,7 @@ main section.portfolio .java-box-container .java-box .turtle-box {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java-box-container .java-box .turtle-box .first-turtle,
-main section.portfolio .java-box-container .java-box .turtle-box .second-turtle {
+  main section.portfolio .java-box-container .java-box .turtle-box .second-turtle {
     position: relative;
     width: 40%;
     left: 32%;
@@ -1558,7 +1474,7 @@ main section.portfolio .java .buttons_java .detail {
 }
 @media screen and (min-width: 1024px) {
   main section.portfolio .java .buttons_java .design,
-main section.portfolio .java .buttons_java .detail {
+  main section.portfolio .java .buttons_java .detail {
     margin: 0;
   }
 }
@@ -1567,6 +1483,32 @@ main section.portfolio .java .buttons_java .detail {
     margin-right: 0;
     margin-bottom: 20px;
   }
+}
+main section.portfolio .etc-container {
+  display: flex;
+  margin-top: 180px;
+}
+main section.portfolio .etc-container a:hover {
+  text-decoration: underline;
+}
+main section.portfolio .etc-container .etc-box {
+  box-sizing: border-box;
+}
+main section.portfolio .etc-container .etc-box h4 {
+  width: 500px;
+  font-size: 1.7em;
+  margin-bottom: 5%;
+}
+main section.portfolio .etc-container .etc-box .etc-text {
+  width: 500px;
+  line-height: 2em;
+  margin-bottom: 3%;
+}
+main section.portfolio .etc-container .etc-box img {
+  width: 80%;
+}
+main section.portfolio .wheel {
+  margin: 2% 49%;
 }
 main section.contact .contact-box {
   border: 1px solid #c5cacc;
@@ -1634,7 +1576,7 @@ footer .footer-box .footer-img2 {
 }
 @media screen and (min-width: 1024px) {
   footer .footer-box .footer-img1,
-footer .footer-box .footer-img2 {
+  footer .footer-box .footer-img2 {
     padding: 10px;
     position: relative;
     width: 4%;

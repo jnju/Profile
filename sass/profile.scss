@@ -1302,6 +1302,35 @@ main {
                 }
             }
         }
+
+        .etc-container {
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            display: flex;
+            margin-top: 180px;
+            .etc-box {
+                h4 {
+                    width: 500px;
+                    font-size: 1.7em;
+                    margin-bottom: 5%;
+                }
+                .etc-text {
+                    width: 500px;
+                    line-height: 2em;
+                    margin-bottom: 3%;
+                }
+                img {
+                    width: 80%;
+                }
+                box-sizing: border-box;
+            }
+        }
+        .wheel {
+            margin: 2% 49%;
+        }
     } // section portfolio end
 
     section.contact {
